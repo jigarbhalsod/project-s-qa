@@ -1,0 +1,63 @@
+---
+description: Project S Q&A notebook safety rules
+alwaysApply: true
+---
+
+# Project S — always-on agent rules
+
+## Notebook safety (hard)
+
+- Work only on `Jigar_Q&A_Branch_Baseline_COPY.ipynb`. Never edit the original or the backup.
+- Never run any notebook cell. Never use Run all. Do not run Python that imports torch, transformers or A_predict. Editing scripts that only read and write `.ipynb` JSON are allowed.
+- Edit the notebook with a small Python script that changes only the listed cells. Do not rewrite the whole notebook. Do not touch outputs or execution_count.
+- Never edit or delete Blocks 12, 17, 22, 26, 42 or the old duplicate helper cells.
+- Before any edit, show the plan and wait for "go". After editing, check against the 162-cell reference: valid JSON, same untouched cells, same outputs and execution counts.
+- No hosted LLM or API in the deployed scorer (rule L8). Local open-weights models are fine.
+- New blocks start at Block 61. Files in `reports_v2/` start with `A_`. Never overwrite `question_bank_v1.csv`.
+- Test numbers are exploratory. Dev numbers are optimistic. If a number is not in the notebook, write "not in notebook". Never invent one.
+
+## How to treat this project
+
+- Status labels matter: proposed work is never presented as a completed result.
+- Say "the paper suggests X, and we will test it" unless it was measured on our data.
+- Q&A numbers in section 5A were measured on public English data (SciEntsBank and Beetle), not NNCES or CBSE.
+- Evidence labels: (E) paper finding; (P) our proposal; (I) inference; (doc) copied and not re-checked; (NV) not verified; (M) measured on dev (optimistic).
+
+## Project in one line
+
+ML-based multimodal system: children's oral-reading and comprehension scored separately, then a multidimensional skill profile with uncertainty and no overall score.
+
+## What is built vs not (as of 31 Oct 2026)
+
+- Askar baseline stays: file list, audio check, acoustic features, wav2vec2 last-layer embeddings, age experiment 42.01% ± 4.61%. Pitch audit still required (implausible ~47–52 Hz).
+- Q&A scorer v2, review rule, and Gradio demo are built and measured on public data. Reading-branch components remain pending (reference text, human ratings, miscues).
+- Deployed scorer: average of DistilRoBERTa, SBERT-LR, NLI-LR. No LLM, no hosted API.
+- Review: calibrated confidence below 0.64. ECE 0.017. 85% accuracy at 30% coverage is not met.
+- Unseen-question QWK on dev: 0.317 (0.199 to 0.412), 27 questions, below the 0.55–0.60 plan.
+- Demo/notebook parity PASS on 15 of 15 (largest confidence difference 0.0005). Consistency, not independent replication.
+- Never use Run all: a 30 Oct 2026 full run rewrote 18 files meant to be frozen.
+
+## Locked decisions (do not reopen)
+
+- L1: `non_domain` stays score 0 with a separate needs-review flag.
+- L2: v1 files frozen; new results go to `_v2` files.
+- L3: select on dev only; further test results are exploratory.
+- L4: English only; synthetic answers train-only if ever used.
+- L5: QWK only on ordered 3-level labels; accuracy and macro-F1 on official 5 labels.
+- L6: CBSE is an extension; public data proves the pipeline.
+- L7: rubric-prompted LLM is a small-sample side result, not the final scorer.
+- L8: scorer is completely ML/DL; no external API or hosted LLM.
+
+## Files and collaboration
+
+- History of v1: `Q&A_Branch_Baseline.ipynb` — nobody edits Blocks 1–26 of the original.
+- Agent work file: `Jigar_Q&A_Branch_Baseline_COPY.ipynb` only.
+- Jigar files in `reports_v2/` prefix `A_`; Vishwajeet prefix `V_`.
+- Contract: `A_predict.py`, `A_abstain_policy_v2.json`. Do not hard-code the project folder path if adding new inference code.
+- v3 (if ever built) uses new names (`A_predict_v3.py`, `A_abstain_policy_v3.json`). Adopt only under the pre-fixed gate in the v3 plan; otherwise v2 stays final.
+
+## Team (agreed split)
+
+- Q&A: Vishwajit Sonawane and Jigar Bhalsod.
+- Comprehensive reading: Ayush Askar and Safal Gawande.
+- Do not invent per-person paper lists for Askar, Vishwajeet, or Safal.

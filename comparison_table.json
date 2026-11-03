@@ -1,0 +1,1136 @@
+[
+  [
+    0,
+    "markdown",
+    "NO",
+    "-",
+    "# basic checks"
+  ],
+  [
+    1,
+    "code",
+    "NO",
+    "-",
+    "import torch"
+  ],
+  [
+    2,
+    "code",
+    "NO",
+    "-",
+    "import gc, torch"
+  ],
+  [
+    3,
+    "markdown",
+    "YES",
+    "cell 1",
+    "# Phase 1 \u2014 Prepare the curriculum dataset"
+  ],
+  [
+    4,
+    "markdown",
+    "YES",
+    "cell 2",
+    "## Group 1: Setup, load, unify"
+  ],
+  [
+    5,
+    "markdown",
+    "YES",
+    "cell 3",
+    "### Block 1: install, config, folders"
+  ],
+  [
+    6,
+    "code",
+    "YES",
+    "cell 4",
+    "!pip -q install datasets pandas scikit-learn pyarrow"
+  ],
+  [
+    7,
+    "markdown",
+    "YES",
+    "cell 5",
+    "### Block 2: load both datasets and check counts"
+  ],
+  [
+    8,
+    "code",
+    "YES",
+    "cell 6",
+    "raw = {name: load_dataset(hf_id) for name, hf_id in HF_IDS.i"
+  ],
+  [
+    9,
+    "markdown",
+    "YES",
+    "cell 7",
+    "### Block 3: one shared table"
+  ],
+  [
+    10,
+    "code",
+    "YES",
+    "cell 8",
+    "def make_qid(ds_name, question, reference):"
+  ],
+  [
+    11,
+    "markdown",
+    "YES",
+    "cell 9",
+    "# Phase 2 \u2014 Build the baseline"
+  ],
+  [
+    12,
+    "markdown",
+    "YES",
+    "cell 10",
+    "## Group 2: Labels, distributions, quality checks"
+  ],
+  [
+    13,
+    "markdown",
+    "YES",
+    "cell 11",
+    "### Block 4: label mappings"
+  ],
+  [
+    14,
+    "code",
+    "YES",
+    "cell 12",
+    "LABEL5_ORDER = [\"correct\", \"contradictory\", \"partially_corre"
+  ],
+  [
+    15,
+    "markdown",
+    "YES",
+    "cell 13",
+    "### Block 5: label distribution and per-question report"
+  ],
+  [
+    16,
+    "code",
+    "YES",
+    "cell 14",
+    "dist5 = pd.crosstab([data[\"dataset\"], data[\"orig_split\"]], d"
+  ],
+  [
+    17,
+    "markdown",
+    "YES",
+    "cell 15",
+    "### Block 6: data-quality and leakage checks, then save"
+  ],
+  [
+    18,
+    "code",
+    "YES",
+    "cell 16",
+    "report = {}"
+  ],
+  [
+    19,
+    "markdown",
+    "YES",
+    "cell 17",
+    "## Group 3: Source register, question bank, rubrics"
+  ],
+  [
+    20,
+    "markdown",
+    "YES",
+    "cell 18",
+    "### Block 7: source register (Step 1) and CBSE syllabus hook"
+  ],
+  [
+    21,
+    "code",
+    "YES",
+    "cell 19",
+    "today = datetime.date.today().isoformat()"
+  ],
+  [
+    22,
+    "markdown",
+    "YES",
+    "cell 20",
+    "### Block 8: question bank"
+  ],
+  [
+    23,
+    "code",
+    "YES",
+    "cell 21",
+    "import os, re"
+  ],
+  [
+    24,
+    "markdown",
+    "YES",
+    "cell 22",
+    "### Block 9: rubric stubs"
+  ],
+  [
+    25,
+    "code",
+    "YES",
+    "cell 23",
+    "NEG = re.compile(r\"\\b(not|no|never|cannot|can't|isn't|doesn'"
+  ],
+  [
+    26,
+    "markdown",
+    "YES",
+    "cell 24",
+    "# Phase 3 \u2014 Advanced answer scoring"
+  ],
+  [
+    27,
+    "markdown",
+    "YES",
+    "cell 25",
+    "## Group 4: Splits, leakage checks, versioned save"
+  ],
+  [
+    28,
+    "code",
+    "YES",
+    "cell 26",
+    "!pip -q install datasets pandas scikit-learn pyarrow"
+  ],
+  [
+    29,
+    "markdown",
+    "YES",
+    "cell 27",
+    "### Block 10: build the splits"
+  ],
+  [
+    30,
+    "code",
+    "YES",
+    "cell 28",
+    "import os, re, json, hashlib, datetime, platform, shutil"
+  ],
+  [
+    31,
+    "markdown",
+    "YES",
+    "cell 29",
+    "### Block 11: leakage checks"
+  ],
+  [
+    32,
+    "code",
+    "YES",
+    "cell 30",
+    "report = {\"hard_rules\": {}, \"warnings\": {}, \"info\": {}}"
+  ],
+  [
+    33,
+    "markdown",
+    "YES",
+    "cell 31",
+    "### Block 12: save v1, rebuild rubrics, hash manifest"
+  ],
+  [
+    34,
+    "code",
+    "YES",
+    "cell 32",
+    "import sklearn, datasets as hf_datasets"
+  ],
+  [
+    35,
+    "markdown",
+    "YES",
+    "cell 33",
+    "## Group 5: Baselines (majority, TF-IDF, SBERT)"
+  ],
+  [
+    36,
+    "markdown",
+    "YES",
+    "cell 34",
+    "### Block 13: setup, metrics, majority baseline"
+  ],
+  [
+    37,
+    "code",
+    "YES",
+    "cell 35",
+    "import os, json, warnings"
+  ],
+  [
+    38,
+    "markdown",
+    "YES",
+    "cell 36",
+    "### Block 14: TF-IDF baselines (similarity-only and TF-IDF +"
+  ],
+  [
+    39,
+    "code",
+    "YES",
+    "cell 37",
+    "from sklearn.feature_extraction.text import TfidfVectorizer"
+  ],
+  [
+    40,
+    "markdown",
+    "YES",
+    "cell 38",
+    "### Block 15: SBERT baselines, comparison table, saved resul"
+  ],
+  [
+    41,
+    "code",
+    "YES",
+    "cell 39",
+    "!pip -q install sentence-transformers"
+  ],
+  [
+    42,
+    "markdown",
+    "YES",
+    "cell 40",
+    "## Group 6: NLI and LLM scorers"
+  ],
+  [
+    43,
+    "markdown",
+    "YES",
+    "cell 41",
+    "### Block 16: NLI concept-check features"
+  ],
+  [
+    44,
+    "code",
+    "YES",
+    "cell 42",
+    "import os, re, json, random, warnings"
+  ],
+  [
+    45,
+    "markdown",
+    "YES",
+    "cell 43",
+    "### Block 17: rubric-prompted LLM scorer (dev splits only)"
+  ],
+  [
+    46,
+    "code",
+    "YES",
+    "cell 44",
+    "!pip -q install anthropic"
+  ],
+  [
+    47,
+    "markdown",
+    "YES",
+    "cell 45",
+    "### Block 18: NLI classifier, fair comparison, save"
+  ],
+  [
+    48,
+    "code",
+    "YES",
+    "cell 46",
+    "import os"
+  ],
+  [
+    49,
+    "markdown",
+    "YES",
+    "cell 47",
+    "## Group 7: Fine-tune, combiner, abstain"
+  ],
+  [
+    50,
+    "markdown",
+    "YES",
+    "cell 48",
+    "### Block 19: fine-tune DistilRoBERTa"
+  ],
+  [
+    51,
+    "code",
+    "YES",
+    "cell 49",
+    "import os, copy"
+  ],
+  [
+    52,
+    "markdown",
+    "YES",
+    "cell 50",
+    "### Block 20: stack the models into a combiner"
+  ],
+  [
+    53,
+    "code",
+    "YES",
+    "cell 51",
+    "import joblib"
+  ],
+  [
+    54,
+    "markdown",
+    "YES",
+    "cell 52",
+    "### Block 21: abstain / teacher-review rule and scored outpu"
+  ],
+  [
+    55,
+    "code",
+    "YES",
+    "cell 53",
+    "import json, datetime"
+  ],
+  [
+    56,
+    "markdown",
+    "YES",
+    "cell 54",
+    "# Phase 4 \u2014 Extend and validate"
+  ],
+  [
+    57,
+    "markdown",
+    "YES",
+    "cell 55",
+    "## Group 8: Locked test evaluation and final package"
+  ],
+  [
+    58,
+    "markdown",
+    "YES",
+    "cell 56",
+    "### Block 22: freeze check (run before touching EVAL_TEST)"
+  ],
+  [
+    59,
+    "code",
+    "YES",
+    "cell 57",
+    "import os, json, hashlib, datetime"
+  ],
+  [
+    60,
+    "markdown",
+    "YES",
+    "cell 58",
+    "### Block 23: test results, confidence intervals, frozen abs"
+  ],
+  [
+    61,
+    "code",
+    "YES",
+    "cell 59",
+    "import json, os, warnings"
+  ],
+  [
+    62,
+    "markdown",
+    "YES",
+    "cell 60",
+    "### Block 24: error analysis, LLM comparison, report summary"
+  ],
+  [
+    63,
+    "code",
+    "YES",
+    "cell 61",
+    "import shutil, datetime, hashlib"
+  ],
+  [
+    64,
+    "markdown",
+    "YES",
+    "cell 62",
+    "## Group 9: Stronger ensemble and a second fine-tuned model"
+  ],
+  [
+    65,
+    "markdown",
+    "YES",
+    "cell 63",
+    "### Block 25: dev-only ensemble weights and abstain rule"
+  ],
+  [
+    66,
+    "code",
+    "YES",
+    "cell 64",
+    "import os, json"
+  ],
+  [
+    67,
+    "markdown",
+    "YES",
+    "cell 65",
+    "### Block 26: fine-tune a second, stronger model"
+  ],
+  [
+    68,
+    "markdown",
+    "YES",
+    "cell 66",
+    "### Never run it again"
+  ],
+  [
+    69,
+    "code",
+    "YES",
+    "cell 67",
+    "import os, gc, json"
+  ],
+  [
+    70,
+    "markdown",
+    "YES",
+    "cell 68",
+    "Note (reproducibility): the RoBERTa-base weights from this b"
+  ],
+  [
+    71,
+    "code",
+    "YES",
+    "cell 69",
+    "import os, datetime"
+  ],
+  [
+    72,
+    "markdown",
+    "YES",
+    "cell 70",
+    "### Block 27: v2 needs_review flag for non_domain (score sta"
+  ],
+  [
+    73,
+    "code",
+    "YES",
+    "cell 71",
+    "import os, json"
+  ],
+  [
+    74,
+    "markdown",
+    "YES",
+    "cell 72",
+    "### Block 28: select the final scorer on dev only)"
+  ],
+  [
+    75,
+    "code",
+    "YES",
+    "cell 73",
+    "import os, json"
+  ],
+  [
+    76,
+    "markdown",
+    "YES",
+    "cell 74",
+    "# PHASE 5 : Stabilize"
+  ],
+  [
+    77,
+    "markdown",
+    "YES",
+    "cell 75",
+    "## Group 10 : Housekeeping and artifact audit"
+  ],
+  [
+    78,
+    "markdown",
+    "YES",
+    "cell 76",
+    "### Block 29: housekeeping audit and artifact inventory (rea"
+  ],
+  [
+    79,
+    "code",
+    "YES",
+    "cell 77",
+    "import os, json, datetime"
+  ],
+  [
+    80,
+    "markdown",
+    "YES",
+    "cell 78",
+    "### Block 30: resolve the freeze finding, run manifest (no G"
+  ],
+  [
+    81,
+    "code",
+    "YES",
+    "cell 79",
+    "import os, json, hashlib, datetime, platform, sys"
+  ],
+  [
+    82,
+    "markdown",
+    "YES",
+    "cell 80",
+    "### Block 31: component check"
+  ],
+  [
+    83,
+    "code",
+    "YES",
+    "cell 81",
+    "!pip -q install sentence-transformers transformers accelerat"
+  ],
+  [
+    84,
+    "markdown",
+    "YES",
+    "cell 82",
+    "# PHASE 6: Final scorer and model evaluation"
+  ],
+  [
+    85,
+    "markdown",
+    "YES",
+    "cell 83",
+    "## Group 11: final-scorer inference"
+  ],
+  [
+    86,
+    "markdown",
+    "YES",
+    "cell 84",
+    "### Block 32: write A_predict.py and test it on one example"
+  ],
+  [
+    87,
+    "code",
+    "YES",
+    "cell 85",
+    "!pip -q install sentence-transformers transformers accelerat"
+  ],
+  [
+    88,
+    "markdown",
+    "YES",
+    "cell 86",
+    "### Block 33: parity check (20 dev rows, tolerance 0.02)"
+  ],
+  [
+    89,
+    "code",
+    "YES",
+    "cell 87",
+    "import os, sys, importlib, json"
+  ],
+  [
+    90,
+    "markdown",
+    "YES",
+    "cell 88",
+    "### Block 34: provisional review policy, contract, hand-writ"
+  ],
+  [
+    91,
+    "code",
+    "YES",
+    "cell 89",
+    "import os, sys, json, importlib, datetime"
+  ],
+  [
+    92,
+    "markdown",
+    "YES",
+    "cell 90",
+    "## Group 12 : model comparison, dataset default, error analy"
+  ],
+  [
+    93,
+    "markdown",
+    "YES",
+    "cell 91",
+    "### Block 35: dev comparison of all models under one protoco"
+  ],
+  [
+    94,
+    "code",
+    "YES",
+    "cell 92",
+    "import os, json"
+  ],
+  [
+    95,
+    "markdown",
+    "YES",
+    "cell 93",
+    "### Block 36: choose the dataset default"
+  ],
+  [
+    96,
+    "code",
+    "YES",
+    "cell 94",
+    "import os, re, sys, json, importlib, datetime"
+  ],
+  [
+    97,
+    "markdown",
+    "YES",
+    "cell 95",
+    "### Block 37: error analysis on dev"
+  ],
+  [
+    98,
+    "code",
+    "YES",
+    "cell 96",
+    "import os, json"
+  ],
+  [
+    99,
+    "markdown",
+    "YES",
+    "cell 97",
+    "## Group 13"
+  ],
+  [
+    100,
+    "markdown",
+    "YES",
+    "cell 98",
+    "### Block 38 : choose the deployable scorer"
+  ],
+  [
+    101,
+    "code",
+    "YES",
+    "cell 99",
+    "import os, sys, json, importlib, datetime"
+  ],
+  [
+    102,
+    "markdown",
+    "YES",
+    "cell 100",
+    "### Block 39: calibration diagnostics, temperature scaling, "
+  ],
+  [
+    103,
+    "code",
+    "YES",
+    "cell 101",
+    "import os, json, datetime"
+  ],
+  [
+    104,
+    "markdown",
+    "YES",
+    "cell 102",
+    "### Block 40: final review policy and a check that the demo "
+  ],
+  [
+    105,
+    "code",
+    "YES",
+    "cell 103",
+    "import os, sys, json, importlib, datetime"
+  ],
+  [
+    106,
+    "markdown",
+    "YES",
+    "cell 104",
+    "# PHASE 7 : Statistical validation and exploratory test"
+  ],
+  [
+    107,
+    "markdown",
+    "YES",
+    "cell 105",
+    "## Group 14: Bootstrap CIs, seed summary, exploratory test r"
+  ],
+  [
+    108,
+    "markdown",
+    "YES",
+    "cell 106",
+    "### Block 41: paired question-level bootstrap CIs"
+  ],
+  [
+    109,
+    "code",
+    "YES",
+    "cell 107",
+    "import os, sys, json, importlib"
+  ],
+  [
+    110,
+    "markdown",
+    "YES",
+    "cell 108",
+    "### Block 42: seed-variability summary"
+  ],
+  [
+    111,
+    "code",
+    "YES",
+    "cell 109",
+    "import os, glob, json, datetime"
+  ],
+  [
+    112,
+    "markdown",
+    "YES",
+    "cell 110",
+    "### Block 43: exploratory test run (frozen policy)"
+  ],
+  [
+    113,
+    "code",
+    "YES",
+    "cell 111",
+    "import os, sys, json, importlib, datetime"
+  ],
+  [
+    114,
+    "markdown",
+    "YES",
+    "cell 112",
+    "# Phase 8 \u2014 Demo verification"
+  ],
+  [
+    115,
+    "markdown",
+    "YES",
+    "cell 113",
+    "## Group 15: Reference outputs, demo parity, tested answers"
+  ],
+  [
+    116,
+    "markdown",
+    "YES",
+    "cell 114",
+    "### Block 44: reference outputs for the demo (15 hand-writte"
+  ],
+  [
+    117,
+    "code",
+    "YES",
+    "cell 115",
+    "import os, sys, json, importlib, hashlib, datetime"
+  ],
+  [
+    118,
+    "markdown",
+    "NO",
+    "-",
+    "### Block 45: parity with Vishwajeet\u2019s demo"
+  ],
+  [
+    119,
+    "code",
+    "NO",
+    "-",
+    "import os, sys, json, shutil, hashlib"
+  ],
+  [
+    120,
+    "code",
+    "NO",
+    "-",
+    "import json, os, datetime"
+  ],
+  [
+    121,
+    "code",
+    "YES",
+    "cell 116",
+    "from google.colab import drive"
+  ],
+  [
+    122,
+    "code",
+    "NO",
+    "-",
+    "import json, os, datetime"
+  ],
+  [
+    123,
+    "markdown",
+    "YES",
+    "cell 117",
+    "### Block 45b: five test cases"
+  ],
+  [
+    124,
+    "code",
+    "YES",
+    "cell 118",
+    "from google.colab import drive"
+  ],
+  [
+    125,
+    "code",
+    "YES",
+    "cell 119",
+    "import sys, importlib"
+  ],
+  [
+    126,
+    "markdown",
+    "YES",
+    "cell 120",
+    "### Block 45c: Gradio interface"
+  ],
+  [
+    127,
+    "code",
+    "YES",
+    "cell 121",
+    "!pip -q install gradio"
+  ],
+  [
+    128,
+    "markdown",
+    "YES",
+    "cell 122",
+    "### Block 46: tested-answers summary and slide examples"
+  ],
+  [
+    129,
+    "code",
+    "YES",
+    "cell 123",
+    "import json"
+  ],
+  [
+    130,
+    "markdown",
+    "YES",
+    "cell 124",
+    "# Phase 9 \u2014 Results and panel"
+  ],
+  [
+    131,
+    "markdown",
+    "YES",
+    "cell 125",
+    "## Group 16: Final tables, figures, v2 package"
+  ],
+  [
+    132,
+    "markdown",
+    "YES",
+    "cell 126",
+    "### Block 47: final tables"
+  ],
+  [
+    133,
+    "code",
+    "YES",
+    "cell 127",
+    "import os, sys, json, importlib"
+  ],
+  [
+    134,
+    "markdown",
+    "YES",
+    "cell 128",
+    "### Block 48: figures"
+  ],
+  [
+    135,
+    "code",
+    "YES",
+    "cell 129",
+    "import os, sys, json, importlib"
+  ],
+  [
+    136,
+    "markdown",
+    "YES",
+    "cell 130",
+    "### Block 49: results summary, v2 package and status"
+  ],
+  [
+    137,
+    "code",
+    "YES",
+    "cell 131",
+    "import os, sys, json, shutil, hashlib, datetime, glob"
+  ],
+  [
+    138,
+    "markdown",
+    "YES",
+    "cell 132",
+    "# Phase 10 \u2014 Extensions and closure"
+  ],
+  [
+    139,
+    "markdown",
+    "YES",
+    "cell 133",
+    "## Group 17: Concept evidence, control set, stronger LLM"
+  ],
+  [
+    140,
+    "markdown",
+    "YES",
+    "cell 134",
+    "### Block 50: concepts and per-concept NLI"
+  ],
+  [
+    141,
+    "code",
+    "YES",
+    "cell 135",
+    "import os, sys, json, glob, importlib"
+  ],
+  [
+    142,
+    "markdown",
+    "YES",
+    "cell 136",
+    "### Block 51: negation, paraphrase and spelling control set"
+  ],
+  [
+    143,
+    "code",
+    "YES",
+    "cell 137",
+    "import os, sys, json, importlib"
+  ],
+  [
+    144,
+    "markdown",
+    "YES",
+    "cell 138",
+    "### Block 52: ML/DL-only audit"
+  ],
+  [
+    145,
+    "code",
+    "YES",
+    "cell 139",
+    "import os, sys, json, glob, datetime"
+  ],
+  [
+    146,
+    "markdown",
+    "YES",
+    "cell 140",
+    "### Block 53: generalization by question cluster (dev only)"
+  ],
+  [
+    147,
+    "code",
+    "YES",
+    "cell 141",
+    "import os, sys, json"
+  ],
+  [
+    148,
+    "markdown",
+    "YES",
+    "cell 142",
+    "## Group 18: Generalization and extension studies"
+  ],
+  [
+    149,
+    "markdown",
+    "YES",
+    "cell 143",
+    "### Block 54: learned deferral vs the threshold (study only,"
+  ],
+  [
+    150,
+    "code",
+    "YES",
+    "cell 144",
+    "import os, sys, json"
+  ],
+  [
+    151,
+    "markdown",
+    "NO",
+    "-",
+    "### Block 55, deployed policy has no hand rule"
+  ],
+  [
+    152,
+    "code",
+    "NO",
+    "-",
+    "import os, glob, json, datetime"
+  ],
+  [
+    153,
+    "code",
+    "NO",
+    "-",
+    "from google.colab import drive"
+  ],
+  [
+    154,
+    "code",
+    "YES",
+    "cell 145",
+    "import os"
+  ],
+  [
+    155,
+    "markdown",
+    "NO",
+    "-",
+    "### Block 56: withdrawn"
+  ],
+  [
+    156,
+    "code",
+    "NO",
+    "-",
+    "import os, json, datetime"
+  ],
+  [
+    157,
+    "markdown",
+    "YES",
+    "cell 146",
+    "### Block 57, ML-derived question descriptors"
+  ],
+  [
+    158,
+    "code",
+    "YES",
+    "cell 147",
+    "import os, json"
+  ],
+  [
+    159,
+    "markdown",
+    "YES",
+    "cell 148",
+    "### Block 58: closure and zip"
+  ],
+  [
+    160,
+    "code",
+    "YES",
+    "cell 149",
+    "import os, glob, json, hashlib, zipfile, datetime"
+  ],
+  [
+    161,
+    "markdown",
+    "YES",
+    "cell 150",
+    "### Limitations and experimental settings"
+  ]
+]
