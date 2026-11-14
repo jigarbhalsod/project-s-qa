@@ -1,0 +1,192 @@
+{
+  "overall_status": "PASS WITH LIMITATIONS",
+  "decision_basis": "Archive integrity and exact extracted match, scorer/reference hashes, staged artifact hashes, and saved parity/package outputs verified locally. Colab run provenance and cloud synchronization remain unverified.",
+  "notebook": {
+    "path": "notebooks/Jigar_Q&A_Branch_Baseline_COPY.ipynb",
+    "valid_json": true,
+    "cells": 167,
+    "sha256": "a35efc489c25806f2ad3db8684006dc2d627634dc1e6d2a61d3fbc75c615030e",
+    "saved_output_cells": [
+      118,
+      122,
+      123,
+      155
+    ],
+    "execution_counts": {
+      "118": null,
+      "122": null,
+      "123": null,
+      "155": null
+    },
+    "separate_executed_notebook_found": false
+  },
+  "block45": {
+    "status": "PASS",
+    "evidence": "user-provided Colab report and saved output in cell 118",
+    "cases": "15/15",
+    "predictions_match": true,
+    "review_flags_match": true,
+    "confidence_difference": "within 0.001",
+    "saved_output_present": true,
+    "execution_count": null
+  },
+  "block58": {
+    "status": "EXECUTED (user-provided; saved output corroborates)",
+    "cell": 155,
+    "demo_outputs_in_archive": 15,
+    "five_case_diagnostic_csv_data_rows": 5,
+    "nli_diagnostic_cell": 123,
+    "evaluation_metrics_and_intervals": "saved output in cell 155 and archived CSVs",
+    "zip_files_reported_by_colab": 54,
+    "zip_archive_entries_verified": 55,
+    "execution_count": null
+  },
+  "scorer_consistency": {
+    "A_predict_sha256": "ca7c2752a4863f2a24b20ec7cd9000b651d83a0cfc39709f0080ebcbdad0a053",
+    "reference_json_sha256": "c99b7d84d000046c9629708d5ee440d5a20ab28fd298f63708e2e8c13f89dc92",
+    "reference_scorer_mode": "pooled",
+    "reference_stored_A_predict_sha256": "ca7c2752a4863f2a24b20ec7cd9000b651d83a0cfc39709f0080ebcbdad0a053",
+    "hash_match": true,
+    "A_predict_default_pooled_and_loads_pooled_lr": true,
+    "pooled_model_path": "interim/pooled_lr_v2.joblib"
+  },
+  "runtime_stage_manifest": {
+    "path": "project_s_qa/reports_v2/A_runtime_stage_manifest_v2.json",
+    "all_8_size_and_sha256_checks_pass": true,
+    "files": [
+      {
+        "path": "reports_v2/A_negation_paraphrase_v2.csv",
+        "exists": true,
+        "expected_sha256": "a4b7f45a12f1a4de8c256ee2634de2fc10f06c2b664ff74eb500b2d730e5a5ab",
+        "actual_sha256": "a4b7f45a12f1a4de8c256ee2634de2fc10f06c2b664ff74eb500b2d730e5a5ab",
+        "size_bytes": 3657,
+        "pass": true
+      },
+      {
+        "path": "interim/ft_distilroberta_v1/config.json",
+        "exists": true,
+        "expected_sha256": "8c906f8eb778d92ec953d68975285af55c12092bed2c7151f6b42034e3919416",
+        "actual_sha256": "8c906f8eb778d92ec953d68975285af55c12092bed2c7151f6b42034e3919416",
+        "size_bytes": 919,
+        "pass": true
+      },
+      {
+        "path": "interim/ft_distilroberta_v1/model.safetensors",
+        "exists": true,
+        "expected_sha256": "671e70acf931c6dedd28ebff73baccfa3acf3b07dba13cb3eb15fc39f04761fd",
+        "actual_sha256": "671e70acf931c6dedd28ebff73baccfa3acf3b07dba13cb3eb15fc39f04761fd",
+        "size_bytes": 328501508,
+        "pass": true
+      },
+      {
+        "path": "interim/ft_distilroberta_v1/tokenizer_config.json",
+        "exists": true,
+        "expected_sha256": "aa6a8a3f069d2d98c09444ee3f9671d64c29ce647473dccd78169b10c490d359",
+        "actual_sha256": "aa6a8a3f069d2d98c09444ee3f9671d64c29ce647473dccd78169b10c490d359",
+        "size_bytes": 388,
+        "pass": true
+      },
+      {
+        "path": "interim/ft_distilroberta_v1/tokenizer.json",
+        "exists": true,
+        "expected_sha256": "ef73668535466d56fd3571306556bcbf3c3d16fd93cdf5e4d38970290c89165b",
+        "actual_sha256": "ef73668535466d56fd3571306556bcbf3c3d16fd93cdf5e4d38970290c89165b",
+        "size_bytes": 3558895,
+        "pass": true
+      },
+      {
+        "path": "interim/combiner_v1.joblib",
+        "exists": true,
+        "expected_sha256": "057e3decd03aca99c804d4408caa6a5832b44f0dc18de67cfd6061e5c966e875",
+        "actual_sha256": "057e3decd03aca99c804d4408caa6a5832b44f0dc18de67cfd6061e5c966e875",
+        "size_bytes": 129270,
+        "pass": true
+      },
+      {
+        "path": "interim/pooled_lr_v2.joblib",
+        "exists": true,
+        "expected_sha256": "216493152a1b7ae2143f0fc60ce2eed6ffc735f40676e308455225b1b55aa96f",
+        "actual_sha256": "216493152a1b7ae2143f0fc60ce2eed6ffc735f40676e308455225b1b55aa96f",
+        "size_bytes": 63625,
+        "pass": true
+      },
+      {
+        "path": "processed/cbse_demo_questions_v1.csv",
+        "exists": true,
+        "expected_sha256": "78852eb405819de017fa99a3839cc47912ed1bd40acd0bd0a3966be4b6987e3b",
+        "actual_sha256": "78852eb405819de017fa99a3839cc47912ed1bd40acd0bd0a3966be4b6987e3b",
+        "size_bytes": 2888,
+        "pass": true
+      }
+    ]
+  },
+  "archive": {
+    "path": "project_s_qa/A_submission_v2.zip",
+    "sha256": "0abb38aaba65194cc4fbd495a441861afce7d2ab2ee3659e83cd51703d93f09f",
+    "crc_test": "PASS",
+    "file_entries": 55,
+    "uncompressed_bytes": 950030,
+    "extracted_folder": "project_s_qa/A_submission_v2",
+    "extracted_folder_exists": true,
+    "missing": [],
+    "extra": [],
+    "size_mismatches": [],
+    "sha256_mismatches": [],
+    "duplicate_paths": [],
+    "zero_byte_files": [],
+    "exact_match": true,
+    "status": "PASS"
+  },
+  "submission_manifest": {
+    "archive_path": "reports_v2/A_submission_manifest_v2.json",
+    "top_level_demo_parity": "pass",
+    "declared_payload_files": 54,
+    "declared_hash_mismatches": [],
+    "archive_files_not_declared_excluding_self": [],
+    "explanation": "55 ZIP entries = 54 declared payload files + the manifest itself."
+  },
+  "saved_metrics": {
+    "dev_overall": "QWK 0.432 (0.358-0.509); macro-F1 0.579 (0.523-0.629)",
+    "dev_seen": "QWK 0.630 (0.562-0.692); macro-F1 0.730 (0.689-0.766)",
+    "dev_unseen_27_questions": "QWK 0.317 (0.199-0.412); macro-F1 0.490 (0.406-0.544)",
+    "exploratory_test_overall": "QWK 0.454 (0.392-0.515); macro-F1 0.576 (0.543-0.606); 3-way accuracy 0.588; coverage 0.288; auto-scored accuracy 0.790 (0.747-0.834)",
+    "target_85_percent_at_30_percent_coverage": "NOT MET",
+    "grouped_cv": "74.77% accuracy at 31.33% coverage",
+    "limitations": [
+      "Test results are exploratory because test sets were seen in v1.",
+      "No claim of CBSE or Indian schoolchildren validation.",
+      "Negation and unrelated-answer weaknesses remain documented."
+    ]
+  },
+  "backups": [
+    {
+      "path": "notebooks/backups/Jigar_Q&A_Branch_Baseline_COPY_before_Block59_60_20261106_010007_389.ipynb",
+      "cells": 167,
+      "sha256": "e241d40e8804de89e0b52bc486786987d0107e0dc2c5a05f03c8773cbb856a7b",
+      "exists": true
+    },
+    {
+      "path": "notebooks/backups/Jigar_Q&A_Branch_Baseline_COPY_before_block60.ipynb",
+      "cells": 159,
+      "sha256": "ae0ccae2ca195cf3b955daa0f79d1577142f540cde01edda9a4d47daa92ff944",
+      "exists": true
+    },
+    {
+      "path": "notebooks/backups/Jigar_Q&A_Branch_Baseline_COPY_before_block61.ipynb",
+      "cells": 161,
+      "sha256": "953e5133fff3b87d5c938d1fda7186a446c80cdb855480734389193bcdce449d",
+      "exists": true
+    },
+    {
+      "path": "notebooks/backups/Jigar_Q&A_Branch_Baseline_COPY_before_phase5.ipynb",
+      "cells": 165,
+      "sha256": "b170db749806ebbe2798d56c6392fc1b0cee0acc8ef1b8f7d49c89f97c5134bf",
+      "exists": true
+    }
+  ],
+  "unverified": [
+    "No separate executed notebook was found; saved outputs in the working notebook have null execution_count, so execution provenance is not independently confirmed.",
+    "Google Drive/OneDrive cloud synchronization is not verified.",
+    "Runtime staging manifest confirms local staged files only, not cloud presence."
+  ]
+}

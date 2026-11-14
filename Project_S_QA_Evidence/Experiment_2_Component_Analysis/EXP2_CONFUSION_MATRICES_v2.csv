@@ -1,0 +1,631 @@
+population,scope,config,name,gold,predicted,count
+primary_2049,overall,C1,DistilRoBERTa,Incorrect,Incorrect,383
+primary_2049,overall,C1,DistilRoBERTa,Incorrect,Partial,144
+primary_2049,overall,C1,DistilRoBERTa,Incorrect,Correct,132
+primary_2049,overall,C1,DistilRoBERTa,Partial,Incorrect,158
+primary_2049,overall,C1,DistilRoBERTa,Partial,Partial,185
+primary_2049,overall,C1,DistilRoBERTa,Partial,Correct,181
+primary_2049,overall,C1,DistilRoBERTa,Correct,Incorrect,194
+primary_2049,overall,C1,DistilRoBERTa,Correct,Partial,105
+primary_2049,overall,C1,DistilRoBERTa,Correct,Correct,567
+primary_2049,overall,C2,SBERT-LR,Incorrect,Incorrect,422
+primary_2049,overall,C2,SBERT-LR,Incorrect,Partial,139
+primary_2049,overall,C2,SBERT-LR,Incorrect,Correct,98
+primary_2049,overall,C2,SBERT-LR,Partial,Incorrect,193
+primary_2049,overall,C2,SBERT-LR,Partial,Partial,193
+primary_2049,overall,C2,SBERT-LR,Partial,Correct,138
+primary_2049,overall,C2,SBERT-LR,Correct,Incorrect,286
+primary_2049,overall,C2,SBERT-LR,Correct,Partial,96
+primary_2049,overall,C2,SBERT-LR,Correct,Correct,484
+primary_2049,overall,C3,NLI-LR,Incorrect,Incorrect,619
+primary_2049,overall,C3,NLI-LR,Incorrect,Partial,4
+primary_2049,overall,C3,NLI-LR,Incorrect,Correct,36
+primary_2049,overall,C3,NLI-LR,Partial,Incorrect,384
+primary_2049,overall,C3,NLI-LR,Partial,Partial,34
+primary_2049,overall,C3,NLI-LR,Partial,Correct,106
+primary_2049,overall,C3,NLI-LR,Correct,Incorrect,447
+primary_2049,overall,C3,NLI-LR,Correct,Partial,60
+primary_2049,overall,C3,NLI-LR,Correct,Correct,359
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,413
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,132
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,114
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,188
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,181
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,155
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,235
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,82
+primary_2049,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,549
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,572
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,41
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,46
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,299
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Partial,Partial,101
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Partial,Correct,124
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,355
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Correct,Partial,60
+primary_2049,overall,C5,DistilRoBERTa + NLI-LR,Correct,Correct,451
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,574
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Incorrect,Partial,50
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Incorrect,Correct,35
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Partial,Incorrect,312
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Partial,Partial,115
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Partial,Correct,97
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Correct,Incorrect,410
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Correct,Partial,61
+primary_2049,overall,C6,SBERT-LR + NLI-LR,Correct,Correct,395
+primary_2049,overall,C7,Full three-component ensemble,Incorrect,Incorrect,525
+primary_2049,overall,C7,Full three-component ensemble,Incorrect,Partial,71
+primary_2049,overall,C7,Full three-component ensemble,Incorrect,Correct,63
+primary_2049,overall,C7,Full three-component ensemble,Partial,Incorrect,255
+primary_2049,overall,C7,Full three-component ensemble,Partial,Partial,138
+primary_2049,overall,C7,Full three-component ensemble,Partial,Correct,131
+primary_2049,overall,C7,Full three-component ensemble,Correct,Incorrect,315
+primary_2049,overall,C7,Full three-component ensemble,Correct,Partial,59
+primary_2049,overall,C7,Full three-component ensemble,Correct,Correct,492
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Incorrect,185
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Partial,37
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Correct,32
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Partial,Incorrect,60
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Partial,Partial,93
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Partial,Correct,35
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Correct,Incorrect,44
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Correct,Partial,32
+primary_2049,seen_dev_ua,C1,DistilRoBERTa,Correct,Correct,235
+primary_2049,seen_dev_ua,C2,SBERT-LR,Incorrect,Incorrect,194
+primary_2049,seen_dev_ua,C2,SBERT-LR,Incorrect,Partial,34
+primary_2049,seen_dev_ua,C2,SBERT-LR,Incorrect,Correct,26
+primary_2049,seen_dev_ua,C2,SBERT-LR,Partial,Incorrect,60
+primary_2049,seen_dev_ua,C2,SBERT-LR,Partial,Partial,103
+primary_2049,seen_dev_ua,C2,SBERT-LR,Partial,Correct,25
+primary_2049,seen_dev_ua,C2,SBERT-LR,Correct,Incorrect,60
+primary_2049,seen_dev_ua,C2,SBERT-LR,Correct,Partial,34
+primary_2049,seen_dev_ua,C2,SBERT-LR,Correct,Correct,217
+primary_2049,seen_dev_ua,C3,NLI-LR,Incorrect,Incorrect,231
+primary_2049,seen_dev_ua,C3,NLI-LR,Incorrect,Partial,1
+primary_2049,seen_dev_ua,C3,NLI-LR,Incorrect,Correct,22
+primary_2049,seen_dev_ua,C3,NLI-LR,Partial,Incorrect,138
+primary_2049,seen_dev_ua,C3,NLI-LR,Partial,Partial,14
+primary_2049,seen_dev_ua,C3,NLI-LR,Partial,Correct,36
+primary_2049,seen_dev_ua,C3,NLI-LR,Correct,Incorrect,159
+primary_2049,seen_dev_ua,C3,NLI-LR,Correct,Partial,9
+primary_2049,seen_dev_ua,C3,NLI-LR,Correct,Correct,143
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,194
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,27
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,33
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,62
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,102
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,24
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,49
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,31
+primary_2049,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,231
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,236
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,8
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,10
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,115
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Partial,49
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Correct,24
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,104
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Partial,19
+primary_2049,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Correct,188
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,235
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Partial,11
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Correct,8
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Incorrect,105
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Partial,69
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Correct,14
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Incorrect,127
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Partial,17
+primary_2049,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Correct,167
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Incorrect,229
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Partial,11
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Correct,14
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Partial,Incorrect,91
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Partial,Partial,78
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Partial,Correct,19
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Correct,Incorrect,78
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Correct,Partial,19
+primary_2049,seen_dev_ua,C7,Full three-component ensemble,Correct,Correct,214
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Incorrect,198
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Partial,107
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Correct,100
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Partial,Incorrect,98
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Partial,Partial,92
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Partial,Correct,146
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Correct,Incorrect,150
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Correct,Partial,73
+primary_2049,unseen_dev_uq,C1,DistilRoBERTa,Correct,Correct,332
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Incorrect,Incorrect,228
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Incorrect,Partial,105
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Incorrect,Correct,72
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Partial,Incorrect,133
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Partial,Partial,90
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Partial,Correct,113
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Correct,Incorrect,226
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Correct,Partial,62
+primary_2049,unseen_dev_uq,C2,SBERT-LR,Correct,Correct,267
+primary_2049,unseen_dev_uq,C3,NLI-LR,Incorrect,Incorrect,388
+primary_2049,unseen_dev_uq,C3,NLI-LR,Incorrect,Partial,3
+primary_2049,unseen_dev_uq,C3,NLI-LR,Incorrect,Correct,14
+primary_2049,unseen_dev_uq,C3,NLI-LR,Partial,Incorrect,246
+primary_2049,unseen_dev_uq,C3,NLI-LR,Partial,Partial,20
+primary_2049,unseen_dev_uq,C3,NLI-LR,Partial,Correct,70
+primary_2049,unseen_dev_uq,C3,NLI-LR,Correct,Incorrect,288
+primary_2049,unseen_dev_uq,C3,NLI-LR,Correct,Partial,51
+primary_2049,unseen_dev_uq,C3,NLI-LR,Correct,Correct,216
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,219
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,105
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,81
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,126
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,79
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,131
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,186
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,51
+primary_2049,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,318
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,336
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,33
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,36
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,184
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Partial,52
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Correct,100
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,251
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Partial,41
+primary_2049,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Correct,263
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,339
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Partial,39
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Correct,27
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Incorrect,207
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Partial,46
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Correct,83
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Incorrect,283
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Partial,44
+primary_2049,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Correct,228
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Incorrect,296
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Partial,60
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Correct,49
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Partial,Incorrect,164
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Partial,Partial,60
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Partial,Correct,112
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Correct,Incorrect,237
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Correct,Partial,40
+primary_2049,unseen_dev_uq,C7,Full three-component ensemble,Correct,Correct,278
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Incorrect,Incorrect,201
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Incorrect,Partial,96
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Incorrect,Correct,72
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Partial,Incorrect,89
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Partial,Partial,108
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Partial,Correct,100
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Correct,Incorrect,116
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Correct,Partial,82
+primary_2049,SciEntsBank,C1,DistilRoBERTa,Correct,Correct,265
+primary_2049,SciEntsBank,C2,SBERT-LR,Incorrect,Incorrect,214
+primary_2049,SciEntsBank,C2,SBERT-LR,Incorrect,Partial,98
+primary_2049,SciEntsBank,C2,SBERT-LR,Incorrect,Correct,57
+primary_2049,SciEntsBank,C2,SBERT-LR,Partial,Incorrect,116
+primary_2049,SciEntsBank,C2,SBERT-LR,Partial,Partial,119
+primary_2049,SciEntsBank,C2,SBERT-LR,Partial,Correct,62
+primary_2049,SciEntsBank,C2,SBERT-LR,Correct,Incorrect,150
+primary_2049,SciEntsBank,C2,SBERT-LR,Correct,Partial,82
+primary_2049,SciEntsBank,C2,SBERT-LR,Correct,Correct,231
+primary_2049,SciEntsBank,C3,NLI-LR,Incorrect,Incorrect,354
+primary_2049,SciEntsBank,C3,NLI-LR,Incorrect,Partial,4
+primary_2049,SciEntsBank,C3,NLI-LR,Incorrect,Correct,11
+primary_2049,SciEntsBank,C3,NLI-LR,Partial,Incorrect,218
+primary_2049,SciEntsBank,C3,NLI-LR,Partial,Partial,22
+primary_2049,SciEntsBank,C3,NLI-LR,Partial,Correct,57
+primary_2049,SciEntsBank,C3,NLI-LR,Correct,Incorrect,269
+primary_2049,SciEntsBank,C3,NLI-LR,Correct,Partial,44
+primary_2049,SciEntsBank,C3,NLI-LR,Correct,Correct,150
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,223
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,88
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,58
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,110
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,110
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,77
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,135
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,70
+primary_2049,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,258
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,322
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,27
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,20
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,159
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Partial,72
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Correct,66
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,208
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Partial,47
+primary_2049,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Correct,208
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,314
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Partial,37
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Correct,18
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Incorrect,171
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Partial,83
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Correct,43
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Incorrect,221
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Partial,58
+primary_2049,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Correct,184
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Incorrect,Incorrect,292
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Incorrect,Partial,50
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Incorrect,Correct,27
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Partial,Incorrect,143
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Partial,Partial,94
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Partial,Correct,60
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Correct,Incorrect,182
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Correct,Partial,54
+primary_2049,SciEntsBank,C7,Full three-component ensemble,Correct,Correct,227
+primary_2049,Beetle,C1,DistilRoBERTa,Incorrect,Incorrect,182
+primary_2049,Beetle,C1,DistilRoBERTa,Incorrect,Partial,48
+primary_2049,Beetle,C1,DistilRoBERTa,Incorrect,Correct,60
+primary_2049,Beetle,C1,DistilRoBERTa,Partial,Incorrect,69
+primary_2049,Beetle,C1,DistilRoBERTa,Partial,Partial,77
+primary_2049,Beetle,C1,DistilRoBERTa,Partial,Correct,81
+primary_2049,Beetle,C1,DistilRoBERTa,Correct,Incorrect,78
+primary_2049,Beetle,C1,DistilRoBERTa,Correct,Partial,23
+primary_2049,Beetle,C1,DistilRoBERTa,Correct,Correct,302
+primary_2049,Beetle,C2,SBERT-LR,Incorrect,Incorrect,208
+primary_2049,Beetle,C2,SBERT-LR,Incorrect,Partial,41
+primary_2049,Beetle,C2,SBERT-LR,Incorrect,Correct,41
+primary_2049,Beetle,C2,SBERT-LR,Partial,Incorrect,77
+primary_2049,Beetle,C2,SBERT-LR,Partial,Partial,74
+primary_2049,Beetle,C2,SBERT-LR,Partial,Correct,76
+primary_2049,Beetle,C2,SBERT-LR,Correct,Incorrect,136
+primary_2049,Beetle,C2,SBERT-LR,Correct,Partial,14
+primary_2049,Beetle,C2,SBERT-LR,Correct,Correct,253
+primary_2049,Beetle,C3,NLI-LR,Incorrect,Incorrect,265
+primary_2049,Beetle,C3,NLI-LR,Incorrect,Partial,0
+primary_2049,Beetle,C3,NLI-LR,Incorrect,Correct,25
+primary_2049,Beetle,C3,NLI-LR,Partial,Incorrect,166
+primary_2049,Beetle,C3,NLI-LR,Partial,Partial,12
+primary_2049,Beetle,C3,NLI-LR,Partial,Correct,49
+primary_2049,Beetle,C3,NLI-LR,Correct,Incorrect,178
+primary_2049,Beetle,C3,NLI-LR,Correct,Partial,16
+primary_2049,Beetle,C3,NLI-LR,Correct,Correct,209
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,190
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,44
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,56
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,78
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,71
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,78
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,100
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,12
+primary_2049,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,291
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,250
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,14
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,26
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,140
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Partial,29
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Correct,58
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,147
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Partial,13
+primary_2049,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Correct,243
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,260
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Partial,13
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Correct,17
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Partial,Incorrect,141
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Partial,Partial,32
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Partial,Correct,54
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Correct,Incorrect,189
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Correct,Partial,3
+primary_2049,Beetle,C6,SBERT-LR + NLI-LR,Correct,Correct,211
+primary_2049,Beetle,C7,Full three-component ensemble,Incorrect,Incorrect,233
+primary_2049,Beetle,C7,Full three-component ensemble,Incorrect,Partial,21
+primary_2049,Beetle,C7,Full three-component ensemble,Incorrect,Correct,36
+primary_2049,Beetle,C7,Full three-component ensemble,Partial,Incorrect,112
+primary_2049,Beetle,C7,Full three-component ensemble,Partial,Partial,44
+primary_2049,Beetle,C7,Full three-component ensemble,Partial,Correct,71
+primary_2049,Beetle,C7,Full three-component ensemble,Correct,Incorrect,133
+primary_2049,Beetle,C7,Full three-component ensemble,Correct,Partial,5
+primary_2049,Beetle,C7,Full three-component ensemble,Correct,Correct,265
+dedup_2030,overall,C1,DistilRoBERTa,Incorrect,Incorrect,381
+dedup_2030,overall,C1,DistilRoBERTa,Incorrect,Partial,144
+dedup_2030,overall,C1,DistilRoBERTa,Incorrect,Correct,132
+dedup_2030,overall,C1,DistilRoBERTa,Partial,Incorrect,158
+dedup_2030,overall,C1,DistilRoBERTa,Partial,Partial,185
+dedup_2030,overall,C1,DistilRoBERTa,Partial,Correct,177
+dedup_2030,overall,C1,DistilRoBERTa,Correct,Incorrect,190
+dedup_2030,overall,C1,DistilRoBERTa,Correct,Partial,101
+dedup_2030,overall,C1,DistilRoBERTa,Correct,Correct,562
+dedup_2030,overall,C2,SBERT-LR,Incorrect,Incorrect,421
+dedup_2030,overall,C2,SBERT-LR,Incorrect,Partial,139
+dedup_2030,overall,C2,SBERT-LR,Incorrect,Correct,97
+dedup_2030,overall,C2,SBERT-LR,Partial,Incorrect,192
+dedup_2030,overall,C2,SBERT-LR,Partial,Partial,193
+dedup_2030,overall,C2,SBERT-LR,Partial,Correct,135
+dedup_2030,overall,C2,SBERT-LR,Correct,Incorrect,283
+dedup_2030,overall,C2,SBERT-LR,Correct,Partial,95
+dedup_2030,overall,C2,SBERT-LR,Correct,Correct,475
+dedup_2030,overall,C3,NLI-LR,Incorrect,Incorrect,617
+dedup_2030,overall,C3,NLI-LR,Incorrect,Partial,4
+dedup_2030,overall,C3,NLI-LR,Incorrect,Correct,36
+dedup_2030,overall,C3,NLI-LR,Partial,Incorrect,383
+dedup_2030,overall,C3,NLI-LR,Partial,Partial,34
+dedup_2030,overall,C3,NLI-LR,Partial,Correct,103
+dedup_2030,overall,C3,NLI-LR,Correct,Incorrect,445
+dedup_2030,overall,C3,NLI-LR,Correct,Partial,59
+dedup_2030,overall,C3,NLI-LR,Correct,Correct,349
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,412
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,132
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,113
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,188
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,181
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,151
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,231
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,79
+dedup_2030,overall,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,543
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,570
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,41
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,46
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,299
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Partial,Partial,101
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Partial,Correct,120
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,352
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Correct,Partial,55
+dedup_2030,overall,C5,DistilRoBERTa + NLI-LR,Correct,Correct,446
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,572
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Incorrect,Partial,50
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Incorrect,Correct,35
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Partial,Incorrect,311
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Partial,Partial,115
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Partial,Correct,94
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Correct,Incorrect,406
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Correct,Partial,60
+dedup_2030,overall,C6,SBERT-LR + NLI-LR,Correct,Correct,387
+dedup_2030,overall,C7,Full three-component ensemble,Incorrect,Incorrect,523
+dedup_2030,overall,C7,Full three-component ensemble,Incorrect,Partial,71
+dedup_2030,overall,C7,Full three-component ensemble,Incorrect,Correct,63
+dedup_2030,overall,C7,Full three-component ensemble,Partial,Incorrect,254
+dedup_2030,overall,C7,Full three-component ensemble,Partial,Partial,138
+dedup_2030,overall,C7,Full three-component ensemble,Partial,Correct,128
+dedup_2030,overall,C7,Full three-component ensemble,Correct,Incorrect,311
+dedup_2030,overall,C7,Full three-component ensemble,Correct,Partial,59
+dedup_2030,overall,C7,Full three-component ensemble,Correct,Correct,483
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Incorrect,185
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Partial,37
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Incorrect,Correct,32
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Partial,Incorrect,60
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Partial,Partial,93
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Partial,Correct,35
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Correct,Incorrect,43
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Correct,Partial,29
+dedup_2030,seen_dev_ua,C1,DistilRoBERTa,Correct,Correct,232
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Incorrect,Incorrect,194
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Incorrect,Partial,34
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Incorrect,Correct,26
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Partial,Incorrect,60
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Partial,Partial,103
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Partial,Correct,25
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Correct,Incorrect,60
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Correct,Partial,34
+dedup_2030,seen_dev_ua,C2,SBERT-LR,Correct,Correct,210
+dedup_2030,seen_dev_ua,C3,NLI-LR,Incorrect,Incorrect,231
+dedup_2030,seen_dev_ua,C3,NLI-LR,Incorrect,Partial,1
+dedup_2030,seen_dev_ua,C3,NLI-LR,Incorrect,Correct,22
+dedup_2030,seen_dev_ua,C3,NLI-LR,Partial,Incorrect,138
+dedup_2030,seen_dev_ua,C3,NLI-LR,Partial,Partial,14
+dedup_2030,seen_dev_ua,C3,NLI-LR,Partial,Correct,36
+dedup_2030,seen_dev_ua,C3,NLI-LR,Correct,Incorrect,158
+dedup_2030,seen_dev_ua,C3,NLI-LR,Correct,Partial,9
+dedup_2030,seen_dev_ua,C3,NLI-LR,Correct,Correct,137
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,194
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,27
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,33
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,62
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,102
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,24
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,48
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,28
+dedup_2030,seen_dev_ua,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,228
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,236
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,8
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,10
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,115
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Partial,49
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Partial,Correct,24
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,103
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Partial,16
+dedup_2030,seen_dev_ua,C5,DistilRoBERTa + NLI-LR,Correct,Correct,185
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,235
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Partial,11
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Incorrect,Correct,8
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Incorrect,105
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Partial,69
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Partial,Correct,14
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Incorrect,126
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Partial,17
+dedup_2030,seen_dev_ua,C6,SBERT-LR + NLI-LR,Correct,Correct,161
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Incorrect,229
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Partial,11
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Incorrect,Correct,14
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Partial,Incorrect,91
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Partial,Partial,78
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Partial,Correct,19
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Correct,Incorrect,77
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Correct,Partial,19
+dedup_2030,seen_dev_ua,C7,Full three-component ensemble,Correct,Correct,208
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Incorrect,196
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Partial,107
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Incorrect,Correct,100
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Partial,Incorrect,98
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Partial,Partial,92
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Partial,Correct,142
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Correct,Incorrect,147
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Correct,Partial,72
+dedup_2030,unseen_dev_uq,C1,DistilRoBERTa,Correct,Correct,330
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Incorrect,Incorrect,227
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Incorrect,Partial,105
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Incorrect,Correct,71
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Partial,Incorrect,132
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Partial,Partial,90
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Partial,Correct,110
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Correct,Incorrect,223
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Correct,Partial,61
+dedup_2030,unseen_dev_uq,C2,SBERT-LR,Correct,Correct,265
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Incorrect,Incorrect,386
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Incorrect,Partial,3
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Incorrect,Correct,14
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Partial,Incorrect,245
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Partial,Partial,20
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Partial,Correct,67
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Correct,Incorrect,287
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Correct,Partial,50
+dedup_2030,unseen_dev_uq,C3,NLI-LR,Correct,Correct,212
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,218
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,105
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,80
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,126
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,79
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,127
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,183
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,51
+dedup_2030,unseen_dev_uq,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,315
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,334
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,33
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,36
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,184
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Partial,52
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Partial,Correct,96
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,249
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Partial,39
+dedup_2030,unseen_dev_uq,C5,DistilRoBERTa + NLI-LR,Correct,Correct,261
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,337
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Partial,39
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Incorrect,Correct,27
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Incorrect,206
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Partial,46
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Partial,Correct,80
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Incorrect,280
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Partial,43
+dedup_2030,unseen_dev_uq,C6,SBERT-LR + NLI-LR,Correct,Correct,226
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Incorrect,294
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Partial,60
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Incorrect,Correct,49
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Partial,Incorrect,163
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Partial,Partial,60
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Partial,Correct,109
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Correct,Incorrect,234
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Correct,Partial,40
+dedup_2030,unseen_dev_uq,C7,Full three-component ensemble,Correct,Correct,275
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Incorrect,Incorrect,199
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Incorrect,Partial,96
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Incorrect,Correct,72
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Partial,Incorrect,89
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Partial,Partial,108
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Partial,Correct,96
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Correct,Incorrect,112
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Correct,Partial,78
+dedup_2030,SciEntsBank,C1,DistilRoBERTa,Correct,Correct,260
+dedup_2030,SciEntsBank,C2,SBERT-LR,Incorrect,Incorrect,213
+dedup_2030,SciEntsBank,C2,SBERT-LR,Incorrect,Partial,98
+dedup_2030,SciEntsBank,C2,SBERT-LR,Incorrect,Correct,56
+dedup_2030,SciEntsBank,C2,SBERT-LR,Partial,Incorrect,115
+dedup_2030,SciEntsBank,C2,SBERT-LR,Partial,Partial,119
+dedup_2030,SciEntsBank,C2,SBERT-LR,Partial,Correct,59
+dedup_2030,SciEntsBank,C2,SBERT-LR,Correct,Incorrect,147
+dedup_2030,SciEntsBank,C2,SBERT-LR,Correct,Partial,81
+dedup_2030,SciEntsBank,C2,SBERT-LR,Correct,Correct,222
+dedup_2030,SciEntsBank,C3,NLI-LR,Incorrect,Incorrect,352
+dedup_2030,SciEntsBank,C3,NLI-LR,Incorrect,Partial,4
+dedup_2030,SciEntsBank,C3,NLI-LR,Incorrect,Correct,11
+dedup_2030,SciEntsBank,C3,NLI-LR,Partial,Incorrect,217
+dedup_2030,SciEntsBank,C3,NLI-LR,Partial,Partial,22
+dedup_2030,SciEntsBank,C3,NLI-LR,Partial,Correct,54
+dedup_2030,SciEntsBank,C3,NLI-LR,Correct,Incorrect,267
+dedup_2030,SciEntsBank,C3,NLI-LR,Correct,Partial,43
+dedup_2030,SciEntsBank,C3,NLI-LR,Correct,Correct,140
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,222
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,88
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,57
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,110
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,110
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,73
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,131
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,67
+dedup_2030,SciEntsBank,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,252
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,320
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,27
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,20
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,159
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Partial,72
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Partial,Correct,62
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,205
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Partial,42
+dedup_2030,SciEntsBank,C5,DistilRoBERTa + NLI-LR,Correct,Correct,203
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,312
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Partial,37
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Incorrect,Correct,18
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Incorrect,170
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Partial,83
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Partial,Correct,40
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Incorrect,217
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Partial,57
+dedup_2030,SciEntsBank,C6,SBERT-LR + NLI-LR,Correct,Correct,176
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Incorrect,Incorrect,290
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Incorrect,Partial,50
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Incorrect,Correct,27
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Partial,Incorrect,142
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Partial,Partial,94
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Partial,Correct,57
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Correct,Incorrect,178
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Correct,Partial,54
+dedup_2030,SciEntsBank,C7,Full three-component ensemble,Correct,Correct,218
+dedup_2030,Beetle,C1,DistilRoBERTa,Incorrect,Incorrect,182
+dedup_2030,Beetle,C1,DistilRoBERTa,Incorrect,Partial,48
+dedup_2030,Beetle,C1,DistilRoBERTa,Incorrect,Correct,60
+dedup_2030,Beetle,C1,DistilRoBERTa,Partial,Incorrect,69
+dedup_2030,Beetle,C1,DistilRoBERTa,Partial,Partial,77
+dedup_2030,Beetle,C1,DistilRoBERTa,Partial,Correct,81
+dedup_2030,Beetle,C1,DistilRoBERTa,Correct,Incorrect,78
+dedup_2030,Beetle,C1,DistilRoBERTa,Correct,Partial,23
+dedup_2030,Beetle,C1,DistilRoBERTa,Correct,Correct,302
+dedup_2030,Beetle,C2,SBERT-LR,Incorrect,Incorrect,208
+dedup_2030,Beetle,C2,SBERT-LR,Incorrect,Partial,41
+dedup_2030,Beetle,C2,SBERT-LR,Incorrect,Correct,41
+dedup_2030,Beetle,C2,SBERT-LR,Partial,Incorrect,77
+dedup_2030,Beetle,C2,SBERT-LR,Partial,Partial,74
+dedup_2030,Beetle,C2,SBERT-LR,Partial,Correct,76
+dedup_2030,Beetle,C2,SBERT-LR,Correct,Incorrect,136
+dedup_2030,Beetle,C2,SBERT-LR,Correct,Partial,14
+dedup_2030,Beetle,C2,SBERT-LR,Correct,Correct,253
+dedup_2030,Beetle,C3,NLI-LR,Incorrect,Incorrect,265
+dedup_2030,Beetle,C3,NLI-LR,Incorrect,Partial,0
+dedup_2030,Beetle,C3,NLI-LR,Incorrect,Correct,25
+dedup_2030,Beetle,C3,NLI-LR,Partial,Incorrect,166
+dedup_2030,Beetle,C3,NLI-LR,Partial,Partial,12
+dedup_2030,Beetle,C3,NLI-LR,Partial,Correct,49
+dedup_2030,Beetle,C3,NLI-LR,Correct,Incorrect,178
+dedup_2030,Beetle,C3,NLI-LR,Correct,Partial,16
+dedup_2030,Beetle,C3,NLI-LR,Correct,Correct,209
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Incorrect,190
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Partial,44
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Incorrect,Correct,56
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Incorrect,78
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Partial,71
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Partial,Correct,78
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Incorrect,100
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Partial,12
+dedup_2030,Beetle,C4,DistilRoBERTa + SBERT-LR,Correct,Correct,291
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Incorrect,250
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Partial,14
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Incorrect,Correct,26
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Incorrect,140
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Partial,29
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Partial,Correct,58
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Incorrect,147
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Partial,13
+dedup_2030,Beetle,C5,DistilRoBERTa + NLI-LR,Correct,Correct,243
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Incorrect,260
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Partial,13
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Incorrect,Correct,17
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Partial,Incorrect,141
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Partial,Partial,32
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Partial,Correct,54
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Correct,Incorrect,189
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Correct,Partial,3
+dedup_2030,Beetle,C6,SBERT-LR + NLI-LR,Correct,Correct,211
+dedup_2030,Beetle,C7,Full three-component ensemble,Incorrect,Incorrect,233
+dedup_2030,Beetle,C7,Full three-component ensemble,Incorrect,Partial,21
+dedup_2030,Beetle,C7,Full three-component ensemble,Incorrect,Correct,36
+dedup_2030,Beetle,C7,Full three-component ensemble,Partial,Incorrect,112
+dedup_2030,Beetle,C7,Full three-component ensemble,Partial,Partial,44
+dedup_2030,Beetle,C7,Full three-component ensemble,Partial,Correct,71
+dedup_2030,Beetle,C7,Full three-component ensemble,Correct,Incorrect,133
+dedup_2030,Beetle,C7,Full three-component ensemble,Correct,Partial,5
+dedup_2030,Beetle,C7,Full three-component ensemble,Correct,Correct,265

@@ -1,0 +1,67 @@
+{
+  "created": "2026-10-30T09:21:14",
+  "model_version": "v2-avg3-ft+sbert+nli",
+  "scorer_mode": "pooled",
+  "rule": "pooled adopted only if mean dev macro-F1 >= 'both' + 0.01",
+  "deployed_components": [
+    "fine-tuned DistilRoBERTa 5-way classifier",
+    "SBERT embeddings + logistic regression",
+    "NLI cross-encoder features + logistic regression",
+    "temperature scaling and a confidence threshold fitted on dev"
+  ],
+  "policy": {
+    "temperature": 1.0000000000000004,
+    "confidence_threshold": 0.64,
+    "use_contradiction_flag": false
+  },
+  "external_api_in_deployed_code": false,
+  "url_mentions": [],
+  "loads": [
+    [
+      26,
+      "nli = AutoModelForSequenceClassification.from_pretrained(NLI_NAME).to(dev).eval()"
+    ],
+    [
+      30,
+      "ft_tok=AutoTokenizer.from_pretrained(FT_DIR),"
+    ],
+    [
+      31,
+      "ft=AutoModelForSequenceClassification.from_pretrained(FT_DIR).to(dev).eval(),"
+    ],
+    [
+      32,
+      "nli_tok=AutoTokenizer.from_pretrained(NLI_NAME), nli=nli,"
+    ],
+    [
+      34,
+      "st=SentenceTransformer(ST_NAME, device=dev),"
+    ],
+    [
+      35,
+      "base=joblib.load(INTERIM + \"/combiner_v1.joblib\")[\"base_models\"])"
+    ],
+    [
+      106,
+      "_S[\"pooled\"] = joblib.load(INTERIM + \"/pooled_lr_v2.joblib\")"
+    ]
+  ],
+  "excluded_from_system": [
+    "Block 17: prompted Qwen2.5-3B-Instruct side result (not trained here)",
+    "Block 17 API option (BACKEND was local)",
+    "regex question tags and rule-based negation flag (descriptive only)"
+  ],
+  "files_with_llm_in_name": [
+    "interim/llm_Qwen2.5-3B-Instruct_beetle_dev_ua_n250.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_beetle_dev_uq_n250.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_beetle_test_ua_n100.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_beetle_test_uq_n100.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_ua_n250.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_uq_n250.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ua_n100.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ud_n100.parquet",
+    "interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_uq_n100.parquet",
+    "reports/llm_predictions_v1.parquet",
+    "reports/test_llm_comparison_v1.csv"
+  ]
+}

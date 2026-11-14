@@ -1,0 +1,5 @@
+split,version,n,review_rate,coverage,acc_auto
+dev,v1,2049,0.65,0.35,0.756
+dev,v2,2049,0.683,0.317,0.73
+test,v1,7093,0.681,0.319,0.81
+test,v2,7093,0.692,0.308,0.803

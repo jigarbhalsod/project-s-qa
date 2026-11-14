@@ -1,0 +1,524 @@
+{
+  "created": "2026-10-30T09:20:06",
+  "status": "hand-written sanity cases, NOT an evaluation; expected scores are the author's judgement",
+  "model_version": "v2-avg3-ft+sbert+nli",
+  "scorer_mode": "pooled",
+  "policy": {
+    "temperature": 1.0000000000000004,
+    "confidence_threshold": 0.64,
+    "use_contradiction_flag": false
+  },
+  "a_predict_sha256": "ca7c2752a4863f2a24b20ec7cd9000b651d83a0cfc39709f0080ebcbdad0a053",
+  "policy_sha256": "b6548edeb682eabd2ba6b74d9b9b67bff293c1fea9c3cb6345e0a7ebf7e9ef9b",
+  "cases": [
+    {
+      "case_id": "c01",
+      "kind": "correct",
+      "question": "Why does a metal spoon left in hot soup get hot?",
+      "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+      "student_answer": "The heat of the soup travels into the spoon through conduction.",
+      "expected_score": 2,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.7184,
+        "p_incorrect": 0.1249,
+        "p_partial": 0.1567,
+        "p_correct": 0.7184,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.9982,
+          "contradict": 0.0
+        },
+        "concepts": [
+          {
+            "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+            "entail": 0.9982,
+            "contradict": 0.0,
+            "neutral": 0.0017
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c02",
+      "kind": "partial",
+      "question": "Why does a metal spoon left in hot soup get hot?",
+      "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+      "student_answer": "Because the spoon is sitting in the hot soup.",
+      "expected_score": 1,
+      "output": {
+        "pred_label": "partial",
+        "pred_score": 1,
+        "confidence": 0.3721,
+        "p_incorrect": 0.2932,
+        "p_partial": 0.3721,
+        "p_correct": 0.3347,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.935,
+          "contradict": 0.0025
+        },
+        "concepts": [
+          {
+            "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+            "entail": 0.935,
+            "contradict": 0.0025,
+            "neutral": 0.0625
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c03",
+      "kind": "negated",
+      "question": "Why does a metal spoon left in hot soup get hot?",
+      "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+      "student_answer": "Heat does not move from the soup into the spoon.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.451,
+        "p_incorrect": 0.451,
+        "p_partial": 0.2477,
+        "p_correct": 0.3013,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.0006,
+          "contradict": 0.9965
+        },
+        "concepts": [
+          {
+            "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+            "entail": 0.0006,
+            "contradict": 0.9965,
+            "neutral": 0.0029
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c04",
+      "kind": "irrelevant",
+      "question": "Why does a metal spoon left in hot soup get hot?",
+      "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+      "student_answer": "Soup is usually eaten with a spoon at dinner.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.4553,
+        "p_incorrect": 0.4553,
+        "p_partial": 0.377,
+        "p_correct": 0.1678,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.1437,
+          "contradict": 0.0008
+        },
+        "concepts": [
+          {
+            "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+            "entail": 0.1437,
+            "contradict": 0.0008,
+            "neutral": 0.8556
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c05",
+      "kind": "vague",
+      "question": "Why does a metal spoon left in hot soup get hot?",
+      "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+      "student_answer": "It is because of the temperature thing.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.7097,
+        "p_incorrect": 0.7097,
+        "p_partial": 0.1929,
+        "p_correct": 0.0974,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.0018,
+          "contradict": 0.0004
+        },
+        "concepts": [
+          {
+            "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+            "entail": 0.0018,
+            "contradict": 0.0004,
+            "neutral": 0.9978
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c06",
+      "kind": "correct",
+      "question": "What do plants need to make their food?",
+      "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+      "student_answer": "To make food a plant uses light from the sun, water, and carbon dioxide from the air.",
+      "expected_score": 2,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.6781,
+        "p_incorrect": 0.1056,
+        "p_partial": 0.2163,
+        "p_correct": 0.6781,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.9972,
+          "contradict": 0.0001
+        },
+        "concepts": [
+          {
+            "concept": "Plants need sunlight, water and carbon dioxide to make food.",
+            "entail": 0.9972,
+            "contradict": 0.0001,
+            "neutral": 0.0027
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c07",
+      "kind": "partial",
+      "question": "What do plants need to make their food?",
+      "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+      "student_answer": "Plants need sunlight.",
+      "expected_score": 1,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.5271,
+        "p_incorrect": 0.138,
+        "p_partial": 0.3349,
+        "p_correct": 0.5271,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.0001,
+          "contradict": 0.001
+        },
+        "concepts": [
+          {
+            "concept": "Plants need sunlight, water and carbon dioxide to make food.",
+            "entail": 0.0001,
+            "contradict": 0.001,
+            "neutral": 0.9989
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c08",
+      "kind": "negated",
+      "question": "What do plants need to make their food?",
+      "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+      "student_answer": "Plants do not need sunlight to make food.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.4649,
+        "p_incorrect": 0.3272,
+        "p_partial": 0.208,
+        "p_correct": 0.4649,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.0001,
+          "contradict": 0.3183
+        },
+        "concepts": [
+          {
+            "concept": "Plants need sunlight, water and carbon dioxide to make food.",
+            "entail": 0.0001,
+            "contradict": 0.3183,
+            "neutral": 0.6816
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c09",
+      "kind": "irrelevant",
+      "question": "What do plants need to make their food?",
+      "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+      "student_answer": "I like to eat vegetables at lunch.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.7458,
+        "p_incorrect": 0.7458,
+        "p_partial": 0.1737,
+        "p_correct": 0.0805,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.0082,
+          "contradict": 0.9734
+        },
+        "concepts": [
+          {
+            "concept": "Plants need sunlight, water and carbon dioxide to make food.",
+            "entail": 0.0082,
+            "contradict": 0.9734,
+            "neutral": 0.0184
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c10",
+      "kind": "spelling",
+      "question": "What do plants need to make their food?",
+      "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+      "student_answer": "Plants need sunlite, watter and carbon dioxide to make food.",
+      "expected_score": 2,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.7246,
+        "p_incorrect": 0.0902,
+        "p_partial": 0.1852,
+        "p_correct": 0.7246,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.9979,
+          "contradict": 0.0001
+        },
+        "concepts": [
+          {
+            "concept": "Plants need sunlight, water and carbon dioxide to make food.",
+            "entail": 0.9979,
+            "contradict": 0.0001,
+            "neutral": 0.002
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c11",
+      "kind": "correct",
+      "question": "Why does the bulb light when the switch is closed?",
+      "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+      "student_answer": "When the switch is closed the circuit is complete so electricity can go through the bulb.",
+      "expected_score": 2,
+      "output": {
+        "pred_label": "correct",
+        "pred_score": 2,
+        "confidence": 0.6128,
+        "p_incorrect": 0.2956,
+        "p_partial": 0.0915,
+        "p_correct": 0.6128,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.9978,
+          "contradict": 0.0
+        },
+        "concepts": [
+          {
+            "concept": "A closed switch completes the circuit, so current flows through the bulb.",
+            "entail": 0.9978,
+            "contradict": 0.0,
+            "neutral": 0.0022
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c12",
+      "kind": "partial",
+      "question": "Why does the bulb light when the switch is closed?",
+      "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+      "student_answer": "The switch is closed.",
+      "expected_score": 1,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.4177,
+        "p_incorrect": 0.4177,
+        "p_partial": 0.3606,
+        "p_correct": 0.2217,
+        "needs_teacher_review": true,
+        "review_reasons": [
+          "low_confidence"
+        ],
+        "nli": {
+          "entail": 0.0005,
+          "contradict": 0.0008
+        },
+        "concepts": [
+          {
+            "concept": "A closed switch completes the circuit, so current flows through the bulb.",
+            "entail": 0.0005,
+            "contradict": 0.0008,
+            "neutral": 0.9987
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c13",
+      "kind": "contradictory",
+      "question": "Why does the bulb light when the switch is closed?",
+      "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+      "student_answer": "The bulb lights because the switch breaks the circuit.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.7334,
+        "p_incorrect": 0.7334,
+        "p_partial": 0.1634,
+        "p_correct": 0.1032,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.0,
+          "contradict": 0.9999
+        },
+        "concepts": [
+          {
+            "concept": "A closed switch completes the circuit, so current flows through the bulb.",
+            "entail": 0.0,
+            "contradict": 0.9999,
+            "neutral": 0.0001
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c14",
+      "kind": "irrelevant",
+      "question": "Why does the bulb light when the switch is closed?",
+      "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+      "student_answer": "The bulb is made of glass.",
+      "expected_score": 0,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.7491,
+        "p_incorrect": 0.7491,
+        "p_partial": 0.1668,
+        "p_correct": 0.0842,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.003,
+          "contradict": 0.0464
+        },
+        "concepts": [
+          {
+            "concept": "A closed switch completes the circuit, so current flows through the bulb.",
+            "entail": 0.003,
+            "contradict": 0.0464,
+            "neutral": 0.9506
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    },
+    {
+      "case_id": "c15",
+      "kind": "vague",
+      "question": "Why does the bulb light when the switch is closed?",
+      "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+      "student_answer": "It works because of electricity.",
+      "expected_score": 1,
+      "output": {
+        "pred_label": "incorrect",
+        "pred_score": 0,
+        "confidence": 0.7454,
+        "p_incorrect": 0.7454,
+        "p_partial": 0.154,
+        "p_correct": 0.1006,
+        "needs_teacher_review": false,
+        "review_reasons": [],
+        "nli": {
+          "entail": 0.0005,
+          "contradict": 0.0001
+        },
+        "concepts": [
+          {
+            "concept": "A closed switch completes the circuit, so current flows through the bulb.",
+            "entail": 0.0005,
+            "contradict": 0.0001,
+            "neutral": 0.9994
+          }
+        ],
+        "model_version": "v2-avg3-ft+sbert+nli",
+        "dataset_used": "pooled",
+        "policy_status": "final"
+      }
+    }
+  ]
+}

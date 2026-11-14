@@ -1,0 +1,40 @@
+{
+  "scorer_mode": "pooled",
+  "temperature": 1.0000000000000004,
+  "threshold": 0.64,
+  "target_met": false,
+  "coverage_all_dev": 0.30600292825768666,
+  "acc_auto_all_dev": 0.7511961722488039,
+  "grouped_cv_raw": {
+    "coverage": 0.31429965836993656,
+    "accuracy": 0.75
+  },
+  "grouped_cv_calibrated": {
+    "coverage": 0.31332357247437775,
+    "accuracy": 0.7476635514018691
+  },
+  "metrics": [
+    {
+      "version": "raw",
+      "ECE": 0.01739,
+      "Brier": 0.54074,
+      "NLL": 0.90631,
+      "mean_conf": 0.57694
+    },
+    {
+      "version": "temp-scaled (fit on all dev)",
+      "ECE": 0.01739,
+      "Brier": 0.54074,
+      "NLL": 0.90631,
+      "mean_conf": 0.57694
+    },
+    {
+      "version": "temp-scaled (grouped out-of-fold)",
+      "ECE": 0.02133,
+      "Brier": 0.54306,
+      "NLL": 0.91046,
+      "mean_conf": 0.57541
+    }
+  ],
+  "created": "2026-10-30T09:18:39"
+}

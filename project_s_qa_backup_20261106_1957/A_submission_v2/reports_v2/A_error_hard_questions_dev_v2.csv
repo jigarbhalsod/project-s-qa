@@ -1,0 +1,11 @@
+question_id,dataset,n,acc3,common_label,question
+SCI-4287f7d1,scientsbank,34,0.20588235294117646,partially_correct_incomplete,Jim used a solid and water to make Mixtures one (one spoon of solid in 100 milliliters wat
+SCI-0a35647e,scientsbank,36,0.2777777777777778,correct,Grace set up a science experiment. Here's what she wrote in her notebook. First I put eggs
+BEE-b7f32586,beetle,60,0.2833333333333333,correct,What do you think the red X means?
+SCI-3bf98725,scientsbank,36,0.3055555555555556,partially_correct_incomplete,Paula wants to test a food to see if it contains acid and/or sugar. When Paula added water
+SCI-d7e63e87,scientsbank,36,0.3055555555555556,partially_correct_incomplete,Describe what you would see if a mirror were placed along a line of symmetry on a flat obj
+SCI-2269b1ee,scientsbank,36,0.3333333333333333,correct,Why is it important to use a standard unit when making a measurement?
+SCI-d684620d,scientsbank,36,0.4166666666666667,partially_correct_incomplete,Look at the picture of the circuit to the right. What will happen to the motor if the ligh
+SCI-4091bae4,scientsbank,36,0.4166666666666667,correct,Bryan taped a golf tee to a globe of the Earth. He shined a flashlight on the globe. The b
+BEE-11e25a30,beetle,114,0.4649122807017544,partially_correct_incomplete,What role does the path play in determining whether or not a switch affects a bulb?
+SCI-ed8cd636,scientsbank,36,0.5,correct,Diva's father told her she should not eat so many cookies because they were pure sugar. Di

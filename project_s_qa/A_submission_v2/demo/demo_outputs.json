@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "c01",
+    "pred_score": 2,
+    "confidence": 0.7186,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c02",
+    "pred_score": 1,
+    "confidence": 0.372,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c03",
+    "pred_score": 0,
+    "confidence": 0.451,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c04",
+    "pred_score": 0,
+    "confidence": 0.4551,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c05",
+    "pred_score": 0,
+    "confidence": 0.7097,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c06",
+    "pred_score": 2,
+    "confidence": 0.6783,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c07",
+    "pred_score": 2,
+    "confidence": 0.5271,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c08",
+    "pred_score": 2,
+    "confidence": 0.4649,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c09",
+    "pred_score": 0,
+    "confidence": 0.7458,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c10",
+    "pred_score": 2,
+    "confidence": 0.7251,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c11",
+    "pred_score": 2,
+    "confidence": 0.6128,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c12",
+    "pred_score": 0,
+    "confidence": 0.4177,
+    "needs_teacher_review": true
+  },
+  {
+    "case_id": "c13",
+    "pred_score": 0,
+    "confidence": 0.7334,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c14",
+    "pred_score": 0,
+    "confidence": 0.7491,
+    "needs_teacher_review": false
+  },
+  {
+    "case_id": "c15",
+    "pred_score": 0,
+    "confidence": 0.745,
+    "needs_teacher_review": false
+  }
+]

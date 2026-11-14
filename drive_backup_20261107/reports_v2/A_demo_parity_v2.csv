@@ -1,0 +1,16 @@
+case_id,ref_pred,ref_conf,ref_review,pred_score,confidence,needs_teacher_review,same_pred,same_review,conf_diff,pass
+c01,2,0.7184,False,2,0.7186,False,True,True,0.00019999999999997797,True
+c02,1,0.3721,True,1,0.372,True,True,True,9.999999999998899e-05,True
+c03,0,0.451,True,0,0.451,True,True,True,0.0,True
+c04,0,0.4553,True,0,0.4551,True,True,True,0.00019999999999997797,True
+c05,0,0.7097,False,0,0.7097,False,True,True,0.0,True
+c06,2,0.6781,False,2,0.6783,False,True,True,0.00019999999999997797,True
+c07,2,0.5271,True,2,0.5271,True,True,True,0.0,True
+c08,2,0.4649,True,2,0.4649,True,True,True,0.0,True
+c09,0,0.7458,False,0,0.7458,False,True,True,0.0,True
+c10,2,0.7246,False,2,0.7251,False,True,True,0.0004999999999999449,True
+c11,2,0.6128,True,2,0.6128,True,True,True,0.0,True
+c12,0,0.4177,True,0,0.4177,True,True,True,0.0,True
+c13,0,0.7334,False,0,0.7334,False,True,True,0.0,True
+c14,0,0.7491,False,0,0.7491,False,True,True,0.0,True
+c15,0,0.7454,False,0,0.745,False,True,True,0.00039999999999995595,True

@@ -1,0 +1,8 @@
+{
+  "block": 56,
+  "status": "withdrawn",
+  "what_it_was": "adaptive question selection: BM25 retrieval plus an Elo-style difficulty update",
+  "why_withdrawn": "both parts are hand-written formulas, not trained models; the block never ran; the project is ML/DL only",
+  "future_work": "next-question selection needs real student response data and a trained model",
+  "created": "2026-10-30T13:15:43"
+}

@@ -1,0 +1,6 @@
+kind,answer,pred,score,conf,review,nli_contradict
+correct,"Yes, plants use sunlight to make their food by photosynthesis.",correct,2,0.798,False,0.0
+partial,Plants need sunlight.,correct,2,0.607,True,0.0
+irrelevant,My favourite colour is blue.,incorrect,0,0.81,False,0.005
+contradictory,Plants do not need sunlight.,incorrect,0,0.432,True,0.997
+ambiguous,"Sometimes, I think, it depends on the plant maybe.",incorrect,0,0.487,True,0.001

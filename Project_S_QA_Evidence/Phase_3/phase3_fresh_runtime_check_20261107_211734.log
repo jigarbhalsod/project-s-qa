@@ -1,0 +1,5 @@
+c01: label=correct; probs=0.1247/0.1566/0.7186; confidence=0.7186; review=False; cold start, includes model loading; single-run timing, not Block 62=47849.2 ms; max_abs_probability_diff=0.00019999999999999185
+c02: label=partial; probs=0.2931/0.372/0.3348; confidence=0.372; review=True; single-run timing, not Block 62=186.4 ms; max_abs_probability_diff=9.999999999998899e-05
+c03: label=incorrect; probs=0.451/0.2477/0.3013; confidence=0.451; review=True; single-run timing, not Block 62=427.9 ms; max_abs_probability_diff=0.0
+c04: label=incorrect; probs=0.4551/0.377/0.1679; confidence=0.4551; review=True; single-run timing, not Block 62=80.0 ms; max_abs_probability_diff=0.00019999999999997797
+c05: label=incorrect; probs=0.7097/0.1929/0.0974; confidence=0.7097; review=False; single-run timing, not Block 62=78.1 ms; max_abs_probability_diff=0.0

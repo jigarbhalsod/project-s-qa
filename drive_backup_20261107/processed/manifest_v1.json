@@ -1,0 +1,160 @@
+{
+  "version": "v1",
+  "created": "2026-11-02T09:37:31",
+  "seed": 42,
+  "dev_uq_frac": 0.15,
+  "dev_ua_frac": 0.1,
+  "python": "3.13.16",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "datasets": "4.8.5",
+  "split_counts": {
+    "beetle|dev_ua": 338,
+    "beetle|dev_uq": 582,
+    "beetle|test_ua": 439,
+    "beetle|test_uq": 819,
+    "beetle|train": 3021,
+    "scientsbank|dev_ua": 415,
+    "scientsbank|dev_uq": 714,
+    "scientsbank|test_ua": 540,
+    "scientsbank|test_ud": 4562,
+    "scientsbank|test_uq": 733,
+    "scientsbank|train": 3840
+  },
+  "rules": [
+    "test_ua, test_uq, test_ud are locked: never used for tuning or example selection",
+    "any change to splits creates v2, never an overwrite",
+    "rubric examples come from the train split only",
+    "student_key is a best-effort parse, not a verified student ID"
+  ],
+  "files": {
+    "/content/drive/MyDrive/project_s_qa/processed/cbse_question_bank_template.csv": {
+      "sha256": "8b0d90f4177d5f498cac2150e5a5556d2269bcba7b9696f431b9f0158a370105",
+      "bytes": 155
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/question_bank.csv": {
+      "sha256": "71ff14f2007174e31dbbc2dd4d4c984c82501e1792701515a5db334b516242e8",
+      "bytes": 124536
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/question_bank_v1.csv": {
+      "sha256": "2e616308feb3784edbaca40b09723d1b4560f5fd642d75230749b1bef9c10eb6",
+      "bytes": 128553
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/rubrics.json": {
+      "sha256": "45bc623b8c3610801023d3b1dd9c6f6f65322d555d28d14ba8bd79318e50011a",
+      "bytes": 394665
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/rubrics_v1.json": {
+      "sha256": "6fcfe7e286e40a55884c76bf3a16d246c3aa022d9b6b072976cc17f4fd81abc8",
+      "bytes": 381325
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/splits_v1.csv": {
+      "sha256": "847ffbb67dff4974b1f8e18d00d370808dad04609db8fbadddb0608dc47a7c9c",
+      "bytes": 1247319
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/sra_unified_labeled.parquet": {
+      "sha256": "be2d0adf93dbaabad9a7c495044ccf802ba47cc223ac449eda85ab520430228a",
+      "bytes": 718960
+    },
+    "/content/drive/MyDrive/project_s_qa/processed/sra_unified_splits_v1.parquet": {
+      "sha256": "bdb67bf80f1cfa2a58a8193fca503bb1e462b393bb72c0635e1cc684b22676a6",
+      "bytes": 1173152
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/RESULTS_SUMMARY_v1.md": {
+      "sha256": "bbe6bb2a65b757bbc4bc6e28e3f7a14280b638e922bd53066493bef3d4b13a01",
+      "bytes": 9566
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/abstain_config_v1.json": {
+      "sha256": "99c46a8fdd7ade53527042821c1eb597718db930d6e8d927875607112712cd68",
+      "bytes": 369
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/abstain_test_v1.csv": {
+      "sha256": "283cd9a7323a01951befe00e665448c1a15db27b648d3a78140ea6f07a5bcd5c",
+      "bytes": 746
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/baseline_predictions_v1.parquet": {
+      "sha256": "cf415f48cd5d0c402dd4eee80ab7fa5d6f7803ad5d165ce69cf476f0e91f6132",
+      "bytes": 144101
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/baseline_results_v1.csv": {
+      "sha256": "e95a8715e7fc65fc2bb806af88b2b4c1c556667d3604521443f59ca8917e4aa4",
+      "bytes": 8775
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/freeze_record_v1.json": {
+      "sha256": "87a3814804b87c4091370e855906c2057c84ef392ef577ddcf2094521425df58",
+      "bytes": 933
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/ft_probs_v1.parquet": {
+      "sha256": "5ab01b6646fad3726322de882af4cdd3527411328342c868fe151ba35eb8839d",
+      "bytes": 321131
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/llm_predictions_v1.parquet": {
+      "sha256": "67f59c2a59cac0f70b1424850a103e3fdbb9a6a0084066ed0db070e91415318a",
+      "bytes": 38690
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/needs_review_nd_v2_report.csv": {
+      "sha256": "5da997da6a482d2b9fe4c250df04ddda0c3ad59a5468c04ffbf5154668b00109",
+      "bytes": 164
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/per_question_beetle_dev_uq_v1.csv": {
+      "sha256": "e8a79d646a584f4f7ac84627f1e9b1f03815641177331eaf7b955d86625e328c",
+      "bytes": 237
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/per_question_scientsbank_dev_uq_v1.csv": {
+      "sha256": "442f1152cb269a9941feb61e00dd0896771af3c1d3ee5d97f9040e37bde52d69",
+      "bytes": 693
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/per_question_test_v1.csv": {
+      "sha256": "da2d30675ee3cb66dd2b7e1fcdf735bc9997f2a78b8761d3b391ed987c180da8",
+      "bytes": 59851
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/phase3a_results_v1.csv": {
+      "sha256": "52acd3a02db0830bb7cbd7861b68463d1745639b45d43a6e4bfed8b0308bd0a3",
+      "bytes": 11351
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/phase3a_same_answers_comparison_v1.csv": {
+      "sha256": "976013398dfc94a9fe260816a4c51140ddf41dcef36251c413b72e20a38d2c77",
+      "bytes": 5319
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/phase3b_combiner_comparison_v1.csv": {
+      "sha256": "d344d9c9a6411b119a41c1bde1b2df8eac13b4bd660e0b591fc2e4caa6f23811",
+      "bytes": 2870
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/scored_dev_v1.parquet": {
+      "sha256": "2be55daf66e76e42472964d96b5d3f75407d3af1a4a3cdd752d1874692d5cb0d",
+      "bytes": 77365
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/scored_dev_v2.parquet": {
+      "sha256": "61e54e369b27083820e18aca5ec6c3035748c8ad522aa191097f8cf775949e5d",
+      "bytes": 81425
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/scored_test_v1.parquet": {
+      "sha256": "31bedbe0955baaf36021d110db0d9e9581bfaa921f45115e61f48eac220b1383",
+      "bytes": 94316
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/scored_test_v2.parquet": {
+      "sha256": "6909bbe289ff657940b3c7a7771821509e411271596ecd4de42eb04aa33b2f2f",
+      "bytes": 97401
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/split_report_v1.json": {
+      "sha256": "5d1f69a3dd5a507fcac2fb38af433c8f827f3e0fff28dce225d5a1ce7b346b93",
+      "bytes": 1485
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/test_access_log_v1.json": {
+      "sha256": "44db82c088118c14844616158e982d049f2c8034ebd19a1d0ae5e2ad88c1a2bf",
+      "bytes": 3237
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/test_ci_v1.csv": {
+      "sha256": "301d8c70027a9d2477d07dc6284e496e1d6945abf62d2ec6488061f84fc730c9",
+      "bytes": 2235
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/test_llm_comparison_v1.csv": {
+      "sha256": "f8d1722857846a1e7aef273d09181e8566e2dc8d87aebfad33d36109381a80c0",
+      "bytes": 1797
+    },
+    "/content/drive/MyDrive/project_s_qa/reports/test_results_v1.csv": {
+      "sha256": "55ad7b5dc564091f03ac58a85e7b169327df0db3819dc63db6baf2e389f6defd",
+      "bytes": 7802
+    }
+  }
+}

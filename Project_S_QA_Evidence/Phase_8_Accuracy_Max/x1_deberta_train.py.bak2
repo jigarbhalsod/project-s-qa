@@ -1,0 +1,20 @@
+# DRAFT ONLY; run only after explicit approval; test splits are never loaded.
+import ast,json,time,torch,numpy as np,pandas as pd; from pathlib import Path; from google.colab import drive; from transformers import AutoTokenizer,AutoModelForSequenceClassification,DataCollatorWithPadding,Trainer,TrainingArguments,set_seed
+drive.mount('/content/drive'); ROOT=Path('/content/drive/MyDrive/project_s_qa'); NB=ROOT/'notebooks/Jigar_Q&A_Branch_Baseline_COPY.ipynb'; OUT=Path('/content/drive/MyDrive/Project_S_QA_Evidence/Phase_8_Accuracy_Max'); OUT.mkdir(parents=True,exist_ok=True); SEED=20261106; MAXLEN=256; set_seed(SEED); assert torch.cuda.is_available(), 'Colab GPU required'
+df=pd.read_parquet(ROOT/'processed/sra_unified_splits_v1.parquet',filters=[('split','in',['train','dev_ua','dev_uq'])]); df['y']=df.label5.map(lambda x:2 if x=='correct' else 1 if x=='partially_correct_incomplete' else 0); tr=df[df.split=='train']; dev=df[df.split.isin(['dev_ua','dev_uq'])]; val=dev[dev.split=='dev_uq']
+src=next(''.join(c.get('source',[])) for c in json.load(open(NB,encoding='utf-8'))['cells'] if 'FACTS = [' in ''.join(c.get('source',[]))); facts=ast.literal_eval(src.split('FACTS = ',1)[1].split('\n\nitems',1)[0]); neg=pd.DataFrame([dict(uid=f'neg-{i+1:02d}',question=q,reference_answer=r,student_answer=n,y=0) for i,(q,r,_,n,_) in enumerate(facts)])
+for CKPT in ('MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli','cross-encoder/nli-deberta-v3-base'):
+ try: tok=AutoTokenizer.from_pretrained(CKPT,local_files_only=True); model=AutoModelForSequenceClassification.from_pretrained(CKPT,num_labels=3,ignore_mismatched_sizes=True,local_files_only=True); break
+ except (OSError,ValueError): continue
+else: raise RuntimeError('Neither approved checkpoint is available locally: MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli or cross-encoder/nli-deberta-v3-base. No download attempted.')
+model.classifier.apply(model._init_weights); trunc_pct=100*np.mean([len(tok(f'[QUESTION] {r.question} [REFERENCE] {r.reference_answer}',str(r.student_answer),truncation=False)['input_ids'])>MAXLEN for r in pd.concat([tr,dev,neg]).itertuples()])
+class Rows(torch.utils.data.Dataset):
+ def __init__(self,d): self.d=d.reset_index(drop=True)
+ def __len__(self): return len(self.d)
+ def __getitem__(self,i):
+  r=self.d.iloc[i]; return {**tok(f'[QUESTION] {r.question} [REFERENCE] {r.reference_answer}',str(r.student_answer),truncation=True,max_length=MAXLEN),'labels':int(r.y)}
+args=TrainingArguments(str(OUT/'trainer'),seed=SEED,data_seed=SEED,fp16=True,per_device_train_batch_size=4,per_device_eval_batch_size=4,gradient_accumulation_steps=2,eval_strategy='epoch',save_strategy='epoch',load_best_model_at_end=True,metric_for_best_model='eval_loss',greater_is_better=False,save_total_limit=1,report_to='none')
+trainer=Trainer(model=model,args=args,train_dataset=Rows(tr),eval_dataset=Rows(val),data_collator=DataCollatorWithPadding(tok)); trainer.train(); trainer.save_model(str(OUT/'model'))
+t0=time.perf_counter(); z=trainer.predict(Rows(dev)).predictions; elapsed=(time.perf_counter()-t0)*1000; prob=torch.softmax(torch.tensor(z),dim=1).numpy(); pd.DataFrame({'uid':dev.uid,'dataset':dev.dataset,'split':dev.split,'question_id':dev.question_id,'y':dev.y,**{f'p{i}':prob[:,i] for i in range(3)}}).to_csv(OUT/'A_x1_deberta_dev_probs.csv',index=False)
+zn=trainer.predict(Rows(neg)).predictions; pn=torch.softmax(torch.tensor(zn),dim=1).numpy(); pd.DataFrame({'uid':neg.uid,'y':neg.y,**{f'p{i}':pn[:,i] for i in range(3)}}).to_csv(OUT/'A_x1_deberta_neg_probs.csv',index=False)
+json.dump({'seed':SEED,'checkpoint_id':CKPT,'max_length':MAXLEN,'dev_rows':len(dev),'truncation_pct_train_dev_controls':float(trunc_pct),'candidate_dev_predict_ms':elapsed,'candidate_dev_ms_per_row':elapsed/len(dev)},open(OUT/'A_x1_deberta_run.json','w'),indent=2); print('truncation %',trunc_pct,'candidate dev ms/row',elapsed/len(dev))

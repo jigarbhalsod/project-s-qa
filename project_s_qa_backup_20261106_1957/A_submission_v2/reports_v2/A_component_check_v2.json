@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-30T09:15:25",
+  "device": "cuda",
+  "mode": "full_ensemble",
+  "checks": {
+    "stack_features_v1 has dev and test splits": {
+      "ok": true,
+      "required": true,
+      "detail": {
+        "test_ud": 4562,
+        "test_uq": 1552,
+        "dev_uq": 1296,
+        "test_ua": 979,
+        "dev_ua": 753
+      }
+    },
+    "sbert_lr + nli_lr load (expect 1538 and 7 features per dataset)": {
+      "ok": true,
+      "required": true,
+      "detail": {
+        "beetle": {
+          "sbert_lr": 1538,
+          "nli_lr": 7
+        },
+        "scientsbank": {
+          "sbert_lr": 1538,
+          "nli_lr": 7
+        }
+      }
+    },
+    "DistilRoBERTa loads and predicts": {
+      "ok": true,
+      "required": true,
+      "detail": "output shape (8, 5)"
+    },
+    "MiniLM encoder loads (expect dim 384)": {
+      "ok": true,
+      "required": true,
+      "detail": "dim 384"
+    },
+    "NLI model loads": {
+      "ok": true,
+      "required": true,
+      "detail": {
+        "0": "contradiction",
+        "1": "entailment",
+        "2": "neutral"
+      }
+    },
+    "RoBERTa-base weights on Drive": {
+      "ok": false,
+      "required": false,
+      "detail": "config and tokenizer only: weights missing"
+    }
+  },
+  "notes": [
+    "sbert_lr and nli_lr are trained per dataset: predict() needs a dataset choice (decide in Block 32).",
+    "DistilRoBERTa is pooled over both datasets."
+  ]
+}

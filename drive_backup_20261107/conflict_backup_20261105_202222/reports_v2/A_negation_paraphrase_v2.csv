@@ -1,0 +1,37 @@
+id,kind,expected,pred,conf,review,nli_contra,answer,exact,safe,silent
+n01-par,paraphrase,2,2,0.6964,False,0.0001,Plants use light from the sun to make their food.,True,True,False
+n01-neg,negation,0,2,0.5696,True,0.9996,Plants do not need sunlight to make food.,False,True,False
+n01-spe,spelling,2,2,0.6738,False,0.0001,Plants need sunlite to make food.,True,True,False
+n02-par,paraphrase,2,2,0.7925,False,0.0,When water gets hot enough it turns into steam.,True,True,False
+n02-neg,negation,0,2,0.4398,True,0.9997,Water does not turn into steam when it is heated.,False,True,False
+n02-spe,spelling,2,2,0.4843,True,0.032,Water bois and turns into steem when it is heated enough.,True,True,False
+n03-par,paraphrase,2,2,0.4807,True,0.0358,"The circuit is complete, so the bulb lights up.",True,True,False
+n03-neg,negation,0,2,0.5589,True,0.9997,The bulb lights because the circuit is open.,False,True,False
+n03-spe,spelling,2,2,0.7681,False,0.0001,The bulb lights becuase the circut is closed.,True,True,False
+n04-par,paraphrase,2,2,0.7657,False,0.0001,Iron is pulled toward a magnet.,True,True,False
+n04-neg,negation,0,2,0.5838,True,0.9995,A magnet does not attract iron.,False,True,False
+n04-spe,spelling,2,2,0.7964,False,0.0001,A magnit attracts iron.,True,True,False
+n05-par,paraphrase,2,2,0.7587,False,0.0,When metal gets hot it gets bigger.,True,True,False
+n05-neg,negation,0,2,0.6227,True,0.9998,Metal does not expand when it is heated.,False,True,False
+n05-spe,spelling,2,2,0.5982,True,0.4625,Metal expandes when it is heted.,True,True,False
+n06-par,paraphrase,2,2,0.7601,False,0.0001,Gills are what fish use to breathe.,True,True,False
+n06-neg,negation,0,2,0.5324,True,0.9995,Fish cannot breathe with gills.,False,True,False
+n06-spe,spelling,2,2,0.614,True,0.0001,Fish breath using gils.,True,True,False
+n07-par,paraphrase,2,2,0.5167,True,0.0001,Day and night happen because the Earth rotates.,True,True,False
+n07-neg,negation,0,0,0.6149,True,0.9994,"The Earth does not rotate, so there is no day and night.",True,True,False
+n07-spe,spelling,2,2,0.7105,False,0.0001,"The Earth spins on its axsis, which causes day and nite.",True,True,False
+n08-par,paraphrase,2,2,0.65,False,0.0001,Electricity can flow through a conductor.,True,True,False
+n08-neg,negation,0,0,0.4589,True,0.9999,A conductor does not let electricity pass through it.,True,True,False
+n08-spe,spelling,2,2,0.622,True,0.0002,A conducter lets electricty pass through it.,True,True,False
+n09-par,paraphrase,2,2,0.5813,True,0.0001,Water is needed for a seed to begin to grow.,True,True,False
+n09-neg,negation,0,2,0.4123,True,0.9993,A seed does not need water to start growing.,False,True,False
+n09-spe,spelling,2,2,0.3771,True,0.0002,A seed needs watter to start groing.,True,True,False
+n10-par,paraphrase,2,2,0.5739,True,0.0004,When ice is warmed it turns into water.,True,True,False
+n10-neg,negation,0,2,0.5984,True,0.9996,Ice does not melt when it gets warm.,False,True,False
+n10-spe,spelling,2,2,0.5998,True,0.1194,Ice melts when it gets warrm.,True,True,False
+n11-par,paraphrase,2,2,0.4768,True,0.0001,Plants absorb water from the soil through their roots.,True,True,False
+n11-neg,negation,0,0,0.4269,True,0.9994,The roots do not take in water from the soil.,True,True,False
+n11-spe,spelling,2,2,0.4047,True,0.0001,The rotes take in watter from the soil.,True,True,False
+n12-par,paraphrase,2,2,0.5191,True,0.0,"When something stops the light, a shadow is made.",True,True,False
+n12-neg,negation,0,2,0.4883,True,0.9996,A shadow does not form when an object blocks light.,False,True,False
+n12-spe,spelling,2,2,0.6955,False,0.0002,A shadow forms when an object blocs light.,True,True,False

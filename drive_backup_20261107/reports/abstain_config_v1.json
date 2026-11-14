@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "created": "2026-11-02T09:43:13",
+  "confidence_threshold": 0.75,
+  "policy": "A: confidence only",
+  "contradiction_nli_threshold": 0.5,
+  "target_accuracy": 0.85,
+  "min_coverage": 0.3,
+  "max_review_rate": 0.5,
+  "chosen_on": "dev out-of-fold predictions only",
+  "rule": "apply unchanged to the locked test splits in Group 8; do not retune"
+}

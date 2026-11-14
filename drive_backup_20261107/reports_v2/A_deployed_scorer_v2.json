@@ -1,0 +1,10 @@
+{
+  "mode": "pooled",
+  "rule": "pooled adopted only if mean dev macro-F1 >= 'both' + 0.01",
+  "created": "2026-10-30T09:18:33",
+  "dev_mean_macroF1_5": {
+    "both": 0.528,
+    "pooled": 0.5509,
+    "native": 0.5839
+  }
+}

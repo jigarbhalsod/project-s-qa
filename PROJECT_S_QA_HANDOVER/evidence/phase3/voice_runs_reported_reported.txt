@@ -1,0 +1,116 @@
+from screenshots
+
+Project S Q&A scorer (v2) — voice-run results
+Fields: intended_label | predicted_label | review_flag
+
+01. cbse_demo_01 — What do plants need to make their food?
+    intended_label: correctness
+    predicted_label: correct
+    review_flag: no
+
+02. cbse_demo_01 — What do plants need to make their food?
+    intended_label: incorrectness
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+03. cbse_demo_01 — What do plants need to make their food?
+    intended_label: partial correctness
+    predicted_label: correct
+    review_flag: no
+
+04. cbse_demo_02 — Why does an object make a shadow?
+    intended_label: incorrectness
+    predicted_label: incorrect
+    review_flag: YES (low_confidence)
+
+05. cbse_demo_02 — Why does an object make a shadow?
+    intended_label: correctness
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+06. cbse_demo_02 — Why does an object make a shadow?
+    intended_label: partial correct
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+07. cbse_demo_03 — What is evaporation?
+    intended_label: misconception test
+    predicted_label: incorrect
+    review_flag: YES (low_confidence)
+
+08. cbse_demo_03 — What is evaporation?
+    intended_label: semantically correct paraphrase
+    predicted_label: incorrect
+    review_flag: YES (low_confidence)
+
+09. cbse_demo_03 — What is evaporation?
+    intended_label: incorrect answer
+    predicted_label: incorrect
+    review_flag: YES (low_confidence)
+
+10. cbse_demo_03 — What is evaporation?
+    intended_label: partially correct answer
+    predicted_label: partial
+    review_flag: YES (low_confidence)
+
+11. cbse_demo_03 — What is evaporation?
+    intended_label: correct answer
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+12. cbse_demo_04 — Which organ pumps blood around the body?
+    intended_label: misconception test
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+13. cbse_demo_04 — Which organ pumps blood around the body?
+    intended_label: semantically correct paraphrase
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+14. cbse_demo_04 — Which organ pumps blood around the body?
+    intended_label: incorrect answer
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+15. cbse_demo_04 — Which organ pumps blood around the body?
+    intended_label: partial correct
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+16. cbse_demo_04 — Which organ pumps blood around the body?
+    intended_label: correct
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+17. cbse_demo_05 — Why does ice float on water?
+    intended_label: correct answer
+    predicted_label: correct
+    review_flag: no
+
+18. cbse_demo_05 — Why does ice float on water?
+    intended_label: partial correct
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+19. cbse_demo_05 — Why does ice float on water?
+    intended_label: NOT VISIBLE in the supplied screenshot text
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+20. cbse_demo_05 — Why does ice float on water?
+    intended_label: incorrect
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+21. cbse_demo_05 — Why does ice float on water?
+    intended_label: semantically correct paraphrase
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+22. cbse_demo_05 — Why does ice float on water?
+    intended_label: misconception test
+    predicted_label: correct
+    review_flag: YES (low_confidence)
+
+Note: Entry 19's student answer says ice is "more dense than water", but its intended-label heading is not visible in the supplied material. It is deliberately left unassigned rather than inferred. The predicted labels and review flags above are copied from the visible results.

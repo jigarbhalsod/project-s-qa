@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "c01",
+    "question": "Why does a metal spoon left in hot soup get hot?",
+    "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+    "student_answer": "The heat of the soup travels into the spoon through conduction."
+  },
+  {
+    "case_id": "c02",
+    "question": "Why does a metal spoon left in hot soup get hot?",
+    "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+    "student_answer": "Because the spoon is sitting in the hot soup."
+  },
+  {
+    "case_id": "c03",
+    "question": "Why does a metal spoon left in hot soup get hot?",
+    "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+    "student_answer": "Heat does not move from the soup into the spoon."
+  },
+  {
+    "case_id": "c04",
+    "question": "Why does a metal spoon left in hot soup get hot?",
+    "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+    "student_answer": "Soup is usually eaten with a spoon at dinner."
+  },
+  {
+    "case_id": "c05",
+    "question": "Why does a metal spoon left in hot soup get hot?",
+    "reference_answer": "Heat is transferred from the hot soup to the spoon by conduction.",
+    "student_answer": "It is because of the temperature thing."
+  },
+  {
+    "case_id": "c06",
+    "question": "What do plants need to make their food?",
+    "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+    "student_answer": "To make food a plant uses light from the sun, water, and carbon dioxide from the air."
+  },
+  {
+    "case_id": "c07",
+    "question": "What do plants need to make their food?",
+    "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+    "student_answer": "Plants need sunlight."
+  },
+  {
+    "case_id": "c08",
+    "question": "What do plants need to make their food?",
+    "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+    "student_answer": "Plants do not need sunlight to make food."
+  },
+  {
+    "case_id": "c09",
+    "question": "What do plants need to make their food?",
+    "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+    "student_answer": "I like to eat vegetables at lunch."
+  },
+  {
+    "case_id": "c10",
+    "question": "What do plants need to make their food?",
+    "reference_answer": "Plants need sunlight, water and carbon dioxide to make food.",
+    "student_answer": "Plants need sunlite, watter and carbon dioxide to make food."
+  },
+  {
+    "case_id": "c11",
+    "question": "Why does the bulb light when the switch is closed?",
+    "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+    "student_answer": "When the switch is closed the circuit is complete so electricity can go through the bulb."
+  },
+  {
+    "case_id": "c12",
+    "question": "Why does the bulb light when the switch is closed?",
+    "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+    "student_answer": "The switch is closed."
+  },
+  {
+    "case_id": "c13",
+    "question": "Why does the bulb light when the switch is closed?",
+    "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+    "student_answer": "The bulb lights because the switch breaks the circuit."
+  },
+  {
+    "case_id": "c14",
+    "question": "Why does the bulb light when the switch is closed?",
+    "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+    "student_answer": "The bulb is made of glass."
+  },
+  {
+    "case_id": "c15",
+    "question": "Why does the bulb light when the switch is closed?",
+    "reference_answer": "A closed switch completes the circuit, so current flows through the bulb.",
+    "student_answer": "It works because of electricity."
+  }
+]

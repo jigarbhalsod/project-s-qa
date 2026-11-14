@@ -1,0 +1,6 @@
+dataset,split,deployed_F1,v1_simple_F1,v1_stacked_F1,deployed_QWK,v1_simple_QWK,v1_stacked_QWK
+beetle,test_ua,0.613,0.614,0.595,0.578,0.641,0.609
+beetle,test_uq,0.513,0.584,0.52,0.45,0.513,0.48
+scientsbank,test_ua,0.501,0.57,0.538,0.514,0.544,0.532
+scientsbank,test_uq,0.353,0.359,0.378,0.421,0.454,0.497
+scientsbank,test_ud,0.541,0.571,0.526,0.441,0.479,0.48

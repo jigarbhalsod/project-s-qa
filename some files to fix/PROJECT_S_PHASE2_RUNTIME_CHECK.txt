@@ -1,0 +1,20 @@
+import os, json, hashlib, importlib.util
+from pathlib import Path
+from google.colab import drive
+checks = []
+try: drive.mount("/content/drive"); checks.append(("Drive mount", Path("/content/drive/MyDrive").is_dir()))
+except Exception as e: checks.append((f"Drive mount ({type(e).__name__})", False))
+ROOT = Path("/content/drive/MyDrive/project_s_qa"); checks.append(("project root", ROOT.is_dir() and Path(os.getenv("PROJECT_S_ROOT", str(ROOT))).resolve() == ROOT.resolve()))
+required = ["reports_v2/A_predict.py", "reports_v2/A_demo_reference_outputs_v2.json", "reports_v2/A_negation_paraphrase_v2.csv", "processed/cbse_demo_questions_v1.csv", "interim/combiner_v1.joblib", "interim/pooled_lr_v2.joblib", "interim/ft_distilroberta_v1/config.json", "interim/ft_distilroberta_v1/model.safetensors", "interim/ft_distilroberta_v1/tokenizer_config.json", "interim/ft_distilroberta_v1/tokenizer.json"]
+for rel in required: checks.append((f"file: {rel}", (ROOT / rel).is_file()))
+ref = {}
+try: ref = json.loads((ROOT / "reports_v2/A_demo_reference_outputs_v2.json").read_text(encoding="utf-8"))
+except Exception as e: checks.append((f"reference JSON readable ({type(e).__name__})", False))
+if ref: ap=ROOT/"reports_v2/A_predict.py"; actual=hashlib.sha256(ap.read_bytes()).hexdigest() if ap.is_file() else ""; checks.extend([("scorer mode is pooled", ref.get("scorer_mode") == "pooled"), ("A_predict SHA matches JSON", bool(actual) and actual == ref.get("a_predict_sha256"))])
+else: checks.extend([("scorer mode is pooled", False), ("A_predict SHA matches JSON", False)])
+packages = [("torch","torch"),("transformers","transformers"),("pandas","pandas"),("numpy","numpy"),("joblib","joblib"),("sentence-transformers","sentence_transformers"),("gradio","gradio")]
+for label, module in packages: checks.append((f"package: {label}", importlib.util.find_spec(module) is not None))
+hf=Path(os.getenv("HF_HOME",str(Path.home()/".cache/huggingface"))); caches={Path(os.getenv("HF_HUB_CACHE",str(hf/"hub"))),Path(os.getenv("TRANSFORMERS_CACHE",str(hf/"hub")))}
+repos=("cross-encoder/nli-deberta-v3-base","sentence-transformers/all-MiniLM-L6-v2","openai/whisper-small")
+for repo in repos: snaps=[c/f"models--{repo.replace('/', '--')}"/"snapshots" for c in caches]; cached=any(s.is_dir() and any(d.is_dir() and (d/"config.json").is_file() and any((d/w).is_file() for w in ("model.safetensors","pytorch_model.bin","model.safetensors.index.json","pytorch_model.bin.index.json")) for d in s.iterdir()) for s in snaps); checks.append((f"model cache: {repo}", cached))
+for label, ok in checks: print(f"{'PASS' if ok else 'FAIL'} | {label}")

@@ -1,0 +1,16 @@
+case,kind,expected,scorer,present,missing,contradicted,whole_ref_contra,concept_flag,whole_flag,detail
+c01,correct,2,2,2,0,0,0.0,False,False,present:Heat moves from the hot so | present:The heat is transferred by
+c02,partial,1,1,1,1,0,0.003,False,False,missing:Heat moves from the hot so | present:The heat is transferred by
+c03,negated,0,0,0,0,2,0.997,True,True,contradicted:Heat moves from the hot so | contradicted:The heat is transferred by
+c04,irrelevant,0,0,1,1,0,0.001,False,False,missing:Heat moves from the hot so | present:The heat is transferred by
+c05,vague,0,0,0,2,0,0.0,False,False,missing:Heat moves from the hot so | missing:The heat is transferred by
+c06,correct,2,2,1,2,0,0.0,False,False,present:Plants need sunlight to ma | missing:Plants need water to make  | missing:Plants need carbon dioxide
+c07,partial,1,2,0,1,2,0.001,True,False,missing:Plants need sunlight to ma | contradicted:Plants need water to make  | contradicted:Plants need carbon dioxide
+c08,negated,0,2,0,2,1,0.318,True,False,contradicted:Plants need sunlight to ma | missing:Plants need water to make  | missing:Plants need carbon dioxide
+c09,irrelevant,0,0,0,1,2,0.973,True,True,missing:Plants need sunlight to ma | contradicted:Plants need water to make  | contradicted:Plants need carbon dioxide
+c10,spelling,2,2,3,0,0,0.0,False,False,present:Plants need sunlight to ma | present:Plants need water to make  | present:Plants need carbon dioxide
+c11,correct,2,2,2,0,0,0.0,False,False,present:A closed switch completes  | present:Current flows through the 
+c12,partial,1,0,0,1,1,0.001,True,False,missing:A closed switch completes  | contradicted:Current flows through the 
+c13,contradictory,0,0,1,0,1,1.0,True,True,contradicted:A closed switch completes  | present:Current flows through the 
+c14,irrelevant,0,0,0,1,1,0.046,True,False,contradicted:A closed switch completes  | missing:Current flows through the 
+c15,vague,1,0,0,2,0,0.0,False,False,missing:A closed switch completes  | missing:Current flows through the 

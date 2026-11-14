@@ -1,0 +1,6 @@
+{
+  "chosen": "avg3 current (ft+sb+nl)",
+  "base": "avg3 current (ft+sb+nl)",
+  "rule": "mean gain >= 0.01, positive on every dev set, paired bootstrap CI above 0",
+  "note": "dev scores are optimistic: epochs were picked on dev"
+}

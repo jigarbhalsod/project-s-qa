@@ -1,0 +1,78 @@
+{
+  "files": [
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::reports_v2/A_negation_paraphrase_v2.csv",
+      "destination": "reports_v2/A_negation_paraphrase_v2.csv",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/reports_v2/A_negation_paraphrase_v2.csv",
+      "bytes": 3657,
+      "sha256": "a4b7f45a12f1a4de8c256ee2634de2fc10f06c2b664ff74eb500b2d730e5a5ab",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/ft_distilroberta_v1/config.json",
+      "destination": "interim/ft_distilroberta_v1/config.json",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/ft_distilroberta_v1/config.json",
+      "bytes": 919,
+      "sha256": "8c906f8eb778d92ec953d68975285af55c12092bed2c7151f6b42034e3919416",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/ft_distilroberta_v1/model.safetensors",
+      "destination": "interim/ft_distilroberta_v1/model.safetensors",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/ft_distilroberta_v1/model.safetensors",
+      "bytes": 328501508,
+      "sha256": "671e70acf931c6dedd28ebff73baccfa3acf3b07dba13cb3eb15fc39f04761fd",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/ft_distilroberta_v1/tokenizer_config.json",
+      "destination": "interim/ft_distilroberta_v1/tokenizer_config.json",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/ft_distilroberta_v1/tokenizer_config.json",
+      "bytes": 388,
+      "sha256": "aa6a8a3f069d2d98c09444ee3f9671d64c29ce647473dccd78169b10c490d359",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/ft_distilroberta_v1/tokenizer.json",
+      "destination": "interim/ft_distilroberta_v1/tokenizer.json",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/ft_distilroberta_v1/tokenizer.json",
+      "bytes": 3558895,
+      "sha256": "ef73668535466d56fd3571306556bcbf3c3d16fd93cdf5e4d38970290c89165b",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/combiner_v1.joblib",
+      "destination": "interim/combiner_v1.joblib",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/combiner_v1.joblib",
+      "bytes": 129270,
+      "sha256": "057e3decd03aca99c804d4408caa6a5832b44f0dc18de67cfd6061e5c966e875",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\archive\\project_s_qa_phase1_v1.zip::interim/pooled_lr_v2.joblib",
+      "destination": "interim/pooled_lr_v2.joblib",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/interim/pooled_lr_v2.joblib",
+      "bytes": 63625,
+      "sha256": "216493152a1b7ae2143f0fc60ce2eed6ffc735f40676e308455225b1b55aa96f",
+      "status": "staged"
+    },
+    {
+      "source": "C:\\Users\\Jigar\\OneDrive\\Desktop\\Project 4\\block60\\cbse_demo_questions_v1.csv",
+      "destination": "processed/cbse_demo_questions_v1.csv",
+      "drive_destination": "/content/drive/MyDrive/project_s_qa/processed/cbse_demo_questions_v1.csv",
+      "bytes": 2888,
+      "sha256": "78852eb405819de017fa99a3839cc47912ed1bd40acd0bd0a3966be4b6987e3b",
+      "status": "staged"
+    }
+  ],
+  "csv_validation": {
+    "negation_csv_rows": 36,
+    "negation_kinds": {
+      "negation": 12,
+      "paraphrase": 12,
+      "spelling": 12
+    },
+    "cbse_csv_rows": 12,
+    "cbse_required_columns": "PASS"
+  }
+}

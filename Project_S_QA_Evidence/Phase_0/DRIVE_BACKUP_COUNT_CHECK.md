@@ -1,0 +1,447 @@
+# Drive Backup Count Check
+
+Read-only comparison by relative path and size. File contents were not read.
+
+## Counts
+- Folder A: 170 files
+- Folder B: 67 files
+
+## Files only in A
+- `Project_S_QA_Drive_Upload/UPLOAD_MANIFEST_SHA256.txt` (968 bytes)
+- `Project_S_QA_Drive_Upload/interim/combiner_v1.joblib` (129270 bytes)
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/config.json` (919 bytes)
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/model.safetensors` (328501508 bytes)
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/tokenizer.json` (3558895 bytes)
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/tokenizer_config.json` (388 bytes)
+- `Project_S_QA_Drive_Upload/interim/pooled_lr_v2.joblib` (63625 bytes)
+- `Project_S_QA_Drive_Upload/processed/cbse_demo_questions_v1.csv` (2888 bytes)
+- `Project_S_QA_Drive_Upload/reports_v2/A_negation_paraphrase_v2.csv` (3657 bytes)
+- `conflict_backup_20261105_202222/interim/combiner_v1.joblib` (129270 bytes)
+- `conflict_backup_20261105_202222/interim/pooled_lr_v2.joblib` (63625 bytes)
+- `conflict_backup_20261105_202222/reports_v2/A_negation_paraphrase_v2.csv` (3658 bytes)
+- `demo/A_predict.py` (7626 bytes)
+- `demo/demo_outputs.json` (1672 bytes)
+- `demo/demo_outputs_PREVIOUS.json` (1671 bytes)
+- `demo/example_inputs.json` (3940 bytes)
+- `interim/ft_roberta_base_v2/config.json` (920 bytes)
+- `interim/ft_roberta_base_v2/tokenizer.json` (3558895 bytes)
+- `interim/ft_roberta_base_v2/tokenizer_config.json` (388 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_dev_ua_n250.parquet` (8152 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_dev_uq_n250.parquet` (8136 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_test_ua_n100.parquet` (4809 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_test_uq_n100.parquet` (4790 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_ua_n250.parquet` (8194 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_uq_n250.parquet` (8016 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ua_n100.parquet` (4814 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ud_n100.parquet` (4841 bytes)
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_uq_n100.parquet` (4799 bytes)
+- `interim/minilm_emb.npy` (23341184 bytes)
+- `interim/minilm_texts.json` (980018 bytes)
+- `interim/nli_features_v1.parquet` (739730 bytes)
+- `interim/rb_probs_v2.parquet` (72707 bytes)
+- `interim/stack_features_v1.parquet` (1644342 bytes)
+- `notebooks/Jigar_Q&A_Branch_Baseline_COPY_UPDATED.ipynb` (2471126 bytes)
+- `processed/cbse_question_bank_template.csv` (155 bytes)
+- `processed/manifest_v1.json` (6923 bytes)
+- `processed/question_bank.csv` (124536 bytes)
+- `processed/question_bank_v1.csv` (128553 bytes)
+- `processed/rubrics.json` (394665 bytes)
+- `processed/rubrics_v1.json` (381325 bytes)
+- `processed/splits_v1.csv` (1247319 bytes)
+- `processed/sra_unified_labeled.parquet` (718960 bytes)
+- `processed/sra_unified_splits_v1.parquet` (1173152 bytes)
+- `project_s_qa_v2_package.zip` (423133 bytes)
+- `project_s_qa_v2_package/A_v2_manifest.json` (5063 bytes)
+- `project_s_qa_v2_package/RESULTS_SUMMARY_v2.md` (1823 bytes)
+- `project_s_qa_v2_package/demo/A_predict.py` (7626 bytes)
+- `project_s_qa_v2_package/demo/demo_outputs.json` (1672 bytes)
+- `project_s_qa_v2_package/demo/example_inputs.json` (3940 bytes)
+- `project_s_qa_v2_package/figures_v2/fig1_paired_differences.png` (82861 bytes)
+- `project_s_qa_v2_package/figures_v2/fig2_seen_vs_unseen.png` (44405 bytes)
+- `project_s_qa_v2_package/figures_v2/fig3_risk_coverage.png` (98606 bytes)
+- `project_s_qa_v2_package/figures_v2/fig4_reliability.png` (77405 bytes)
+- `project_s_qa_v2_package/reports_v2/A_abstain_policy_v2.json` (784 bytes)
+- `project_s_qa_v2_package/reports_v2/A_bootstrap_ci_v2.csv` (4987 bytes)
+- `project_s_qa_v2_package/reports_v2/A_demo_cases_summary_v2.csv` (1820 bytes)
+- `project_s_qa_v2_package/reports_v2/A_demo_parity_v2.csv` (1006 bytes)
+- `project_s_qa_v2_package/reports_v2/A_demo_parity_v2.json` (113 bytes)
+- `project_s_qa_v2_package/reports_v2/A_demo_reference_outputs_v2.json` (16474 bytes)
+- `project_s_qa_v2_package/reports_v2/A_deployed_metrics_ci_v2.csv` (627 bytes)
+- `project_s_qa_v2_package/reports_v2/A_deployed_scorer_v2.json` (222 bytes)
+- `project_s_qa_v2_package/reports_v2/A_final_tables_v2.md` (4675 bytes)
+- `project_s_qa_v2_package/reports_v2/A_predict.py` (7626 bytes)
+- `project_s_qa_v2_package/reports_v2/A_predict_contract_v2.json` (1217 bytes)
+- `project_s_qa_v2_package/reports_v2/A_seed_summary_v2.json` (154 bytes)
+- `project_s_qa_v2_package/reports_v2/A_stats.py` (1215 bytes)
+- `project_s_qa_v2_package/reports_v2/A_table_dev_ci_v2.csv` (268 bytes)
+- `project_s_qa_v2_package/reports_v2/A_table_paired_v2.csv` (1916 bytes)
+- `project_s_qa_v2_package/reports_v2/A_table_risk_coverage_v2.csv` (311 bytes)
+- `project_s_qa_v2_package/reports_v2/A_table_test_v2.csv` (667 bytes)
+- `project_s_qa_v2_package/reports_v2/A_table_v1_vs_deployed_v2.csv` (360 bytes)
+- `project_s_qa_v2_package/reports_v2/A_test_access_log_v2.json` (393 bytes)
+- `project_s_qa_v2_package/reports_v2/A_test_results_v2.csv` (2287 bytes)
+- `project_s_qa_v2_package/reports_v2/A_test_scored_v2.parquet` (195541 bytes)
+- `raw/sra_unified_raw.parquet` (691143 bytes)
+- `reports/RESULTS_SUMMARY_v1.md` (9566 bytes)
+- `reports/abstain_config_v1.json` (369 bytes)
+- `reports/abstain_test_v1.csv` (746 bytes)
+- `reports/baseline_predictions_v1.parquet` (144101 bytes)
+- `reports/baseline_results_v1.csv` (8775 bytes)
+- `reports/freeze_record_v1.json` (933 bytes)
+- `reports/ft_probs_v1.parquet` (321131 bytes)
+- `reports/llm_predictions_v1.parquet` (38690 bytes)
+- `reports/needs_review_nd_v2_report.csv` (164 bytes)
+- `reports/per_question_beetle_dev_uq_v1.csv` (237 bytes)
+- `reports/per_question_scientsbank_dev_uq_v1.csv` (693 bytes)
+- `reports/per_question_test_v1.csv` (59851 bytes)
+- `reports/phase3a_results_v1.csv` (11351 bytes)
+- `reports/phase3a_same_answers_comparison_v1.csv` (5319 bytes)
+- `reports/phase3b_combiner_comparison_v1.csv` (2870 bytes)
+- `reports/scored_dev_v1.parquet` (77365 bytes)
+- `reports/scored_dev_v2.parquet` (81425 bytes)
+- `reports/scored_test_v1.parquet` (94316 bytes)
+- `reports/scored_test_v2.parquet` (97401 bytes)
+- `reports/split_report_v1.json` (1485 bytes)
+- `reports/test_access_log_v1.json` (3884 bytes)
+- `reports/test_ci_v1.csv` (2235 bytes)
+- `reports/test_llm_comparison_v1.csv` (1797 bytes)
+- `reports/test_results_v1.csv` (7802 bytes)
+- `reports_v2/A_abstain_policy_v2.json` (784 bytes)
+- `reports_v2/A_block56_withdrawn_v2.json` (402 bytes)
+- `reports_v2/A_bootstrap_ci_v2.csv` (4987 bytes)
+- `reports_v2/A_calibration_dev_v2.csv` (924 bytes)
+- `reports_v2/A_calibration_params_v2.json` (892 bytes)
+- `reports_v2/A_cluster_breakdown_v2.csv` (1397 bytes)
+- `reports_v2/A_component_check_v2.json` (1423 bytes)
+- `reports_v2/A_concept_evidence_demo_v2.csv` (2006 bytes)
+- `reports_v2/A_concepts_review_sheet_v2.csv` (13050 bytes)
+- `reports_v2/A_dataset_default_v2.json` (1006 bytes)
+- `reports_v2/A_dataset_option_dev_v2.csv` (959 bytes)
+- `reports_v2/A_demo_cases_summary_v2.csv` (1820 bytes)
+- `reports_v2/A_demo_five_cases_v2.csv` (437 bytes)
+- `reports_v2/A_demo_parity_v2.csv` (1006 bytes)
+- `reports_v2/A_demo_parity_v2.json` (113 bytes)
+- `reports_v2/A_deployed_dev_probs_v2.parquet` (131382 bytes)
+- `reports_v2/A_deployed_metrics_ci_v2.csv` (627 bytes)
+- `reports_v2/A_deployed_scorer_v2.json` (222 bytes)
+- `reports_v2/A_error_analysis_dev_v2.csv` (219 bytes)
+- `reports_v2/A_error_hard_questions_dev_v2.csv` (1507 bytes)
+- `reports_v2/A_errors_sample_dev_v2.csv` (6925 bytes)
+- `reports_v2/A_final_tables_v2.md` (4675 bytes)
+- `reports_v2/A_freeze_resolution_v2.json` (462 bytes)
+- `reports_v2/A_handtests_v2.csv` (548 bytes)
+- `reports_v2/A_learned_deferral_cv_v2.csv` (159 bytes)
+- `reports_v2/A_learned_deferral_verdict_v2.json` (593 bytes)
+- `reports_v2/A_ml_only_audit_v2.json` (2273 bytes)
+- `reports_v2/A_model_comparison_dev_v2.csv` (9136 bytes)
+- `reports_v2/A_parity_v2.csv` (2282 bytes)
+- `reports_v2/A_predict_contract_v2.json` (1217 bytes)
+- `reports_v2/A_question_clusters_v2.csv` (2675 bytes)
+- `reports_v2/A_question_descriptors_v2.csv` (64634 bytes)
+- `reports_v2/A_risk_coverage_v2.csv` (532 bytes)
+- `reports_v2/A_rubrics_v2.json` (428317 bytes)
+- `reports_v2/A_run_manifest_v2.json` (3170 bytes)
+- `reports_v2/A_seed_summary_v2.json` (154 bytes)
+- `reports_v2/A_stats.py` (1215 bytes)
+- `reports_v2/A_submission_manifest_v2.json` (6080 bytes)
+- `reports_v2/A_table_dev_ci_v2.csv` (268 bytes)
+- `reports_v2/A_table_paired_v2.csv` (1916 bytes)
+- `reports_v2/A_table_risk_coverage_v2.csv` (311 bytes)
+- `reports_v2/A_table_test_v2.csv` (667 bytes)
+- `reports_v2/A_table_v1_vs_deployed_v2.csv` (360 bytes)
+- `reports_v2/A_test_access_log_v2.json` (393 bytes)
+- `reports_v2/A_test_results_v2.csv` (2287 bytes)
+- `reports_v2/A_test_scored_v2.parquet` (195541 bytes)
+- `reports_v2/A_v1_rule_supersession_v2.json` (348 bytes)
+- `reports_v2/A_v2_manifest.json` (5063 bytes)
+- `reports_v2/RESULTS_SUMMARY_v2.md` (1823 bytes)
+- `reports_v2/__pycache__/A_predict.cpython-313.pyc` (14877 bytes)
+- `reports_v2/__pycache__/A_stats.cpython-313.pyc` (3471 bytes)
+- `reports_v2/ensemble_weights_dev_v2.csv` (1510 bytes)
+- `reports_v2/figures_v2/fig1_paired_differences.png` (82861 bytes)
+- `reports_v2/figures_v2/fig2_seen_vs_unseen.png` (44405 bytes)
+- `reports_v2/figures_v2/fig3_risk_coverage.png` (98606 bytes)
+- `reports_v2/figures_v2/fig4_reliability.png` (77405 bytes)
+- `reports_v2/final_scorer_choice_v2.json` (231 bytes)
+- `reports_v2/model_selection_bootstrap_v2.csv` (359 bytes)
+- `reports_v2/model_selection_dev_v2.csv` (2379 bytes)
+- `reports_v2/risk_coverage_ensemble_dev_v2.csv` (599 bytes)
+
+## Files only in B
+- `A_submission_v2/demo/A_predict.py` (7626 bytes)
+- `A_submission_v2/demo/demo_outputs.json` (1672 bytes)
+- `A_submission_v2/demo/demo_outputs_PREVIOUS.json` (1671 bytes)
+- `A_submission_v2/demo/example_inputs.json` (3940 bytes)
+- `A_submission_v2/reports_v2/A_abstain_policy_v2.json` (784 bytes)
+- `A_submission_v2/reports_v2/A_block56_withdrawn_v2.json` (402 bytes)
+- `A_submission_v2/reports_v2/A_bootstrap_ci_v2.csv` (4987 bytes)
+- `A_submission_v2/reports_v2/A_calibration_dev_v2.csv` (924 bytes)
+- `A_submission_v2/reports_v2/A_calibration_params_v2.json` (892 bytes)
+- `A_submission_v2/reports_v2/A_cluster_breakdown_v2.csv` (1397 bytes)
+- `A_submission_v2/reports_v2/A_component_check_v2.json` (1423 bytes)
+- `A_submission_v2/reports_v2/A_concept_evidence_demo_v2.csv` (2006 bytes)
+- `A_submission_v2/reports_v2/A_concepts_review_sheet_v2.csv` (13050 bytes)
+- `A_submission_v2/reports_v2/A_dataset_default_v2.json` (1006 bytes)
+- `A_submission_v2/reports_v2/A_dataset_option_dev_v2.csv` (959 bytes)
+- `A_submission_v2/reports_v2/A_demo_cases_summary_v2.csv` (1820 bytes)
+- `A_submission_v2/reports_v2/A_demo_five_cases_v2.csv` (437 bytes)
+- `A_submission_v2/reports_v2/A_demo_parity_v2.csv` (1006 bytes)
+- `A_submission_v2/reports_v2/A_demo_parity_v2.json` (113 bytes)
+- `A_submission_v2/reports_v2/A_demo_reference_outputs_v2.json` (16474 bytes)
+- `A_submission_v2/reports_v2/A_deployed_dev_probs_v2.parquet` (131382 bytes)
+- `A_submission_v2/reports_v2/A_deployed_metrics_ci_v2.csv` (627 bytes)
+- `A_submission_v2/reports_v2/A_deployed_scorer_v2.json` (222 bytes)
+- `A_submission_v2/reports_v2/A_error_analysis_dev_v2.csv` (219 bytes)
+- `A_submission_v2/reports_v2/A_error_hard_questions_dev_v2.csv` (1507 bytes)
+- `A_submission_v2/reports_v2/A_errors_sample_dev_v2.csv` (6925 bytes)
+- `A_submission_v2/reports_v2/A_final_tables_v2.md` (4675 bytes)
+- `A_submission_v2/reports_v2/A_freeze_resolution_v2.json` (462 bytes)
+- `A_submission_v2/reports_v2/A_handtests_v2.csv` (548 bytes)
+- `A_submission_v2/reports_v2/A_learned_deferral_cv_v2.csv` (159 bytes)
+- `A_submission_v2/reports_v2/A_learned_deferral_verdict_v2.json` (593 bytes)
+- `A_submission_v2/reports_v2/A_ml_only_audit_v2.json` (2273 bytes)
+- `A_submission_v2/reports_v2/A_model_comparison_dev_v2.csv` (9136 bytes)
+- `A_submission_v2/reports_v2/A_negation_paraphrase_v2.csv` (3657 bytes)
+- `A_submission_v2/reports_v2/A_parity_v2.csv` (2282 bytes)
+- `A_submission_v2/reports_v2/A_predict.py` (7626 bytes)
+- `A_submission_v2/reports_v2/A_predict_contract_v2.json` (1217 bytes)
+- `A_submission_v2/reports_v2/A_question_clusters_v2.csv` (2675 bytes)
+- `A_submission_v2/reports_v2/A_question_descriptors_v2.csv` (64634 bytes)
+- `A_submission_v2/reports_v2/A_risk_coverage_v2.csv` (532 bytes)
+- `A_submission_v2/reports_v2/A_rubrics_v2.json` (428317 bytes)
+- `A_submission_v2/reports_v2/A_run_manifest_v2.json` (3170 bytes)
+- `A_submission_v2/reports_v2/A_seed_summary_v2.json` (154 bytes)
+- `A_submission_v2/reports_v2/A_stats.py` (1215 bytes)
+- `A_submission_v2/reports_v2/A_submission_manifest_v2.json` (6080 bytes)
+- `A_submission_v2/reports_v2/A_table_dev_ci_v2.csv` (268 bytes)
+- `A_submission_v2/reports_v2/A_table_paired_v2.csv` (1916 bytes)
+- `A_submission_v2/reports_v2/A_table_risk_coverage_v2.csv` (311 bytes)
+- `A_submission_v2/reports_v2/A_table_test_v2.csv` (667 bytes)
+- `A_submission_v2/reports_v2/A_table_v1_vs_deployed_v2.csv` (360 bytes)
+- `A_submission_v2/reports_v2/A_test_access_log_v2.json` (393 bytes)
+- `A_submission_v2/reports_v2/A_test_results_v2.csv` (2287 bytes)
+- `A_submission_v2/reports_v2/A_test_scored_v2.parquet` (195541 bytes)
+- `A_submission_v2/reports_v2/A_v1_rule_supersession_v2.json` (348 bytes)
+- `A_submission_v2/reports_v2/A_v2_manifest.json` (5063 bytes)
+- `reports_v2/A_runtime_stage_manifest_v2.json` (3911 bytes)
+
+## Different sizes
+- None
+
+## Assessment
+Differences are not only temp/cache-like. Path and size alone cannot identify file purpose.
+
+- `Project_S_QA_Drive_Upload/UPLOAD_MANIFEST_SHA256.txt`
+- `Project_S_QA_Drive_Upload/interim/combiner_v1.joblib`
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/config.json`
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/model.safetensors`
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/tokenizer.json`
+- `Project_S_QA_Drive_Upload/interim/ft_distilroberta_v1/tokenizer_config.json`
+- `Project_S_QA_Drive_Upload/interim/pooled_lr_v2.joblib`
+- `Project_S_QA_Drive_Upload/processed/cbse_demo_questions_v1.csv`
+- `Project_S_QA_Drive_Upload/reports_v2/A_negation_paraphrase_v2.csv`
+- `conflict_backup_20261105_202222/interim/combiner_v1.joblib`
+- `conflict_backup_20261105_202222/interim/pooled_lr_v2.joblib`
+- `conflict_backup_20261105_202222/reports_v2/A_negation_paraphrase_v2.csv`
+- `demo/A_predict.py`
+- `demo/demo_outputs.json`
+- `demo/demo_outputs_PREVIOUS.json`
+- `demo/example_inputs.json`
+- `interim/ft_roberta_base_v2/config.json`
+- `interim/ft_roberta_base_v2/tokenizer.json`
+- `interim/ft_roberta_base_v2/tokenizer_config.json`
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_dev_ua_n250.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_dev_uq_n250.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_test_ua_n100.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_beetle_test_uq_n100.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_ua_n250.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_dev_uq_n250.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ua_n100.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_ud_n100.parquet`
+- `interim/llm_Qwen2.5-3B-Instruct_scientsbank_test_uq_n100.parquet`
+- `interim/minilm_emb.npy`
+- `interim/minilm_texts.json`
+- `interim/nli_features_v1.parquet`
+- `interim/rb_probs_v2.parquet`
+- `interim/stack_features_v1.parquet`
+- `notebooks/Jigar_Q&A_Branch_Baseline_COPY_UPDATED.ipynb`
+- `processed/manifest_v1.json`
+- `processed/question_bank.csv`
+- `processed/question_bank_v1.csv`
+- `processed/rubrics.json`
+- `processed/rubrics_v1.json`
+- `processed/splits_v1.csv`
+- `processed/sra_unified_labeled.parquet`
+- `processed/sra_unified_splits_v1.parquet`
+- `project_s_qa_v2_package.zip`
+- `project_s_qa_v2_package/A_v2_manifest.json`
+- `project_s_qa_v2_package/RESULTS_SUMMARY_v2.md`
+- `project_s_qa_v2_package/demo/A_predict.py`
+- `project_s_qa_v2_package/demo/demo_outputs.json`
+- `project_s_qa_v2_package/demo/example_inputs.json`
+- `project_s_qa_v2_package/figures_v2/fig1_paired_differences.png`
+- `project_s_qa_v2_package/figures_v2/fig2_seen_vs_unseen.png`
+- `project_s_qa_v2_package/figures_v2/fig3_risk_coverage.png`
+- `project_s_qa_v2_package/figures_v2/fig4_reliability.png`
+- `project_s_qa_v2_package/reports_v2/A_abstain_policy_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_bootstrap_ci_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_demo_cases_summary_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_demo_parity_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_demo_parity_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_demo_reference_outputs_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_deployed_metrics_ci_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_deployed_scorer_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_final_tables_v2.md`
+- `project_s_qa_v2_package/reports_v2/A_predict.py`
+- `project_s_qa_v2_package/reports_v2/A_predict_contract_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_seed_summary_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_stats.py`
+- `project_s_qa_v2_package/reports_v2/A_table_dev_ci_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_table_paired_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_table_risk_coverage_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_table_test_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_table_v1_vs_deployed_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_test_access_log_v2.json`
+- `project_s_qa_v2_package/reports_v2/A_test_results_v2.csv`
+- `project_s_qa_v2_package/reports_v2/A_test_scored_v2.parquet`
+- `raw/sra_unified_raw.parquet`
+- `reports/RESULTS_SUMMARY_v1.md`
+- `reports/abstain_config_v1.json`
+- `reports/abstain_test_v1.csv`
+- `reports/baseline_predictions_v1.parquet`
+- `reports/baseline_results_v1.csv`
+- `reports/freeze_record_v1.json`
+- `reports/ft_probs_v1.parquet`
+- `reports/llm_predictions_v1.parquet`
+- `reports/needs_review_nd_v2_report.csv`
+- `reports/per_question_beetle_dev_uq_v1.csv`
+- `reports/per_question_scientsbank_dev_uq_v1.csv`
+- `reports/per_question_test_v1.csv`
+- `reports/phase3a_results_v1.csv`
+- `reports/phase3a_same_answers_comparison_v1.csv`
+- `reports/phase3b_combiner_comparison_v1.csv`
+- `reports/scored_dev_v1.parquet`
+- `reports/scored_dev_v2.parquet`
+- `reports/scored_test_v1.parquet`
+- `reports/scored_test_v2.parquet`
+- `reports/split_report_v1.json`
+- `reports/test_access_log_v1.json`
+- `reports/test_ci_v1.csv`
+- `reports/test_llm_comparison_v1.csv`
+- `reports/test_results_v1.csv`
+- `reports_v2/A_abstain_policy_v2.json`
+- `reports_v2/A_block56_withdrawn_v2.json`
+- `reports_v2/A_bootstrap_ci_v2.csv`
+- `reports_v2/A_calibration_dev_v2.csv`
+- `reports_v2/A_calibration_params_v2.json`
+- `reports_v2/A_cluster_breakdown_v2.csv`
+- `reports_v2/A_component_check_v2.json`
+- `reports_v2/A_concept_evidence_demo_v2.csv`
+- `reports_v2/A_concepts_review_sheet_v2.csv`
+- `reports_v2/A_dataset_default_v2.json`
+- `reports_v2/A_dataset_option_dev_v2.csv`
+- `reports_v2/A_demo_cases_summary_v2.csv`
+- `reports_v2/A_demo_five_cases_v2.csv`
+- `reports_v2/A_demo_parity_v2.csv`
+- `reports_v2/A_demo_parity_v2.json`
+- `reports_v2/A_deployed_dev_probs_v2.parquet`
+- `reports_v2/A_deployed_metrics_ci_v2.csv`
+- `reports_v2/A_deployed_scorer_v2.json`
+- `reports_v2/A_error_analysis_dev_v2.csv`
+- `reports_v2/A_error_hard_questions_dev_v2.csv`
+- `reports_v2/A_errors_sample_dev_v2.csv`
+- `reports_v2/A_final_tables_v2.md`
+- `reports_v2/A_freeze_resolution_v2.json`
+- `reports_v2/A_handtests_v2.csv`
+- `reports_v2/A_learned_deferral_cv_v2.csv`
+- `reports_v2/A_learned_deferral_verdict_v2.json`
+- `reports_v2/A_ml_only_audit_v2.json`
+- `reports_v2/A_model_comparison_dev_v2.csv`
+- `reports_v2/A_parity_v2.csv`
+- `reports_v2/A_predict_contract_v2.json`
+- `reports_v2/A_question_clusters_v2.csv`
+- `reports_v2/A_question_descriptors_v2.csv`
+- `reports_v2/A_risk_coverage_v2.csv`
+- `reports_v2/A_rubrics_v2.json`
+- `reports_v2/A_run_manifest_v2.json`
+- `reports_v2/A_seed_summary_v2.json`
+- `reports_v2/A_stats.py`
+- `reports_v2/A_submission_manifest_v2.json`
+- `reports_v2/A_table_dev_ci_v2.csv`
+- `reports_v2/A_table_paired_v2.csv`
+- `reports_v2/A_table_risk_coverage_v2.csv`
+- `reports_v2/A_table_test_v2.csv`
+- `reports_v2/A_table_v1_vs_deployed_v2.csv`
+- `reports_v2/A_test_access_log_v2.json`
+- `reports_v2/A_test_results_v2.csv`
+- `reports_v2/A_test_scored_v2.parquet`
+- `reports_v2/A_v1_rule_supersession_v2.json`
+- `reports_v2/A_v2_manifest.json`
+- `reports_v2/RESULTS_SUMMARY_v2.md`
+- `reports_v2/ensemble_weights_dev_v2.csv`
+- `reports_v2/figures_v2/fig1_paired_differences.png`
+- `reports_v2/figures_v2/fig2_seen_vs_unseen.png`
+- `reports_v2/figures_v2/fig3_risk_coverage.png`
+- `reports_v2/figures_v2/fig4_reliability.png`
+- `reports_v2/final_scorer_choice_v2.json`
+- `reports_v2/model_selection_bootstrap_v2.csv`
+- `reports_v2/model_selection_dev_v2.csv`
+- `reports_v2/risk_coverage_ensemble_dev_v2.csv`
+- `A_submission_v2/demo/A_predict.py`
+- `A_submission_v2/demo/demo_outputs.json`
+- `A_submission_v2/demo/demo_outputs_PREVIOUS.json`
+- `A_submission_v2/demo/example_inputs.json`
+- `A_submission_v2/reports_v2/A_abstain_policy_v2.json`
+- `A_submission_v2/reports_v2/A_block56_withdrawn_v2.json`
+- `A_submission_v2/reports_v2/A_bootstrap_ci_v2.csv`
+- `A_submission_v2/reports_v2/A_calibration_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_calibration_params_v2.json`
+- `A_submission_v2/reports_v2/A_cluster_breakdown_v2.csv`
+- `A_submission_v2/reports_v2/A_component_check_v2.json`
+- `A_submission_v2/reports_v2/A_concept_evidence_demo_v2.csv`
+- `A_submission_v2/reports_v2/A_concepts_review_sheet_v2.csv`
+- `A_submission_v2/reports_v2/A_dataset_default_v2.json`
+- `A_submission_v2/reports_v2/A_dataset_option_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_demo_cases_summary_v2.csv`
+- `A_submission_v2/reports_v2/A_demo_five_cases_v2.csv`
+- `A_submission_v2/reports_v2/A_demo_parity_v2.csv`
+- `A_submission_v2/reports_v2/A_demo_parity_v2.json`
+- `A_submission_v2/reports_v2/A_demo_reference_outputs_v2.json`
+- `A_submission_v2/reports_v2/A_deployed_dev_probs_v2.parquet`
+- `A_submission_v2/reports_v2/A_deployed_metrics_ci_v2.csv`
+- `A_submission_v2/reports_v2/A_deployed_scorer_v2.json`
+- `A_submission_v2/reports_v2/A_error_analysis_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_error_hard_questions_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_errors_sample_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_final_tables_v2.md`
+- `A_submission_v2/reports_v2/A_freeze_resolution_v2.json`
+- `A_submission_v2/reports_v2/A_handtests_v2.csv`
+- `A_submission_v2/reports_v2/A_learned_deferral_cv_v2.csv`
+- `A_submission_v2/reports_v2/A_learned_deferral_verdict_v2.json`
+- `A_submission_v2/reports_v2/A_ml_only_audit_v2.json`
+- `A_submission_v2/reports_v2/A_model_comparison_dev_v2.csv`
+- `A_submission_v2/reports_v2/A_negation_paraphrase_v2.csv`
+- `A_submission_v2/reports_v2/A_parity_v2.csv`
+- `A_submission_v2/reports_v2/A_predict.py`
+- `A_submission_v2/reports_v2/A_predict_contract_v2.json`
+- `A_submission_v2/reports_v2/A_question_clusters_v2.csv`
+- `A_submission_v2/reports_v2/A_question_descriptors_v2.csv`
+- `A_submission_v2/reports_v2/A_risk_coverage_v2.csv`
+- `A_submission_v2/reports_v2/A_rubrics_v2.json`
+- `A_submission_v2/reports_v2/A_run_manifest_v2.json`
+- `A_submission_v2/reports_v2/A_seed_summary_v2.json`
+- `A_submission_v2/reports_v2/A_stats.py`
+- `A_submission_v2/reports_v2/A_submission_manifest_v2.json`
+- `A_submission_v2/reports_v2/A_table_dev_ci_v2.csv`
+- `A_submission_v2/reports_v2/A_table_paired_v2.csv`
+- `A_submission_v2/reports_v2/A_table_risk_coverage_v2.csv`
+- `A_submission_v2/reports_v2/A_table_test_v2.csv`
+- `A_submission_v2/reports_v2/A_table_v1_vs_deployed_v2.csv`
+- `A_submission_v2/reports_v2/A_test_access_log_v2.json`
+- `A_submission_v2/reports_v2/A_test_results_v2.csv`
+- `A_submission_v2/reports_v2/A_test_scored_v2.parquet`
+- `A_submission_v2/reports_v2/A_v1_rule_supersession_v2.json`
+- `A_submission_v2/reports_v2/A_v2_manifest.json`
+- `reports_v2/A_runtime_stage_manifest_v2.json`
+
+No file content, hashes, or test-artifact contents were read.

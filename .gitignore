@@ -1,1 +1,23 @@
-*.zip 
+# weights (over GitHub's 100 MB limit)
+*.safetensors
+*.npy
+
+# test data
+*test_scored*
+scored_test_*
+A_test_*
+A_table_test_*
+*test_results*
+*test_access_log*
+*test_ci_*
+*_test_ua_*
+*_test_uq_*
+*_test_ud_*
+per_question_test*
+abstain_test*
+
+# junk
+__pycache__/
+*.pyc
+Jigar_QA_PHASE3_SETUP_SCRATCH_files/*.zip
+*test_llm_comparison*

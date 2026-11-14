@@ -1,0 +1,2 @@
+# Instructions: one row per CSV-dropdown score; expected_label may be "not stated".
+case_id,question,typed_answer,expected_label,actual_label,score_out_of_2,confidence,review_flag,notes,screenshot_file

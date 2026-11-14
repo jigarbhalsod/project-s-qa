@@ -1,0 +1,10 @@
+Checked on: 7 Nov 2026
+A_predict.py: 30 Oct
+A_predict_contract_v2.json: 30 Oct
+A_demo_reference_outputs_v2.json: 30 Oct
+A_deployed_scorer_v2.json: 30 Oct
+A_deployed_dev_probs_v2.parquet: 30 Oct
+Policy file: not identified
+Jigar_Q&A_Branch_Baseline_COPY_UPDATED.ipynb: not found in Drive listing
+Note: A_demo_five_cases_v2.csv, A_demo_parity_v2.csv, A_demo_parity_v2.json, A_submission_manifest_v2.json and A_negation_paraphrase_v2.csv show 6 Nov.
+Both local backup (6 Nov 19:57) and Drive download (7 Nov) post-date the 30 Oct files.

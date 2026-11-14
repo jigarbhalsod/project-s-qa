@@ -1,0 +1,20 @@
+# E4 DeBERTa experiment specification
+
+**Drafted; execution requires separate approval and successful Colab Blocks
+59–62.** This is the single Phase 8 source for planned hyperparameters.
+
+| Setting | Draft specification | Status |
+|---|---|---|
+| Checkpoint order | `MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli`; fallback `cross-encoder/nli-deberta-v3-base` | Unverified availability |
+| Seed | 20261106; the inspected plan file also specifies 20261106, not 42 | Drafted |
+| Learning rate | Not explicitly specified in the inspected plan or script | BLOCKED; resolve before execution |
+| Epochs | Not explicitly specified in the inspected plan or script | BLOCKED; resolve before execution |
+| Batch | Per-device train 4 x accumulation 4 (effective 16); eval 8 | Drafted |
+| Max length | 256; report observed truncation rate | Drafted; rate Unverified |
+| Precision / runtime | fp16; intended Colab T4 | Drafted; T4 memory safety Unverified |
+| Inputs / labels | `[question][reference][answer]`; five labels collapsed to three | Drafted |
+| Selection | Existing dev_uq; not independent confirmation | Exploratory |
+| Test | Never read or used for selection | Drafted |
+
+**Drafted:** Paths and run checklist remain in `PHASE_8_ACCURACY_MAX_PLAN.md`.
+**BLOCKED:** Do not run until learning rate and epoch count are explicitly set.

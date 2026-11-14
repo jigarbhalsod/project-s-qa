@@ -1,0 +1,6 @@
+label5,correct(2),incorrect(0),partial(1),n
+contradictory,0.15,0.752,0.098,307
+correct,0.585,0.348,0.067,866
+irrelevant,0.046,0.823,0.131,283
+non_domain,0.0,1.0,0.0,69
+partially_correct_incomplete,0.227,0.458,0.315,524

@@ -1,0 +1,1 @@
+run_no,condition (slow/fast/noisy),intended_sentence,transcript,transcript_matches (Y/N),asr_changed_meaning (Y/N),label,confidence,review_flag,notes

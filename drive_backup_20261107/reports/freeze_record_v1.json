@@ -1,0 +1,24 @@
+{
+  "frozen_at": "2026-10-19T20:38:17",
+  "hashes": {
+    "splits": "847ffbb67dff4974b1f8e18d00d370808dad04609db8fbadddb0608dc47a7c9c",
+    "rubrics": "6fcfe7e286e40a55884c76bf3a16d246c3aa022d9b6b072976cc17f4fd81abc8",
+    "question_bank": "2e616308feb3784edbaca40b09723d1b4560f5fd642d75230749b1bef9c10eb6",
+    "abstain_config": "8949e925cfd38af428e8018c6b966c9ef081341a84875ba40d7b1cfe2bde8739"
+  },
+  "abstain_config": {
+    "version": "v1",
+    "created": "2026-10-19T20:33:21",
+    "confidence_threshold": 0.75,
+    "policy": "A: confidence only",
+    "contradiction_nli_threshold": 0.5,
+    "target_accuracy": 0.85,
+    "min_coverage": 0.3,
+    "max_review_rate": 0.5,
+    "chosen_on": "dev out-of-fold predictions only",
+    "rule": "apply unchanged to the locked test splits in Group 8; do not retune"
+  },
+  "dev_stacked_macroF1_5": 0.5959908907688396,
+  "dev_stacked_qwk_ours": 0.4635463637096834,
+  "dev_stacked_n": 2049
+}

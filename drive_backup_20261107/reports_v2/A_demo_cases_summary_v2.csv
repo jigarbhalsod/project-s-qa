@@ -1,0 +1,16 @@
+case_id,kind,answer,conf,review,reasons,match,safe,silent_failure,expected_label,pred_label
+c01,correct,The heat of the soup travels into the spoon through conduction.,0.7184,False,,True,True,False,correct,correct
+c02,partial,Because the spoon is sitting in the hot soup.,0.3721,True,low_confidence,True,True,False,partial,partial
+c03,negated,Heat does not move from the soup into the spoon.,0.451,True,low_confidence,True,True,False,incorrect,incorrect
+c04,irrelevant,Soup is usually eaten with a spoon at dinner.,0.4553,True,low_confidence,True,True,False,incorrect,incorrect
+c05,vague,It is because of the temperature thing.,0.7097,False,,True,True,False,incorrect,incorrect
+c06,correct,"To make food a plant uses light from the sun, water, and carbon dioxide from the air.",0.6781,False,,True,True,False,correct,correct
+c07,partial,Plants need sunlight.,0.5271,True,low_confidence,False,True,False,partial,correct
+c08,negated,Plants do not need sunlight to make food.,0.4649,True,low_confidence,False,True,False,incorrect,correct
+c09,irrelevant,I like to eat vegetables at lunch.,0.7458,False,,True,True,False,incorrect,incorrect
+c10,spelling,"Plants need sunlite, watter and carbon dioxide to make food.",0.7246,False,,True,True,False,correct,correct
+c11,correct,When the switch is closed the circuit is complete so electricity can go through the bulb.,0.6128,True,low_confidence,True,True,False,correct,correct
+c12,partial,The switch is closed.,0.4177,True,low_confidence,False,True,False,partial,incorrect
+c13,contradictory,The bulb lights because the switch breaks the circuit.,0.7334,False,,True,True,False,incorrect,incorrect
+c14,irrelevant,The bulb is made of glass.,0.7491,False,,True,True,False,incorrect,incorrect
+c15,vague,It works because of electricity.,0.7454,False,,False,False,True,partial,incorrect

@@ -1,0 +1,20 @@
+"""DRAFT ONLY; run after explicit approval; never reads test splits."""
+import ast,json,time,torch,numpy as np,pandas as pd; from pathlib import Path; from sklearn.metrics import f1_score; from transformers import AutoTokenizer,AutoModelForSequenceClassification,DataCollatorWithPadding,Trainer,TrainingArguments,set_seed
+ROOT=Path('/content/drive/MyDrive/project_s_qa'); NB=ROOT/'notebooks/Jigar_Q&A_Branch_Baseline_COPY.ipynb'; OUT=Path('/content/drive/MyDrive/Project_S_QA_Evidence/Phase_8_Accuracy_Max'); SPLITS=ROOT/'processed/sra_unified_splits_v1.parquet'; TRAINER=OUT/'trainer'; MODEL=OUT/'model'; DEV_OUT=OUT/'A_x1_deberta_dev_probs.csv'; NEG_OUT=OUT/'A_x1_deberta_neg_probs.csv'; RUN_OUT=OUT/'A_x1_deberta_run.json'; SEED=20261106; MAXLEN=256; CHECKPOINTS=('MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli','cross-encoder/nli-deberta-v3-base')
+try: from google.colab import drive; drive.mount('/content/drive')
+except ImportError: pass
+set_seed(SEED); assert torch.cuda.is_available(), 'Colab GPU required'; OUT.mkdir(parents=True,exist_ok=True)
+df=pd.read_parquet(SPLITS,filters=[('split','in',['train','dev_ua','dev_uq'])]); df['y']=df.label5.map(lambda x:2 if x=='correct' else 1 if x=='partially_correct_incomplete' else 0); tr=df[df.split=='train']; dev=df[df.split.isin(['dev_ua','dev_uq'])]; val=dev[dev.split=='dev_uq']
+src=next(''.join(c.get('source',[])) for c in json.load(open(NB,encoding='utf-8'))['cells'] if 'FACTS = [' in ''.join(c.get('source',[]))); facts=ast.literal_eval(src.split('FACTS = ',1)[1].split('\n\nitems',1)[0]); neg=pd.DataFrame([dict(uid=f'neg-{i+1:02d}',question=q,reference_answer=r,student_answer=n,y=0) for i,(q,r,_,n,_) in enumerate(facts)])
+ERRORS=[]
+for CKPT in CHECKPOINTS:
+ try: tok=AutoTokenizer.from_pretrained(CKPT); model=AutoModelForSequenceClassification.from_pretrained(CKPT,num_labels=3,ignore_mismatched_sizes=True); break
+ except Exception as exc: ERRORS.append(f'{CKPT}: {type(exc).__name__}: {exc}')
+else: raise RuntimeError('Both checkpoints failed: '+'; '.join(ERRORS))
+model.classifier.apply(model._init_weights); trunc_pct=100*np.mean([len(tok(f'[QUESTION] {r.question} [REFERENCE] {r.reference_answer}',str(r.student_answer),truncation=False)['input_ids'])>MAXLEN for r in pd.concat([tr,dev,neg]).itertuples()])
+class Rows(torch.utils.data.Dataset):
+ def __init__(self,d): self.d=d.reset_index(drop=True)
+ def __len__(self): return len(self.d)
+ def __getitem__(self,i): r=self.d.iloc[i]; return {**tok(f'[QUESTION] {r.question} [REFERENCE] {r.reference_answer}',str(r.student_answer),truncation=True,max_length=MAXLEN),'labels':int(r.y)}
+metric=lambda p:{'macro_f1':f1_score(p.label_ids,p.predictions.argmax(-1),average='macro')}; args=TrainingArguments(str(TRAINER),seed=SEED,data_seed=SEED,learning_rate=2e-5,num_train_epochs=3,warmup_ratio=0.10,fp16=True,per_device_train_batch_size=4,per_device_eval_batch_size=8,gradient_accumulation_steps=4,eval_strategy='epoch',save_strategy='epoch',load_best_model_at_end=True,metric_for_best_model='eval_macro_f1',greater_is_better=True,save_total_limit=1,report_to='none'); trainer=Trainer(model=model,args=args,train_dataset=Rows(tr),eval_dataset=Rows(val),data_collator=DataCollatorWithPadding(tok),compute_metrics=metric); trainer.train(); trainer.save_model(str(MODEL))
+t0=time.perf_counter(); z=trainer.predict(Rows(dev)).predictions; elapsed=(time.perf_counter()-t0)*1000; prob=torch.softmax(torch.tensor(z),dim=1).numpy(); pd.DataFrame({'uid':dev.uid,'dataset':dev.dataset,'split':dev.split,'question_id':dev.question_id,'y':dev.y,**{f'p{i}':prob[:,i] for i in range(3)}}).to_csv(DEV_OUT,index=False); zn=trainer.predict(Rows(neg)).predictions; pn=torch.softmax(torch.tensor(zn),dim=1).numpy(); pd.DataFrame({'uid':neg.uid,'y':neg.y,**{f'p{i}':pn[:,i] for i in range(3)}}).to_csv(NEG_OUT,index=False); json.dump({'seed':SEED,'checkpoint_id':CKPT,'max_length':MAXLEN,'dev_rows':len(dev),'truncation_pct_train_dev_controls':float(trunc_pct),'candidate_dev_predict_ms':elapsed,'candidate_dev_ms_per_row':elapsed/len(dev)},open(RUN_OUT,'w'),indent=2)

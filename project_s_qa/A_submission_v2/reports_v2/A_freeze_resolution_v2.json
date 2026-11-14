@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-30T09:15:12",
+  "substantive_differences": {},
+  "only_timestamp_differs": true,
+  "frozen_rule": {
+    "confidence_threshold": 0.75,
+    "policy": "A: confidence only",
+    "contradiction_nli_threshold": 0.5
+  },
+  "test_evaluations_on_record": 3,
+  "note": "abstain_config_v1.json was rewritten when Block 21 was re-run; only the 'created' field changed. Block 23 used the copy stored in freeze_record_v1.json, which is untouched."
+}

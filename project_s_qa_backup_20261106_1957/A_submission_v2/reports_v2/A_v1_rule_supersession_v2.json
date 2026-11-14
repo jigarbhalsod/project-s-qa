@@ -1,0 +1,11 @@
+{
+  "created": "2026-10-30T09:21:38",
+  "deployed_review_rule": "calibrated confidence below 0.64",
+  "fitted_on": "dev data (risk-coverage and grouped CV)",
+  "hand_set_rules_in_deployed_policy": [],
+  "v1_hand_rules_superseded": [
+    "contradiction flag",
+    "model-disagreement flag"
+  ],
+  "v1_config_file": "reports/abstain_config_v1.json"
+}

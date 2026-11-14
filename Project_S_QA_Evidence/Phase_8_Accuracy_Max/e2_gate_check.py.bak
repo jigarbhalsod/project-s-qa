@@ -1,0 +1,11 @@
+# DRAFT ONLY; reads saved dev/control probabilities and never reads test rows.
+import json,numpy as np,pandas as pd
+from pathlib import Path
+from sklearn.metrics import f1_score,recall_score,cohen_kappa_score
+ROOT=Path('/content/drive/MyDrive/project_s_qa'); OUT=Path('/content/drive/MyDrive/Project_S_QA_Evidence/Phase_8_Accuracy_Max')
+BASE=next(p for p in [ROOT/'reports_v2/A_deployed_dev_probs_v2.parquet',ROOT/'A_submission_v2/reports_v2/A_deployed_dev_probs_v2.parquet'] if p.exists()); b=pd.read_parquet(BASE); c=pd.read_csv(OUT/'A_e2_deberta_dev_probs.csv'); m=c.merge(b,on=['uid','dataset','split','question_id'],validate='one_to_one'); assert len(m)==2049 and set(m.split)<= {'dev_ua','dev_uq'} and set(m.uid)==set(b.uid)
+y=np.where(m.label5=='correct',2,np.where(m.label5=='partially_correct_incomplete',1,0)); assert np.array_equal(y,m.y.to_numpy()); pb=np.c_[m.d_p1+m.d_p3+m.d_p4,m.d_p2,m.d_p0].to_numpy(); pc=m[['p0','p1','p2']].to_numpy(); bp=pb.argmax(1); cp=pc.argmax(1); macro=lambda q:f1_score(y,q,labels=[0,1,2],average='macro',zero_division=0); gain=macro(cp)-macro(bp)
+groups=(m.dataset.astype(str)+'|'+m.question_id.astype(str)).to_numpy(); unique=np.unique(groups); rng=np.random.default_rng(20261106); boot=lambda:(lambda ix:macro(cp[ix])-macro(bp[ix]))(np.concatenate([np.flatnonzero(groups==g) for g in rng.choice(unique,len(unique),replace=True)])); ci=np.quantile([boot() for _ in range(2000)],[.025,.975])
+u=m.split.eq('dev_uq').to_numpy(); qwk_b=cohen_kappa_score(y[u],bp[u],weights='quadratic'); qwk_c=cohen_kappa_score(y[u],cp[u],weights='quadratic'); pr_b=recall_score(y,bp,labels=[1],average=None)[0]; pr_c=recall_score(y,cp,labels=[1],average=None)[0]
+n=pd.read_csv(OUT/'A_e2_deberta_neg_probs.csv'); assert len(n)==12; neg_acc=(n.y.to_numpy()==n[['p0','p1','p2']].to_numpy().argmax(1)).mean(); lat=json.load(open(OUT/'A_e2_deberta_run.json'))
+print('Macro-F1 gain/paired question bootstrap CI/gate',gain,ci,gain>=.01 and ci[0]>0); print('Unseen QWK candidate >= pooled',qwk_c,qwk_b,qwk_c>=qwk_b); print('Partial recall candidate > pooled',pr_c,pr_b,pr_c>pr_b); print('Negation exact > 3/12',int((n.y==n[['p0','p1','p2']].to_numpy().argmax(1)).sum()),'/12',neg_acc>3/12); print('Candidate dev prediction latency ms/row',lat['candidate_dev_ms_per_row'])

@@ -1,0 +1,621 @@
+population,split,n,n_questions,metric,class_label,value,method
+ALL dev,dev,2049,177,accuracy,,0.5636896046852123,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,macro_f1,,0.5270457220051079,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,weighted_f1,,0.5496174748169258,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,macro_precision,,0.5705261980365356,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,macro_recall,,0.5427165724592399,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,qwk,,0.40152952766111893,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,precision,incorrect,0.4794520547945205,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,recall,incorrect,0.7966616084977238,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,f1,incorrect,0.5986316989737742,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,support,incorrect,659,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,precision,partial,0.5149253731343284,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,recall,partial,0.2633587786259542,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,f1,partial,0.3484848484848485,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,support,partial,524,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,precision,correct,0.717201166180758,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,recall,correct,0.5681293302540416,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,f1,correct,0.634020618556701,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,support,correct,866,"A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[525, 71, 63], [255, 138, 131], [315, 59, 492]]","A_predict._to3 probability collapse; dev, optimistic"
+ALL dev,dev,2049,177,accuracy,,0.554904831625183,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,macro_f1,,0.5788917984719972,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,weighted_f1,,0.5528824615744338,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,macro_precision,,0.5628966695752825,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,macro_recall,,0.6023884478577294,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,precision,correct,0.6768149882903981,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,recall,correct,0.6674364896073903,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,f1,correct,0.672093023255814,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,support,correct,866,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,precision,contradictory,0.4318181818181818,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,recall,contradictory,0.43322475570032576,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,f1,contradictory,0.432520325203252,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,support,contradictory,307,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,precision,partially_correct_incomplete,0.463302752293578,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,recall,partially_correct_incomplete,0.38549618320610685,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,f1,partially_correct_incomplete,0.42083333333333334,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,support,partially_correct_incomplete,524,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,precision,irrelevant,0.4254742547425474,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,recall,irrelevant,0.5547703180212014,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,f1,irrelevant,0.4815950920245399,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,support,irrelevant,283,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,precision,non_domain,0.8170731707317073,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,recall,non_domain,0.9710144927536232,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,f1,non_domain,0.8874172185430463,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,support,non_domain,69,"LABEL5_ORDER argmax; dev, optimistic"
+ALL dev,dev,2049,177,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[578, 94, 89, 102, 3], [78, 133, 61, 27, 8], [171, 66, 202, 82, 3], [27, 14, 84, 157, 1], [0, 1, 0, 1, 67]]","LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,accuracy,,0.6918990703851262,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,macro_f1,,0.6655020347876076,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,weighted_f1,,0.6853242985815408,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,macro_precision,,0.7213319559259787,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,macro_recall,,0.6681904380205195,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,qwk,,0.5879501564075386,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,precision,incorrect,0.5753768844221105,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,recall,incorrect,0.9015748031496063,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,f1,incorrect,0.7024539877300614,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,support,incorrect,254,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,precision,partial,0.7222222222222222,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,recall,partial,0.4148936170212766,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,f1,partial,0.527027027027027,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,support,partial,188,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,precision,correct,0.8663967611336032,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,recall,correct,0.6881028938906752,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,f1,correct,0.7670250896057348,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,support,correct,311,"A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[229, 11, 14], [91, 78, 19], [78, 19, 214]]","A_predict._to3 probability collapse; dev, optimistic"
+seen answers,dev,753,150,accuracy,,0.702523240371846,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,macro_f1,,0.7301533790104615,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,weighted_f1,,0.7030308625527789,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,macro_precision,,0.7210345749558275,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,macro_recall,,0.7435154577839893,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,precision,correct,0.8087248322147651,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,recall,correct,0.77491961414791,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,f1,correct,0.7914614121510674,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,support,correct,311,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,precision,contradictory,0.609375,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,recall,contradictory,0.609375,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,f1,contradictory,0.609375,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,support,contradictory,128,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,precision,partially_correct_incomplete,0.6416184971098265,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,recall,partially_correct_incomplete,0.5904255319148937,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,f1,partially_correct_incomplete,0.6149584487534626,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,support,partially_correct_incomplete,188,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,precision,irrelevant,0.5909090909090909,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,recall,irrelevant,0.7428571428571429,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,f1,irrelevant,0.6582278481012658,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,support,irrelevant,105,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,precision,non_domain,0.9545454545454546,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,recall,non_domain,1.0,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,f1,non_domain,0.9767441860465116,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,support,non_domain,21,"LABEL5_ORDER argmax; dev, optimistic"
+seen answers,dev,753,150,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[241, 22, 30, 18, 0], [25, 78, 16, 9, 0], [26, 23, 111, 27, 1], [6, 5, 16, 78, 0], [0, 0, 0, 0, 21]]","LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,accuracy,,0.48919753086419754,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,macro_f1,,0.4461655674538616,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,weighted_f1,,0.47013968872876843,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,macro_precision,,0.4776448637124721,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,macro_recall,,0.47011217566773117,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,qwk,,0.29489987887534463,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,precision,incorrect,0.4246771879483501,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,recall,incorrect,0.7308641975308642,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,f1,incorrect,0.5372050816696915,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,support,incorrect,405,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,precision,partial,0.375,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,recall,partial,0.17857142857142858,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,f1,partial,0.24193548387096775,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,support,partial,336,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,precision,correct,0.6332574031890661,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,recall,correct,0.5009009009009009,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,f1,correct,0.5593561368209256,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,support,correct,555,"A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[296, 60, 49], [164, 60, 112], [237, 40, 278]]","A_predict._to3 probability collapse; dev, optimistic"
+unseen questions,dev,1296,27,accuracy,,0.4691358024691358,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,macro_f1,,0.48989636552192783,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,weighted_f1,,0.46473084889077915,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,macro_precision,,0.4715356536063925,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,macro_recall,,0.5174913336850755,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,precision,correct,0.6061151079136691,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,recall,correct,0.6072072072072072,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,f1,correct,0.6066606660666066,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,support,correct,555,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,precision,contradictory,0.3055555555555556,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,recall,contradictory,0.30726256983240224,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,f1,contradictory,0.3064066852367688,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,support,contradictory,179,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,precision,partially_correct_incomplete,0.34600760456273766,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,recall,partially_correct_incomplete,0.2708333333333333,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,f1,partially_correct_incomplete,0.3038397328881469,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,support,partially_correct_incomplete,336,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,precision,irrelevant,0.3333333333333333,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,recall,irrelevant,0.4438202247191011,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,f1,irrelevant,0.38072289156626504,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,support,irrelevant,178,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,precision,non_domain,0.7666666666666667,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,recall,non_domain,0.9583333333333334,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,f1,non_domain,0.8518518518518519,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,support,non_domain,48,"LABEL5_ORDER argmax; dev, optimistic"
+unseen questions,dev,1296,27,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[337, 72, 59, 84, 3], [53, 55, 45, 18, 8], [145, 43, 91, 55, 2], [21, 9, 68, 79, 1], [0, 1, 0, 1, 46]]","LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,accuracy,,0.5891304347826087,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,macro_f1,,0.5289793657905216,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,weighted_f1,,0.5639378270933977,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,macro_precision,,0.6094615729046827,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,macro_recall,,0.5516163710648038,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,qwk,,0.435960529706633,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,precision,incorrect,0.4874476987447699,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,recall,incorrect,0.803448275862069,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,f1,incorrect,0.6067708333333334,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,support,incorrect,290,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,precision,partial,0.6285714285714286,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,recall,partial,0.19383259911894274,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,f1,partial,0.2962962962962963,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,support,partial,227,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,precision,correct,0.7123655913978495,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,recall,correct,0.6575682382133995,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,f1,correct,0.6838709677419355,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,support,correct,403,"A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[233, 21, 36], [112, 44, 71], [133, 5, 265]]","A_predict._to3 probability collapse; dev, optimistic"
+beetle dev,dev,920,44,accuracy,,0.6097826086956522,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,macro_f1,,0.5360805512847037,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,weighted_f1,,0.592684174987109,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,macro_precision,,0.5886137422108645,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,macro_recall,,0.54996798997158,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,precision,correct,0.6914414414414415,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,recall,correct,0.7617866004962779,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,f1,correct,0.7249114521841794,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,support,correct,403,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,precision,contradictory,0.42857142857142855,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,recall,contradictory,0.5806451612903226,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,f1,contradictory,0.4931506849315068,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,support,contradictory,186,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,precision,partially_correct_incomplete,0.5611510791366906,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,recall,partially_correct_incomplete,0.3436123348017621,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,f1,partially_correct_incomplete,0.4262295081967213,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,support,partially_correct_incomplete,227,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,precision,irrelevant,0.42857142857142855,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,recall,irrelevant,0.07894736842105263,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,f1,irrelevant,0.13333333333333333,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,support,irrelevant,38,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,precision,non_domain,0.8333333333333334,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,recall,non_domain,0.9848484848484849,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,f1,non_domain,0.9027777777777778,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,support,non_domain,66,"LABEL5_ORDER argmax; dev, optimistic"
+beetle dev,dev,920,44,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[307, 77, 17, 0, 2], [41, 108, 30, 0, 7], [86, 56, 78, 4, 3], [10, 10, 14, 3, 1], [0, 1, 0, 0, 65]]","LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,accuracy,,0.5429583702391497,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_f1,,0.518796217782019,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,weighted_f1,,0.5331142829612997,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_precision,,0.5569783698648454,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_recall,,0.5327023357717487,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,qwk,,0.36971150112509044,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,incorrect,0.473257698541329,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,incorrect,0.7913279132791328,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,incorrect,0.592292089249493,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,support,incorrect,369,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,partial,0.47474747474747475,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,partial,0.3164983164983165,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,partial,0.3797979797979798,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,support,partial,297,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,correct,0.7229299363057324,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,correct,0.490280777537797,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,correct,0.5842985842985843,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,support,correct,463,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[292, 50, 27], [143, 94, 60], [182, 54, 227]]","A_predict._to3 probability collapse; dev, optimistic"
+scientsbank dev,dev,1129,133,accuracy,,0.5101860053144376,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_f1,,0.47993680509592923,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,weighted_f1,,0.5063453048420922,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_precision,,0.49006539266679416,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,macro_recall,,0.5009342515880901,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,correct,0.6609756097560976,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,correct,0.5853131749460043,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,correct,0.6208476517754868,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,support,correct,463,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,contradictory,0.44642857142857145,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,contradictory,0.2066115702479339,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,contradictory,0.2824858757062147,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,support,contradictory,121,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,partially_correct_incomplete,0.4175084175084175,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,partially_correct_incomplete,0.4175084175084175,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,partially_correct_incomplete,0.4175084175084175,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,support,partially_correct_incomplete,297,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,irrelevant,0.425414364640884,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,irrelevant,0.6285714285714286,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,irrelevant,0.5074135090609555,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,support,irrelevant,245,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,precision,non_domain,0.5,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,recall,non_domain,0.6666666666666666,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,f1,non_domain,0.5714285714285714,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,support,non_domain,3,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank dev,dev,1129,133,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[271, 17, 72, 102, 1], [37, 25, 31, 27, 1], [85, 10, 124, 78, 0], [17, 4, 70, 154, 0], [0, 0, 0, 1, 2]]","LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,accuracy,,0.7100591715976331,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_f1,,0.6380704612650063,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,weighted_f1,,0.6895179301217235,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_precision,,0.756971892841458,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_recall,,0.6440376227714751,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,qwk,,0.6270284304816305,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,incorrect,0.5815217391304348,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,incorrect,0.9067796610169492,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,incorrect,0.7086092715231788,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,incorrect,118,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,partial,0.8181818181818182,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,partial,0.2535211267605634,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,partial,0.3870967741935484,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,partial,71,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,correct,0.8712121212121212,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,correct,0.7718120805369127,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,correct,0.8185053380782918,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,correct,149,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[107, 2, 9], [45, 18, 8], [32, 2, 115]]","A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_ua,dev,338,37,accuracy,,0.7248520710059172,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_f1,,0.6788762780286345,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,weighted_f1,,0.7194702366717285,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_precision,,0.7209459798486367,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,macro_recall,,0.665443644735736,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,correct,0.8104575163398693,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,correct,0.8322147651006712,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,correct,0.8211920529801324,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,correct,149,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,contradictory,0.6039603960396039,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,contradictory,0.7011494252873564,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,contradictory,0.648936170212766,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,contradictory,87,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,partially_correct_incomplete,0.6379310344827587,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,partially_correct_incomplete,0.5211267605633803,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,partially_correct_incomplete,0.5736434108527132,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,partially_correct_incomplete,71,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,irrelevant,0.6,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,irrelevant,0.2727272727272727,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,irrelevant,0.375,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,irrelevant,11,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,precision,non_domain,0.9523809523809523,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,recall,non_domain,1.0,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,f1,non_domain,0.975609756097561,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,support,non_domain,20,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_ua,dev,338,37,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[124, 15, 10, 0, 0], [18, 61, 8, 0, 0], [11, 20, 37, 2, 1], [0, 5, 3, 3, 0], [0, 0, 0, 0, 20]]","LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,accuracy,,0.5189003436426117,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_f1,,0.46765398078862247,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,weighted_f1,,0.4931762776023756,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_precision,,0.5317460317460317,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_recall,,0.4965919957679708,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,qwk,,0.3191255444204829,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,incorrect,0.42857142857142855,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,incorrect,0.7325581395348837,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,incorrect,0.5407725321888412,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,incorrect,172,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,partial,0.5416666666666666,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,partial,0.16666666666666666,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,partial,0.2549019607843137,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,partial,156,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,correct,0.625,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,correct,0.5905511811023622,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,correct,0.6072874493927125,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,correct,254,"A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[126, 19, 27], [67, 26, 63], [101, 3, 150]]","A_predict._to3 probability collapse; dev, optimistic"
+beetle/dev_uq,dev,582,7,accuracy,,0.5429553264604811,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_f1,,0.45346752039518956,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,weighted_f1,,0.5188470877844952,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_precision,,0.44715415624876764,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,macro_recall,,0.48726025961561736,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,correct,0.6288659793814433,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,correct,0.7204724409448819,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,correct,0.671559633027523,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,correct,254,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,contradictory,0.31125827814569534,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,contradictory,0.47474747474747475,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,contradictory,0.376,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,contradictory,99,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,partially_correct_incomplete,0.5061728395061729,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,partially_correct_incomplete,0.26282051282051283,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,partially_correct_incomplete,0.3459915611814346,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,partially_correct_incomplete,156,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,irrelevant,0.0,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,irrelevant,0.0,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,irrelevant,0.0,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,irrelevant,27,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,precision,non_domain,0.7894736842105263,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,recall,non_domain,0.9782608695652174,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,f1,non_domain,0.8737864077669902,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,support,non_domain,46,"LABEL5_ORDER argmax; dev, optimistic"
+beetle/dev_uq,dev,582,7,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[183, 62, 7, 0, 2], [23, 47, 22, 0, 7], [75, 36, 41, 2, 2], [10, 5, 11, 0, 1], [0, 1, 0, 0, 45]]","LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,accuracy,,0.6771084337349398,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_f1,,0.6676924353707623,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,weighted_f1,,0.6741489736934972,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_precision,,0.7095458139219892,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_recall,,0.6736634824870119,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,qwk,,0.5511450784426781,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,incorrect,0.5700934579439252,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,incorrect,0.8970588235294118,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,incorrect,0.6971428571428572,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,incorrect,136,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,partial,0.6976744186046512,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,partial,0.5128205128205128,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,partial,0.5911330049261084,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,partial,117,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,correct,0.8608695652173913,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,correct,0.6111111111111112,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,correct,0.7148014440433214,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,correct,162,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[122, 9, 5], [46, 60, 11], [46, 17, 99]]","A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,accuracy,,0.6843373493975904,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_f1,,0.7157758099740643,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,weighted_f1,,0.682934128610655,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_precision,,0.734111124665139,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,macro_recall,,0.71344146829357,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,correct,0.8068965517241379,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,correct,0.7222222222222222,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,correct,0.762214983713355,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,correct,162,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,contradictory,0.6296296296296297,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,contradictory,0.4146341463414634,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,contradictory,0.5,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,contradictory,41,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,partially_correct_incomplete,0.6434782608695652,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,partially_correct_incomplete,0.6324786324786325,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,partially_correct_incomplete,0.6379310344827587,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,partially_correct_incomplete,117,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,irrelevant,0.5905511811023622,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,irrelevant,0.7978723404255319,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,irrelevant,0.6787330316742082,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,irrelevant,94,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,precision,non_domain,1.0,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,recall,non_domain,1.0,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,f1,non_domain,1.0,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,support,non_domain,1,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_ua,dev,415,113,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[117, 7, 20, 18, 0], [7, 17, 8, 9, 0], [15, 3, 74, 25, 0], [6, 0, 13, 75, 0], [0, 0, 0, 0, 1]]","LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,accuracy,,0.4649859943977591,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_f1,,0.42648930243244015,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,weighted_f1,,0.44900498129811073,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_precision,,0.45620791242042663,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_recall,,0.4479172640765614,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,qwk,,0.27140077821011677,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,incorrect,0.4218362282878412,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,incorrect,0.7296137339055794,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,incorrect,0.5345911949685535,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,incorrect,233,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,partial,0.30357142857142855,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,partial,0.18888888888888888,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,partial,0.2328767123287671,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,partial,180,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,correct,0.6432160804020101,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,correct,0.42524916943521596,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,correct,0.512,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,correct,301,"A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[170, 41, 22], [97, 34, 49], [136, 37, 128]]","A_predict._to3 probability collapse; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,accuracy,,0.40896358543417366,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_f1,,0.35530562418524536,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,weighted_f1,,0.4031795788951069,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_precision,,0.3602445930523561,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,macro_recall,,0.38251689854030835,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,correct,0.5811320754716981,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,correct,0.5116279069767442,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,correct,0.5441696113074205,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,correct,301,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,contradictory,0.27586206896551724,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,contradictory,0.1,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,contradictory,0.14678899082568808,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,contradictory,80,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,partially_correct_incomplete,0.27472527472527475,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,partially_correct_incomplete,0.2777777777777778,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,partially_correct_incomplete,0.27624309392265195,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,partially_correct_incomplete,180,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,irrelevant,0.33617021276595743,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,irrelevant,0.5231788079470199,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,irrelevant,0.40932642487046633,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,irrelevant,151,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,precision,non_domain,0.3333333333333333,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,recall,non_domain,0.5,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,f1,non_domain,0.4,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,support,non_domain,2,"LABEL5_ORDER argmax; dev, optimistic"
+scientsbank/dev_uq,dev,714,20,confusion_matrix_rows_true_cols_pred,correct;contradictory;partially_correct_incomplete;irrelevant;non_domain,"[[154, 10, 52, 84, 1], [30, 8, 23, 18, 1], [70, 7, 50, 53, 0], [11, 4, 57, 79, 0], [0, 0, 0, 1, 1]]","LABEL5_ORDER argmax; dev, optimistic"
+ALL test,test,7093,248,accuracy,,0.5879035668969407,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,macro_f1,,0.5331930219136913,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,weighted_f1,,0.5705239927185022,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,macro_precision,,0.5740077524967523,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,macro_recall,,0.5464741763794053,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,qwk,,0.45388841882243025,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,precision,incorrect,0.5359049005337215,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,recall,incorrect,0.8615444617784711,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,f1,incorrect,0.6607837271911456,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,support,incorrect,2564,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,precision,partial,0.4106382978723404,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,recall,partial,0.24775353016688062,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,f1,partial,0.3090472377902322,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,support,partial,1558,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,precision,correct,0.7754800590841949,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,recall,correct,0.5301245371928643,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,f1,correct,0.6297481007596961,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,support,correct,2971,saved A_test_scored_v2; exploratory (test seen in v1)
+ALL test,test,7093,248,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[2209, 145, 210], [926, 386, 246], [987, 409, 1575]]",saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,accuracy,,0.6373850868232891,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,macro_f1,,0.5962619322507597,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,weighted_f1,,0.625518432114525,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,macro_precision,,0.6239168937822148,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,macro_recall,,0.6058378906173102,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,qwk,,0.5425399875181443,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,precision,incorrect,0.5902912621359223,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,recall,incorrect,0.881159420289855,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,f1,incorrect,0.7069767441860465,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,support,incorrect,345,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,precision,partial,0.4873417721518987,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,recall,partial,0.3422222222222222,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,f1,partial,0.402088772845953,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,support,partial,225,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,precision,correct,0.7941176470588235,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,recall,correct,0.5941320293398533,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,f1,correct,0.6797202797202797,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,support,correct,409,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ua,test,979,179,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[304, 18, 23], [108, 77, 40], [103, 63, 243]]",saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,accuracy,,0.5780359491451118,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,macro_f1,,0.5247295996473503,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,weighted_f1,,0.5616035648083276,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,macro_precision,,0.566098029761326,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,macro_recall,,0.5387907207068338,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,qwk,,0.4413643980371078,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,precision,incorrect,0.5337308982482296,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,recall,incorrect,0.8631705846895721,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,f1,incorrect,0.6596038691847075,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,support,incorrect,1659,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,precision,partial,0.3810240963855422,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,recall,partial,0.2565922920892495,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,f1,partial,0.30666666666666664,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,support,partial,986,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,precision,correct,0.7835390946502058,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,recall,correct,0.4966092853416797,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,f1,correct,0.6079182630906769,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,support,correct,1917,saved A_test_scored_v2; exploratory (test seen in v1)
+test_ud,test,4562,46,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[1432, 95, 132], [602, 253, 131], [649, 316, 952]]",saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,accuracy,,0.5856958762886598,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,macro_f1,,0.5121117267800165,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,weighted_f1,,0.5573293886048402,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,macro_precision,,0.5771930241022963,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,macro_recall,,0.5317244764223855,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,qwk,,0.4363621874420922,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,precision,incorrect,0.5119047619047619,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,recall,incorrect,0.8446428571428571,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,f1,incorrect,0.637466307277628,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,support,incorrect,560,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,precision,partial,0.4745762711864407,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,recall,partial,0.16138328530259366,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,f1,partial,0.24086021505376345,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,support,partial,347,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,precision,correct,0.7450980392156863,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,recall,correct,0.5891472868217055,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,f1,correct,0.658008658008658,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,support,correct,645,saved A_test_scored_v2; exploratory (test seen in v1)
+test_uq,test,1552,24,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[473, 32, 55], [216, 56, 75], [235, 30, 380]]",saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,accuracy,,0.636724960254372,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,macro_f1,,0.579641960330933,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,weighted_f1,,0.6151219406777423,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,macro_precision,,0.6708766778744204,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,macro_recall,,0.58737254658642,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,qwk,,0.492719539654741,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,precision,incorrect,0.5496503496503496,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,recall,incorrect,0.8656387665198237,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,f1,incorrect,0.6723695466210436,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,support,incorrect,454,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,precision,partial,0.7,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,recall,partial,0.24647887323943662,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,f1,partial,0.3645833333333333,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,support,partial,284,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,precision,correct,0.7629796839729119,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,recall,correct,0.65,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,f1,correct,0.7019730010384216,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,support,correct,520,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle test,test,1258,52,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[393, 16, 45], [154, 70, 60], [168, 14, 338]]",saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,accuracy,,0.5773778920308483,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,macro_f1,,0.5232719913803392,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,weighted_f1,,0.5606261718796225,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,macro_precision,,0.5627259943400073,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,macro_recall,,0.5377977153941368,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,qwk,,0.4453661238006058,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,precision,incorrect,0.5330202524214852,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,recall,incorrect,0.8606635071090047,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,f1,incorrect,0.6583288018850825,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,support,incorrect,2110,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,precision,partial,0.3761904761904762,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,recall,partial,0.24803767660910517,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,f1,partial,0.2989593188268685,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,support,partial,1274,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,precision,correct,0.7789672544080605,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,recall,correct,0.5046919624643003,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,f1,correct,0.6125278534290666,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,support,correct,2451,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank test,test,5835,196,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[1816, 129, 165], [772, 316, 186], [819, 395, 1237]]",saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,accuracy,,0.6765375854214123,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,macro_f1,,0.6390811809003046,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,weighted_f1,,0.6612976315793355,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,macro_precision,,0.7002889109867637,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,macro_recall,,0.6447027034775379,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,qwk,,0.5783327435417824,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,precision,incorrect,0.5848214285714286,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,recall,incorrect,0.8675496688741722,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,f1,incorrect,0.6986666666666667,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,support,incorrect,151,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,precision,partial,0.7307692307692307,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,recall,partial,0.3392857142857143,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,f1,partial,0.4634146341463415,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,support,partial,112,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,precision,correct,0.7852760736196319,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,recall,correct,0.7272727272727273,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,f1,correct,0.7551622418879056,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,support,correct,176,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_ua,test,439,44,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[131, 7, 13], [52, 38, 22], [41, 7, 128]]",saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,accuracy,,0.6153846153846154,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,macro_f1,,0.5413118787174204,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,weighted_f1,,0.5879603915643442,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,macro_precision,,0.6500905182167912,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,macro_recall,,0.5537326988512804,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,qwk,,0.44966588723991296,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,precision,incorrect,0.5336048879837068,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,recall,incorrect,0.8646864686468647,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,f1,incorrect,0.6599496221662469,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,support,incorrect,303,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,precision,partial,0.6666666666666666,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,recall,partial,0.18604651162790697,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,f1,partial,0.2909090909090909,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,support,partial,172,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,precision,correct,0.75,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,recall,correct,0.6104651162790697,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,f1,correct,0.6730769230769231,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,support,correct,344,saved A_test_scored_v2; exploratory (test seen in v1)
+beetle/test_uq,test,819,9,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[262, 9, 32], [102, 32, 38], [127, 7, 210]]",saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,accuracy,,0.6055555555555555,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,macro_f1,,0.5604228576922962,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,weighted_f1,,0.594765131642864,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,macro_precision,,0.5888740169035831,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,macro_recall,,0.5768158508140254,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,qwk,,0.5138136852444153,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,precision,incorrect,0.5945017182130584,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,recall,incorrect,0.8917525773195877,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,f1,incorrect,0.7134020618556701,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,support,incorrect,194,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,precision,partial,0.36792452830188677,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,recall,partial,0.34513274336283184,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,f1,partial,0.3561643835616438,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,support,partial,113,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,precision,correct,0.8041958041958042,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,recall,correct,0.49356223175965663,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,f1,correct,0.6117021276595744,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,support,correct,233,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ua,test,540,135,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[173, 11, 10], [56, 39, 18], [62, 56, 115]]",saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,accuracy,,0.5780359491451118,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,macro_f1,,0.5247295996473503,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,weighted_f1,,0.5616035648083276,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,macro_precision,,0.566098029761326,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,macro_recall,,0.5387907207068338,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,qwk,,0.4413643980371078,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,precision,incorrect,0.5337308982482296,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,recall,incorrect,0.8631705846895721,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,f1,incorrect,0.6596038691847075,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,support,incorrect,1659,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,precision,partial,0.3810240963855422,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,recall,partial,0.2565922920892495,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,f1,partial,0.30666666666666664,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,support,partial,986,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,precision,correct,0.7835390946502058,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,recall,correct,0.4966092853416797,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,f1,correct,0.6079182630906769,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,support,correct,1917,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_ud,test,4562,46,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[1432, 95, 132], [602, 253, 131], [649, 316, 952]]",saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,accuracy,,0.5525238744884038,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,macro_f1,,0.48260462950430316,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,weighted_f1,,0.5241420480615759,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,macro_precision,,0.5230951663726039,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,macro_recall,,0.5076461944835847,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,qwk,,0.4210560909320956,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,precision,incorrect,0.48729792147806006,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,recall,incorrect,0.8210116731517509,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,f1,incorrect,0.6115942028985507,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,support,incorrect,257,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,precision,partial,0.34285714285714286,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,recall,partial,0.13714285714285715,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,f1,partial,0.19591836734693877,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,support,partial,175,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,precision,correct,0.7391304347826086,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,recall,correct,0.5647840531561462,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,f1,correct,0.64030131826742,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,support,correct,301,saved A_test_scored_v2; exploratory (test seen in v1)
+scientsbank/test_uq,test,733,15,confusion_matrix_rows_true_cols_pred,incorrect;partial;correct,"[[211, 23, 23], [114, 24, 37], [108, 23, 170]]",saved A_test_scored_v2; exploratory (test seen in v1)
+ALL dev,dev,2049,177,coverage_at_0.64,,0.30600292825768666,confidence >= frozen threshold 0.64
+ALL dev,dev,627,177,accuracy_auto_at_0.64,,0.7511961722488039,confidence >= frozen threshold 0.64
+ALL dev,dev,1422,177,accuracy_review_at_0.64,,0.4810126582278481,confidence < frozen threshold 0.64
+ALL test,test,7093,248,coverage_at_0.64,,0.28845340476526155,confidence >= frozen threshold 0.64
+ALL test,test,2046,248,accuracy_auto_at_0.64,,0.7903225806451613,confidence >= frozen threshold 0.64
+ALL test,test,5047,248,accuracy_review_at_0.64,,0.5058450564691896,confidence < frozen threshold 0.64

@@ -1,0 +1,32 @@
+{
+  "hard_rules": {
+    "beetle_train_vs_dev_uq_shared_questions": 0,
+    "beetle_train_vs_dev_ua_shared_identical_answers": 0,
+    "scientsbank_train_vs_dev_uq_shared_questions": 0,
+    "scientsbank_train_vs_dev_ua_shared_identical_answers": 0
+  },
+  "warnings": {
+    "beetle_test_ua_questions_shared_with_train_or_dev": 44,
+    "beetle_test_ua_identical_answers_also_in_train": 3,
+    "beetle_test_uq_questions_shared_with_train_or_dev": 1,
+    "beetle_test_uq_identical_answers_also_in_train": 0,
+    "scientsbank_test_ua_questions_shared_with_train_or_dev": 135,
+    "scientsbank_test_ua_identical_answers_also_in_train": 21,
+    "scientsbank_test_uq_questions_shared_with_train_or_dev": 0,
+    "scientsbank_test_uq_identical_answers_also_in_train": 0,
+    "scientsbank_test_ud_questions_shared_with_train_or_dev": 0,
+    "scientsbank_test_ud_identical_answers_also_in_train": 0
+  },
+  "info": {
+    "beetle_dev_ua_questions_missing_from_train": 0,
+    "beetle_dev_ua_students_also_in_train": "167 of 167",
+    "beetle_test_ua_students_also_in_train": "183 of 183",
+    "beetle_test_uq_students_also_in_train": "219 of 219",
+    "scientsbank_dev_ua_questions_missing_from_train": 0,
+    "scientsbank_dev_ua_students_also_in_train": "289 of 367",
+    "scientsbank_test_ua_students_also_in_train": "350 of 457",
+    "scientsbank_test_uq_students_also_in_train": "479 of 600",
+    "scientsbank_test_ud_students_also_in_train": "0 of 911",
+    "splits_missing_a_label_class": []
+  }
+}

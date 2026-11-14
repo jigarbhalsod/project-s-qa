@@ -1,0 +1,51 @@
+{
+  "function": "A_predict.predict(question, reference_answer, student_answer, dataset='scientsbank')",
+  "dataset_options": [
+    "scientsbank",
+    "beetle",
+    "both"
+  ],
+  "note": "SBERT-LR and NLI-LR are trained per dataset; the fine-tuned model is pooled.",
+  "fields": [
+    "concepts",
+    "confidence",
+    "dataset_used",
+    "model_version",
+    "needs_teacher_review",
+    "nli",
+    "p_correct",
+    "p_incorrect",
+    "p_partial",
+    "policy_status",
+    "pred_label",
+    "pred_score",
+    "review_reasons"
+  ],
+  "example_output": {
+    "pred_label": "correct",
+    "pred_score": 2,
+    "confidence": 0.8018,
+    "p_incorrect": 0.0849,
+    "p_partial": 0.1133,
+    "p_correct": 0.8018,
+    "needs_teacher_review": false,
+    "review_reasons": [],
+    "nli": {
+      "entail": 0.9828,
+      "contradict": 0.0
+    },
+    "concepts": [
+      {
+        "concept": "Heat is transferred from the hot soup to the spoon by conduction.",
+        "entail": 0.9828,
+        "contradict": 0.0,
+        "neutral": 0.0172
+      }
+    ],
+    "model_version": "v2-avg3-ft+sbert+nli",
+    "dataset_used": "pooled",
+    "policy_status": "final"
+  },
+  "default_dataset_option": "pooled",
+  "policy_status": "final"
+}

@@ -1,82 +1,68 @@
-# Project S: Q&A branch, full context (state as of 2 Nov 2026, Day 3 of 5)
+# Project S, Q&A branch: full context (state as of 3 Nov 2026, Day 4 of 5)
 
-## 1. Project
+## 1. Date and deadline
+Date: Day 4 = 3 Nov 2026
+Plan days: Day 1 = 31 Oct, Day 2 = 1 Nov, Day 3 = 2 Nov, Day 4 = 3 Nov (today), Day 5 = 4 Nov (freeze, ASSUMED deadline; confirm with Jigar). Earlier chat messages wrongly treated 2 Nov as today. Honest progress: about 1.5 of 5 plan-days done, nothing verified by running in Colab. Roughly 2.5 days behind.
+
+## 2. Project
 Project S builds an interpretable reading-skills profile for children (ages 8 to 12). Reading and comprehension are reported separately. There is no single total score. Each skill has its own uncertainty interval and a teacher-review flag.
-- Reading branch (Askar and Safal): design stage. Reference text, transcripts and human ratings are missing, so most experiments are blocked. Askar's baseline: age classification 42.01% +/- 4.61%. This comes from Notion; re-check before using on a slide.
-- Q&A branch (Jigar and Vishwajeet): built and measured on public English data (SciEntsBank, Beetle). Not measured on NNCES or CBSE.
-- Jigar owns architecture, Q&A scoring, profile layer, evaluation. Vishwajeet's notebook is his own; Jigar cannot edit it. Published numbers from other papers are hypotheses until tested on our data.
-- Notion master page: "Reading Skills Profile Generation of Children, Project Master Page". Child page: "Q&A Branch: Next 5 Days, Effective Work Plan (from 31 Oct 2026)". Deadline (Day 5 = 4 Nov) is ASSUMED; confirm it.
+- Reading branch (Askar and Safal): design stage. Reference text, transcripts and human ratings are missing, so most experiments are blocked. Askar baseline: age classification 42.01% +/- 4.61% (from Notion, unverified here).
+- Q&A branch (Jigar Bhalsod and Vishwajeet Sonawane): built and measured on public English data (SciEntsBank, Beetle). Not measured on NNCES or CBSE. Jigar owns architecture, Q&A scoring, profile layer and evaluation. Vishwajeet's notebook is his own; Jigar cannot edit it.
+- Jigar: B.Tech CSE, IIIT Nagpur, 2027, ML/GenAI/RAG track. The panel is academic: explain simply.
+- Notion master page: "Reading Skills Profile Generation of Children, Project Master Page" (last updated 31 Oct 2026, Q&A results in section 5A). Child page: "Q&A Branch: Next 5 Days, Effective Work Plan (from 31 Oct 2026)". Published numbers from other papers are hypotheses until tested on our data.
 
-## 2. Deployed scorer (measured, dev data, optimistic)
-- Average of three local models: fine-tuned DistilRoBERTa, SBERT + logistic regression, NLI + logistic regression. Model version v2-avg3-ft+sbert+nli.
-- Outputs: incorrect / partial / correct (0/1/2), confidence, probabilities, NLI entail/contradict, concepts, needs_teacher_review (confidence below 0.64).
-- Inference file: A_predict.py with predict(question, reference_answer, student_answer, dataset="both") and predict_batch(items, dataset="both", policy=None). The project path /content/drive/MyDrive/project_s_qa is hard-coded.
-- Rule L8: no hosted LLM, no external API in the deployed scorer. Local open-weights models in Colab are allowed.
-- Dev QWK: all 0.432 (0.358 to 0.509); seen 0.630; unseen 0.317 (0.199 to 0.412) over 27 questions. Plan was 0.55 to 0.60: NOT met.
-- Dev macro-F1: all 0.579, seen 0.730, unseen 0.490.
-- Review threshold 0.64, ECE 0.017. Accuracy on auto-scored answers: dev 0.751 at coverage 0.306; test 0.790 at coverage 0.288. Target 85% at 30% coverage: NOT met (grouped-CV estimate 0.748 at 0.313).
-- Exploratory test QWK: all 0.454 (0.392 to 0.515); unseen domain 0.441. Test sets were seen in v1 (access log reads 3), so every test number is exploratory.
-- Demo parity: PASS on 15 of 15 hand-written reference cases. It shows consistency, not independent replication.
-- Negation control set (36 sentences): 3 of 12 negated answers scored exactly right; all 12 flagged for review.
+## 3. Tool history (what each assistant did)
+- Claude chat (this thread): reviewed the notebook; wrote the Summary section code, the Block 60 cell and the 12-question CSV; wrote every prompt below; ran a read-only diagnosis on the 162-cell notebook (section 8).
+- Antigravity (ran out of tokens): found the clean 162-cell notebook in the Windows Recycle Bin (file named like $RK1WTDE.ipynb); compared it with the 151-cell file; explained 162 vs 151; restored the four cells deleted by mistake; built the COPY; made all edits in section 6; added Blocks 59 and 60 and the Summary; ran integrity checks; created a backup; probably produced extracted_A_predict.py and comparison_table.json (unverified).
+- Cursor (limit hit): created .cursor/rules/project-s.mdc (alwaysApply true; safety rules plus a short Project S snapshot, content not read by Claude) and an earlier PROJECT_CONTEXT.md (9 sections). It reported that reference/ did not exist. Its reference-hash check, copy-vs-reference comparison and read-only diagnosis were NOT done.
+- Codex (now): you. This file and AGENTS.md replace the Cursor files as the source of truth.
 
-## 3. Folder map (Project 4/, Windows: C:\Users\Jigar\OneDrive\Desktop\Project 4)
-- Jigar_Q&A_Branch_Baseline.ipynb: ORIGINAL on disk. READ-ONLY, never edit. It has 151 cells, NOT the clean 162. Blocks 45 (heading and parity code) and 55 (heading and policy code) were deleted from it by mistake earlier. It is not clean v1 history.
-- Jigar_Q&A_Branch_Baseline_COPY.ipynb: the working copy and the ONLY notebook you may edit. 161 cells.
-- Jigar_Q&A_Branch_Baseline_COPY_before_block60.ipynb: backup of the copy, 159 cells. READ-ONLY.
-- reference/: must hold the CLEAN 162-cell notebook (the reference for every comparison; 70 code cells, 3,798 code lines). Jigar recovered it from the Recycle Bin and must copy it here. If it is not in this folder, STOP and ask. Do not search the Recycle Bin or the rest of the disk. READ-ONLY.
-- extracted_A_predict.py: local extract of the v2 scorer. READ-ONLY. It imports torch and transformers: read it as text, never import or run it.
-- comparison_table.json: cell-by-cell map of the 162 vs 151 notebooks. READ-ONLY. Treat it as helpful but unverified; re-check against the notebooks.
-- project_s_qa_phase1_v1.zip and project_s_qa_final_v1.zip: archived Phase 1 package and frozen v1 results. READ-ONLY. Do not unzip into this folder, do not overwrite, do not modify.
-- New folder (2)/block_60_voice_demo_cell.py (68 lines, sha256 cb082b77f2536c234310b3f8e230415f4d07a8ef8be4a1ca3c2337f98409d6c5) and New folder (2)/cbse_demo_questions_v1.csv (12 draft questions, status draft_unreviewed, not labelled student answers). READ-ONLY.
-- My Research Papers/, New folder/, Askar/: PDFs (papers on ASAG, literacy assessment, child speech, reading-side work by Askar and Safal). READ-ONLY. Do not open or summarise a PDF unless Jigar asks for that exact paper. Askar/ belongs to the reading branch, not this task.
-- .cursor/rules/project-s.mdc: always-on rules. Do not edit it unless Jigar asks.
-- The notebook is about 3 MB, mostly saved outputs. Never paste it into chat. Use an outline (cell index, type, first line, block) and edit with small Python scripts that read and write .ipynb JSON and change only the listed cells.
+## 4. Folder layout
+Project 4/
+  AGENTS.md
+  PROJECT_CONTEXT.md
+  README_FILES.txt
+  .AI/ (leave exactly as it is)
+  notebooks/
+    Jigar_Q&A_Branch_Baseline_COPY.ipynb (165 cells; only editable file)
+    backups/
+      Jigar_Q&A_Branch_Baseline_COPY_before_block60.ipynb (159 cells; read-only)
+      Jigar_Q&A_Branch_Baseline_COPY_before_block61.ipynb (161 cells; read-only)
+    reference/
+      Jigar_Q&A_Branch_Baseline_REFERENCE_162.ipynb (not yet present; Jigar adds it)
+      Jigar_Q&A_Branch_Baseline.ipynb (151-cell original; read-only)
+  block60/
+    block_60_voice_demo_cell.py
+    cbse_demo_questions_v1.csv
+  tools/
+    extracted_A_predict.py
+    comparison_table.json
+  archive/
+    project_s_qa_phase1_v1.zip
+    project_s_qa_final_v1.zip
+  README.md
+  .gitignore
+Paper folders are not in Project 4.
 
-## 4. What was done on the COPY (verified by script: valid JSON, 161 cells, 149 untouched cells with identical source, outputs and execution counts, 12 differing cells)
-Deleted from the 162 reference (9 cells): original 0, 1, 2 (basic checks, GPU check, memory cleanup); 120 and 122 (Block 45 timestamp checks); 153 (Block 55 file check); 154 (RoBERTa file listing); 155 and 156 (Block 56 "withdrawn").
-Restored from the reference: Block 45 heading and parity code; Block 55 heading and policy code.
-Copy cell map:
-- 0: READ FIRST (never Run all; run only Summary, Block 59, Block 60; do-not-run list)
-- 43: Block 17 note "dev-only side result, uses an API call, not part of the deployed scorer"
-- 72: Block 28 heading, stray ")" removed
-- 118: Block 45 provenance note (demo_outputs.json regenerated 31 Oct 06:46; earlier file kept as demo_outputs_PREVIOUS.json)
-- 124: Block 45c Gradio cell, description clause "reliable for related answers" removed (only that string changed)
-- 154 to 155: Block 59 latency (hardware print, 1 warm-up, median of 20 runs)
-- 156 to 157: Block 60 question dropdown + local Whisper-small voice input, editable transcript, scored by A_predict.predict
-- 158: Limitations cell (NLI evidence caveat 0.87 to 0.96 on 3 of 4 off-topic sentences; hard-coded path in A_predict.py)
-- 159 to 160: Summary for the panel (read-only loader of 8 reports_v2 files plus fig*_*.png)
-NOTHING has been run in Colab. Summary, Block 59 and Block 60 are untested.
+## 5. Notebook versions
+- REFERENCE (clean, 162 cells, 70 code cells, 3,798 code lines; 92 markdown). sha256 f2991cf09f431a3110101d388610149728643c140e55e1e43d83fc5c53922cda. Single source of truth for comparisons.
+- ORIGINAL on disk: 151 cells. Blocks 45 (heading plus parity code) and 55 (heading plus policy code) were deleted by mistake in an earlier manual edit. Not clean v1 history.
+- BACKUP before Block 60: 159 cells.
+- COPY: 161 cells. Verified by script (Antigravity): valid JSON; 149 untouched cells identical in source, outputs and execution counts; 12 differing cells (8 new, 4 edited). Note: an earlier message said 150 untouched; 149 is correct.
+- Block 60 file: block_60_voice_demo_cell.py, 68 lines, 3,680 bytes, sha256 cb082b77f2536c234310b3f8e230415f4d07a8ef8be4a1ca3c2337f98409d6c5 (matches the code cell byte for byte).
+- Cell numbering in the reference: Block N heading, then its code cell right after. Block 41 code is cell 109, Block 47 cell 133, Block 49 cell 137.
 
-## 5. Rules (always)
-- Edit only. NEVER run any notebook cell. NEVER use Run all (it rewrote 18 frozen v1 files on 30 Oct and raised the test-access count to 3). Do not run Python that imports torch, transformers, A_predict or extracted_A_predict.
-- Edit only the COPY. Everything else in section 3 is read-only.
-- Never edit or delete Blocks 12 and 22 (manifest, freeze check), Block 17 (LLM_PRED is used by Blocks 18 and 24), Block 26 (only record of the RoBERTa-base run; weights were never saved), Block 42 (Block 49 reads its seed summary), or the old duplicate helper cells (to3, met, sha256, boot, make_qid, pick, nli_X, predict_probs, ens, md, rc). Editing them forces a re-run.
-- New blocks start at Block 61 (59 and 60 are taken). Files written to reports_v2/ start with "A_". Never overwrite question_bank_v1.csv (Block 12 writes it, Block 22 hashes it). The question bank file is cbse_demo_questions_v1.csv, which lives in project_s_qa/processed/ on Drive.
-- New helper code goes in one A_utils.py for NEW cells only. Library first: pretrained model, then library function, then documented recipe, then own code.
-- Before any change: show the plan and wait for "go". After: integrity checks against the 162-cell reference (valid JSON, untouched cells identical in source, outputs and execution counts, list of differing cells).
-- Test numbers are labelled "exploratory (test seen in v1)". Dev numbers are labelled "dev, optimistic". If a number is not in the notebook, write "not in notebook". Never invent or estimate a number. Never compute a plain overall accuracy for the panel if the notebook does not report one.
-- Do not use the 36 negation control sentences for training.
-
-## 6. Pending work, in order
-1. Folder fix by Jigar: copy the clean 162-cell notebook into reference/.
-2. Colab runs by Jigar (nothing has run yet): back up the Drive folder project_s_qa; upload cbse_demo_questions_v1.csv to project_s_qa/processed/; upload the COPY as a new notebook; run only Summary (last cell), then Block 59, then Block 60. Test the voice demo with about 10 adult recordings (slow, fast, noisy). Check no frozen file timestamp changed.
-3. Read-only accuracy report from saved outputs, compared with the numbers in section 2. List every mismatch.
-4. Question bank: 12 of the planned 20 to 30. Jigar and Vishwajeet review the science and wording and write the rest. Reference answers: 1 or 2 short sentences, one idea each.
-5. Pilot: 5 to 8 volunteers type answers to 15 to 20 questions. Jigar and Vishwajeet label 0/1/2 separately, blind to the scorer; report agreement first (labellers also wrote the questions; say so). Then score and report QWK, review rate, silent failures as a pilot of 100 to 150 answers, not a validation.
-6. One gated accuracy experiment (choose on Day 3). Recommended: Option C, negation augmentation (synthetic negated answers, flagged synthetic, training only). Option A (learned deferral): keep as a study, do not deploy (0.815 vs 0.751 accuracy at coverage 0.306, interval 0.002 to 0.128, tuned on the same dev data). Option B (DeBERTa-v3 cross-encoder): drop first if short on time. Before any training, write 30+ NEW negation test sentences kept out of training. Judge on out-of-fold results over all 177 dev questions, not only the 27 unseen. Adoption gates, ALL must hold: macro-F1 beats v2 by at least 0.01 with a paired interval above 0; unseen-question QWK does not fall; negation exact goes above 3 of 12. Stop at midday Day 4 if no clear result. Adopting a model means re-running calibration, policy, parity and Block 58. Measure latency before changing anything.
-7. Day 4: backup screen video of the demo (the Gradio link works only while the Colab runtime is alive); run A_predict.py once on a fresh runtime.
-8. Day 5 freeze: re-run Block 45 then Block 58, confirm DEMO PARITY: PASS and no warnings; screenshots (five text cases, voice demo, dropdown); update Notion; pipeline diagram slide; slides; rehearsal. No new features.
-9. Vishwajeet's items (he does them; Jigar cannot): restore headings of his Blocks 34, 37, 40, 43; say 0.581 is mean macro-F1 over four dev splits; answer whether he fine-tuned his own RoBERTa; copy V_roberta_three_seed_metrics_v2.csv and rb_probs_v2.parquet into shared reports_v2/ (then Jigar re-runs Block 42 only after copying the Drive folder); delete his 23 empty cells.
-
-## 7. Status against the 5-day plan (honest)
-About 1.5 of 5 days done, about 1 day verified. Not started: pilot, accuracy experiment, freeze, slides. Biggest risk: nothing has been run in Colab.
-
-## 8. Weak spots to state openly
-- Vague answer "It works because of electricity." scored 0 (expected 1) at confidence 0.745, NOT flagged: the only silent failure in the 15 reference cases.
-- Partly-right answers are scored wrong but flagged for a teacher.
-- Negation: 3 of 12 exact, nine scored "correct".
-- NLI evidence panel shows entailment 0.87 to 0.96 on off-topic sentences: do not present it as an explanation for off-topic answers.
-- Unseen questions: QWK 0.317. Public data only. Voice demo: adult voices only, child speech untested, transcript errors flow into the score. CBSE questions untested. All demo examples are hand-written sanity checks, not an evaluation.
-
-## 9. Not doing in this window
-Adaptive question selection (BM25 plus Elo, Block 56 withdrawn); averaging in Vishwajeet's RoBERTa; CBSE or child-speech accuracy claims; retraining RoBERTa-base; deploying the learned deferral; v3 multi-task cross-encoder and conformal sets (future work).
+## 6. What was changed in the COPY (from the 162 reference)
+Voice input and the question bank are DRAFTED, not tested or done, until Jigar reports the Colab run.
+Deleted (9 reference cells): 0, 1, 2 (basic-checks heading, memory cleanup, GPU check); 120 and 122 (Block 45 timestamp checks of demo_outputs.json and demo_outputs_PREVIOUS.json); 153 (Block 55 file check; no later cell uses it); 154 (RoBERTa folder file listing); 155 and 156 (Block 56 "withdrawn" heading and code; the cell wrote a small JSON note nobody reads).
+Restored from the reference after the mistaken deletion: 118 and 119 (Block 45 heading and parity code), 151 and 152 (Block 55 heading and policy code).
+Copy cell map (copy indices):
+- 0 NEW markdown "READ FIRST: what to run and what not to run": never Run all; run only the Summary (last cell), then Block 59, then Block 60; do-not-run list (Blocks 1 to 11, 17, 18 to 21 and 26, 22 to 24, 41 and 42, demo cells, reporting blocks 47 to 49 and 58); how to re-run one block safely; what to do if the Summary prints MISSING; run history (30 Oct full run rewrote 18 frozen v1 files and raised the test-access count to 3).
+- 43 EDIT Block 17 heading: note "Dev-only side result. It uses an API call and is not part of the deployed scorer." (Cell 46 of the reference installs the anthropic package and sets a Claude haiku model name; the Notion page says no hosted model. The note resolves this for panel readers.)
+- 72 EDIT Block 28 heading: stray ")" removed.
+- 118 NEW markdown, Block 45 provenance: "demo_outputs.json was regenerated on 31 Oct (06:46). Vishwajeet's earlier file is kept as demo_outputs_PREVIOUS.json."
+- 124 EDIT Block 45c Gradio cell: only the description string changed. Removed the unsupported clause "it is reliable for related answers but". New text: "The evidence shown is the model's own NLI output and can be misleading for off-topic answers." Outputs and execution count unchanged.
+- 154 and 155 NEW Block 59 latency: prints runtime hardware (GPU name or CPU), loads A_demo_reference_outputs_v2.json, 1 warm-up then 20 timed runs with time.perf_counter, median (ms) for a single answer (case 1) and a batch of 15, per-item median. It calls predict with dataset=scorer_mode read from the JSON (value "pooled"). It writes nothing, prints only.
+- 156 and 157 NEW Block 60 voice demo (section 9).
+- 158 EDIT Limitations cell: added "The NLI evidence panel shows entailment 0.87 to 0.96 for three of four unrelated sentences, so it cannot be presented as an explanation for off-topic answers." and "A_predict.py has the Google Drive project path (/content/drive/MyDrive/project_s_qa) hard-coded and must be overridden when executing from a differently named folder." Existing bullets kept (unseen QWK 0.317, 85% at 30% target unmet).
+- 159

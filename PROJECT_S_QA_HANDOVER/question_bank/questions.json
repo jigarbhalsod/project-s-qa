@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0-draft",
+  "questions": [
+    {
+      "question_id": "cbse_demo_01",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "plants",
+      "question_text": "What do plants need to make their food?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "Plants need sunlight to make food. They also need water and carbon dioxide."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_02",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "light",
+      "question_text": "Why does an object make a shadow?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "A shadow forms when an object blocks light. Light cannot pass through an opaque object."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_03",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "water",
+      "question_text": "What is evaporation?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "Evaporation is when liquid water changes into water vapour. Heat makes it happen faster."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_04",
+      "subject": "Science",
+      "grade": 4,
+      "chapter": null,
+      "topic": "human_body",
+      "question_text": "Which organ pumps blood around the body?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "The heart pumps blood around the body."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_05",
+      "subject": "Science",
+      "grade": 6,
+      "chapter": null,
+      "topic": "matter",
+      "question_text": "Why does ice float on water?",
+      "difficulty": "medium",
+      "reference_answers": [
+        "Ice is less dense than liquid water. So it floats on top of the water."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_06",
+      "subject": "Science",
+      "grade": 6,
+      "chapter": null,
+      "topic": "electricity",
+      "question_text": "What is an electrical conductor?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "A conductor is a material that lets electricity pass through it. Metals such as copper are good conductors."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_07",
+      "subject": "Science",
+      "grade": 4,
+      "chapter": null,
+      "topic": "health",
+      "question_text": "Why should we wash our hands before eating?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "Washing removes germs from the hands. This helps stop us from falling ill."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_08",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "earth_sun",
+      "question_text": "What causes day and night on Earth?",
+      "difficulty": "medium",
+      "reference_answers": [
+        "The Earth spins on its axis. The side facing the Sun has day and the other side has night."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_09",
+      "subject": "Science",
+      "grade": 4,
+      "chapter": null,
+      "topic": "plants",
+      "question_text": "What do the roots of a plant do?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "Roots take in water and minerals from the soil. Roots also hold the plant firmly in the ground."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_10",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "magnets",
+      "question_text": "What happens when a magnet is brought near an iron nail?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "A magnet attracts an iron nail. The nail moves towards the magnet."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_11",
+      "subject": "Science",
+      "grade": 5,
+      "chapter": null,
+      "topic": "matter",
+      "question_text": "Name the three states of matter.",
+      "difficulty": "easy",
+      "reference_answers": [
+        "The three states of matter are solid, liquid and gas."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    },
+    {
+      "question_id": "cbse_demo_12",
+      "subject": "Science",
+      "grade": 4,
+      "chapter": null,
+      "topic": "human_body",
+      "question_text": "What is the job of our teeth?",
+      "difficulty": "easy",
+      "reference_answers": [
+        "Teeth cut and grind food into small pieces. This makes the food easier to swallow and digest."
+      ],
+      "required_concepts": [],
+      "supporting_concepts": [],
+      "accepted_answer_variants": [],
+      "common_misconceptions": [],
+      "contradictory_claims": [],
+      "partial_credit_criteria": [
+        "Draft only: reviewer must define when a response is partially complete; no keyword-only rule."
+      ],
+      "source_provenance": {
+        "source_file": "project_s_qa/processed/cbse_demo_questions_v1.csv",
+        "source_page": "",
+        "source_status": "draft_unreviewed",
+        "curriculum_alignment": "Unverified"
+      },
+      "created_at": "2026-11-10",
+      "review_status": "draft_unreviewed",
+      "needs_review": [
+        "chapter missing in source",
+        "required concepts not reviewed",
+        "accepted variants not reviewed",
+        "misconceptions not reviewed",
+        "partial-credit criteria require review"
+      ]
+    }
+  ],
+  "label_contract": {
+    "incorrect": 0,
+    "partial": 1,
+    "correct": 2
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "default_dataset": "both",
+  "decided_at": "2026-10-30T09:17:42",
+  "rule": "single-dataset option only if it beats 'both' by >= 0.01 mean dev macro-F1 over 4 cells",
+  "table": [
+    {
+      "option": "beetle",
+      "beet/dev_ua": 0.6998,
+      "beet/dev_uq": 0.4897,
+      "scie/dev_ua": 0.465,
+      "scie/dev_uq": 0.2909,
+      "mean_F1": 0.4864,
+      "mean_QWK": 0.4761
+    },
+    {
+      "option": "both",
+      "beet/dev_ua": 0.6646,
+      "beet/dev_uq": 0.4773,
+      "scie/dev_ua": 0.594,
+      "scie/dev_uq": 0.376,
+      "mean_F1": 0.528,
+      "mean_QWK": 0.4991
+    },
+    {
+      "option": "native",
+      "beet/dev_ua": 0.6998,
+      "beet/dev_uq": 0.4897,
+      "scie/dev_ua": 0.7303,
+      "scie/dev_uq": 0.4157,
+      "mean_F1": 0.5839,
+      "mean_QWK": 0.5112
+    },
+    {
+      "option": "scientsbank",
+      "beet/dev_ua": 0.5275,
+      "beet/dev_uq": 0.4422,
+      "scie/dev_ua": 0.7303,
+      "scie/dev_uq": 0.4157,
+      "mean_F1": 0.529,
+      "mean_QWK": 0.4954
+    }
+  ]
+}

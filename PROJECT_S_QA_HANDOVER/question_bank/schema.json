@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project S draft question bank bundle",
+  "type": "object",
+  "required": ["schema_version", "questions", "rubrics", "label_contract"],
+  "$defs": {
+    "rubric": {
+      "type": "object",
+      "required": ["question_id", "correctness_criteria", "completeness_criteria", "required_concepts", "supporting_concepts", "accepted_variants", "misconceptions", "contradictory_claims", "partial_credit_criteria", "source_provenance", "created_at", "review_status"],
+      "properties": {
+        "question_id": {"type": "string", "minLength": 1},
+        "correctness_criteria": {"type": "array", "items": {"type": "string"}},
+        "completeness_criteria": {"type": "array", "items": {"type": "string"}},
+        "required_concepts": {"type": "array", "items": {"type": "string"}},
+        "supporting_concepts": {"type": "array", "items": {"type": "string"}},
+        "accepted_variants": {"type": "array", "items": {"type": "string"}},
+        "misconceptions": {"type": "array", "items": {"type": "string"}},
+        "contradictory_claims": {"type": "array", "items": {"type": "string"}},
+        "partial_credit_criteria": {"type": "array", "items": {"type": "string"}},
+        "source_provenance": {"type": "object"},
+        "created_at": {"type": "string"},
+        "review_status": {"enum": ["draft_unreviewed", "reviewed", "approved", "rejected"]}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"type": "string"},
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "subject", "grade", "chapter", "topic", "question_text", "difficulty", "reference_answers", "required_concepts", "supporting_concepts", "accepted_answer_variants", "common_misconceptions", "contradictory_claims", "partial_credit_criteria", "source_provenance", "created_at", "review_status"],
+        "properties": {
+          "question_id": {"type": "string", "minLength": 1},
+          "subject": {"type": "string", "minLength": 1},
+          "grade": {"type": "integer", "enum": [4, 5, 6]},
+          "chapter": {"type": ["string", "null"]},
+          "topic": {"type": "string"},
+          "question_text": {"type": "string", "minLength": 1},
+          "difficulty": {"enum": ["easy", "medium", "hard", "unknown"]},
+          "reference_answers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "required_concepts": {"type": "array", "items": {"type": "string"}},
+          "supporting_concepts": {"type": "array", "items": {"type": "string"}},
+          "accepted_answer_variants": {"type": "array", "items": {"type": "string"}},
+          "common_misconceptions": {"type": "array", "items": {"type": "string"}},
+          "contradictory_claims": {"type": "array", "items": {"type": "string"}},
+          "partial_credit_criteria": {"type": "array", "items": {"type": "string"}},
+          "source_provenance": {"type": "object"},
+          "created_at": {"type": "string"},
+          "review_status": {"enum": ["draft_unreviewed", "reviewed", "approved", "rejected"]},
+          "needs_review": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "rubrics": {"type": "object", "additionalProperties": {"$ref": "#/$defs/rubric"}},
+    "label_contract": {"const": {"incorrect": 0, "partial": 1, "correct": 2}}
+  }
+}

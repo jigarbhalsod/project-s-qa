@@ -1,0 +1,23 @@
+{
+  "rule": "adopt only if gain >= 0.01 and paired CI low > 0 at equal coverage",
+  "results": {
+    "logistic": {
+      "coverage": 0.306,
+      "acc_auto": 0.804,
+      "diff_vs_threshold": 0.055,
+      "ci_low": -0.017,
+      "ci_high": 0.123,
+      "adopt": false
+    },
+    "gradient_boosting": {
+      "coverage": 0.306,
+      "acc_auto": 0.815,
+      "diff_vs_threshold": 0.064,
+      "ci_low": 0.002,
+      "ci_high": 0.128,
+      "adopt": true
+    }
+  },
+  "deployed_policy_changed": false,
+  "note": "baseline threshold was chosen on all dev rows, so it has an in-sample advantage"
+}

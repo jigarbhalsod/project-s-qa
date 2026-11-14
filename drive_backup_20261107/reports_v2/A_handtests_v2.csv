@@ -1,0 +1,6 @@
+kind,answer,pred,conf,review,reasons,nli_ent,nli_con
+correct,Heat moves from the soup into the spoon by con,correct,0.826,False,,0.9828,0.0
+partial,Because it is sitting in the hot soup.,incorrect,0.4341,True,low_confidence,0.0717,0.0071
+contradictory,"Heat flows from the spoon into the soup, so th",incorrect,0.4321,True,low_confidence,0.0045,0.9847
+irrelevant,Soup is usually eaten with a spoon at dinner.,incorrect,0.5305,True,low_confidence,0.1437,0.0008
+ambiguous,It is because of the temperature thing.,incorrect,0.6761,False,,0.0018,0.0004

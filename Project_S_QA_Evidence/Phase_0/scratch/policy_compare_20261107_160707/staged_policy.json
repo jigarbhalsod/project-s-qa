@@ -1,0 +1,27 @@
+{
+  "status": "final",
+  "version": "v2",
+  "created": "2026-10-24T13:22:20",
+  "scorer_mode": "pooled",
+  "temperature": 1.0000000000000004,
+  "confidence_threshold": 0.64,
+  "contradiction_nli_threshold": 0.5,
+  "use_contradiction_flag": false,
+  "target_accuracy": 0.85,
+  "min_coverage": 0.3,
+  "target_met": false,
+  "dev_estimate_all_dev": {
+    "coverage": 0.306,
+    "review_rate": 0.694,
+    "acc_auto": 0.7512,
+    "acc_reviewed": 0.481
+  },
+  "grouped_cv_estimate": {
+    "coverage": 0.31332357247437775,
+    "accuracy": 0.7476635514018691
+  },
+  "not_implemented": [
+    "likely_off_topic: the non_domain flag in Block 27 uses the true label, so it is evaluation-only"
+  ],
+  "basis": "calibrated on dev only; dev is optimistic, see the exploratory test run in Block 43"
+}
