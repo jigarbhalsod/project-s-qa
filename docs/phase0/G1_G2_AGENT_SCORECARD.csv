@@ -1,0 +1,35 @@
+gate,candidate,criterion,weight_percent,score_0_to_10,status,evidence_and_limit
+G1,working_COPY,Notebook integrity,20,5,PARTIAL,Current hash verified; structural/source differences vs D are from prior report
+G1,updated_local,Notebook integrity,20,8,PARTIAL,Current hash verified; prior report says source matches D; not re-parsed now
+G1,D_snapshot,Notebook integrity,20,8,PARTIAL,Current hash verified; dated local snapshot only
+G1,phase2_executed,Notebook integrity,20,5,PARTIAL,Current hash verified; prior report records unapproved source delta
+G1,working_COPY,Runtime consistency,20,,BLOCKED,Live Drive/root not verified
+G1,updated_local,Runtime consistency,20,,BLOCKED,Live Drive/root not verified
+G1,D_snapshot,Runtime consistency,20,,BLOCKED,Dated snapshot is not live runtime evidence
+G1,phase2_executed,Runtime consistency,20,,BLOCKED,Execution metadata does not prove loaded runtime files
+G1,working_COPY,Artifact completeness,20,,BLOCKED,Expected active policy missing at top-level runtime path
+G1,updated_local,Artifact completeness,20,,BLOCKED,Expected active policy missing at top-level runtime path
+G1,D_snapshot,Artifact completeness,20,,BLOCKED,No live runtime artifact confirmation
+G1,phase2_executed,Artifact completeness,20,,BLOCKED,Execution copy does not prove current artifact availability
+G1,working_COPY,Reproducibility,20,,BLOCKED,Package versions/Hub revisions/runtime are unverified
+G1,updated_local,Reproducibility,20,,BLOCKED,Package versions/Hub revisions/runtime are unverified
+G1,D_snapshot,Reproducibility,20,,BLOCKED,Package versions/Hub revisions/runtime are unverified
+G1,phase2_executed,Reproducibility,20,,BLOCKED,Source delta and runtime provenance unresolved
+G1,working_COPY,Execution-path clarity,10,5,PARTIAL,Local source path evidence only; authority and live root unresolved
+G1,updated_local,Execution-path clarity,10,7,PARTIAL,Prior report records expected root; no live verification
+G1,D_snapshot,Execution-path clarity,10,7,PARTIAL,Prior report records expected root; snapshot only
+G1,phase2_executed,Execution-path clarity,10,5,PARTIAL,Extra cells and source patch require review
+G1,working_COPY,Error handling,10,3,PARTIAL,Scorer policy fallback remains a risk
+G1,updated_local,Error handling,10,3,PARTIAL,Scorer policy fallback remains a risk
+G1,D_snapshot,Error handling,10,3,PARTIAL,Scorer policy fallback remains a risk
+G1,phase2_executed,Error handling,10,5,PARTIAL,Policy check reported in prior review; source delta unapproved
+G2,root_JSON_plus_scratch_policy,Hash integrity,25,10,VERIFIED_LOCAL,JSON scorer/policy declarations match local bytes; policy is only in scratch
+G2,packaged_JSON_policy,Hash integrity,25,10,VERIFIED_LOCAL,Packaged JSON/policy/scorer hashes match
+G2,root_JSON_plus_scratch_policy,JSON-policy consistency,25,10,VERIFIED_LOCAL,Root JSON declares scratch policy hash; scorer hash matches
+G2,packaged_JSON_policy,JSON-policy consistency,25,10,VERIFIED_LOCAL,Packaged pair declares matching policy/scorer hashes
+G2,root_JSON_plus_scratch_policy,Runtime path compatibility,20,,BLOCKED,Expected policy filename absent from active reports_v2
+G2,packaged_JSON_policy,Runtime path compatibility,20,,BLOCKED,Nested package lacks interim model artifacts; live root unknown
+G2,root_JSON_plus_scratch_policy,Schema completeness,15,8,PARTIAL,JSON parses and required fields inspected; no schema contract pass claimed
+G2,packaged_JSON_policy,Schema completeness,15,8,PARTIAL,JSON parses and required fields inspected; no schema contract pass claimed
+G2,root_JSON_plus_scratch_policy,Fallback safety,15,,BLOCKED,Missing active policy causes silent 0.60 fallback
+G2,packaged_JSON_policy,Fallback safety,15,,BLOCKED,Safe only if exact policy is present at selected runtime path

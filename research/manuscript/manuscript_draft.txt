@@ -1,0 +1,331 @@
+Generalization and Selective Prediction in Automated Short-Answer Grading: An Empirical Study of a Three-Signal Scorer on SciEntsBank and Beetle
+Jigar [surname and co-authors: to complete] · Department of Computer Science and Engineering, Indian Institute of Information Technology Nagpur · Supervisor: [to complete] · Course: [to complete]
+Working draft. Items marked [V1]–[V12] are unresolved facts. Each is explained in the separate author verification ledger and must be resolved or removed before submission. Scope: the question-answering (short-answer grading) branch only.
+Abstract
+Automatic short-answer grading (ASAG) can save teacher time. But graders that work well on familiar questions often do worse on new questions, and a grader that hands uncertain answers to a teacher must be judged on accuracy and coverage together. We study a three-signal scorer that labels student answers as Incorrect, Partial or Correct on two public English datasets, SciEntsBank and Beetle. The scorer averages a fine-tuned DistilRoBERTa classifier, SBERT embeddings with logistic regression, and natural-language-inference (NLI) features with logistic regression. It flags answers with confidence below 0.64 for teacher review. On a development set of 2,049 answers to 177 questions, the deployed scorer reached 56.4% accuracy and a quadratic weighted kappa (QWK) of 0.40. Accuracy was 69.2% on seen questions (150 questions) and 48.9% on unseen questions (27 questions). The review rule accepted about 31% of answers automatically, with 75.1% accuracy on those answers. The target of 85% accuracy at about 30% coverage was not met (grouped cross-validation estimate: 74.8% at 31.3%). Partial-credit answers cause the largest share of errors, and small hand-written checks show unreliable handling of negation. An alternative way of combining the outputs raised Partial recall from 26.3% to 38.5% but was not deployed. Test-set results are exploratory, because those partitions were used in earlier work. Nothing reported here was measured on children, school-board questions or other languages.
+Keywords: automatic short-answer grading; selective prediction; sentence embeddings; natural language inference; unseen-question generalization
+1. Introduction
+Short-answer questions ask students to write a few words or sentences. Grading them by hand is slow, and different graders may disagree. Automatic short-answer grading (ASAG) has been studied for many years, using concept matching, information extraction, text similarity and supervised learning [1]. Word overlap alone is a weak grader. A correct answer can use different words from the reference answer, and a wrong answer can reuse the reference words while reversing their meaning. The SemEval-2013 student response analysis task treated grading as a problem of semantic inference, closely linked to recognizing textual entailment [2].
+Two practical problems motivate this study. First, teachers want to add new questions without labelling new answers, so a grader must work on questions it has not seen. Scores on familiar questions can overstate this ability, and out-of-sample questions are a separate, harder test [3]. Second, a grader that can abstain and pass uncertain answers to a teacher changes what accuracy means. Accuracy on the accepted answers is meaningful only when reported with the share of answers accepted (coverage) and the accuracy over all answers [4], [5].
+This work comes from a larger student project on a reading-skills profile for children, which has an oral-reading branch and a comprehension branch. This paper covers only the comprehension branch, as built and tested on public English data. It reports no oral-reading, speech or child-population results.
+We ask four exploratory questions.
+• RQ1. How does the three-signal scorer compare with simpler baselines and its own components?
+• RQ2. How does performance differ between seen and unseen questions?
+• RQ3. What accuracy–coverage trade-off appears when uncertain answers are sent for review?
+• RQ4. What error patterns appear for partial-credit, negated, contradictory and irrelevant answers?
+Contributions. (i) A documented description of a three-component scorer for three-level ASAG. (ii) A report of the gap between seen and unseen questions, with question counts beside each estimate. (iii) An evaluation of a fixed-threshold review rule, reporting selective accuracy with coverage and with overall accuracy, and showing that an 85% target was not met. (iv) An error analysis of partial-credit, negation and high-confidence failures. We do not claim a new algorithm. SBERT, NLI features, transformer classifiers, ensemble averaging and confidence thresholds are each established. The contribution is an honest account of how this combination behaves and where it fails.
+Section 2 reviews related work. Section 3 describes the scorer. Section 4 gives the experimental setup. Section 5 reports results, Section 6 discusses them, and Sections 7 and 8 give limitations and conclusions.
+2. Related Work
+ASAG surveys and the shared task. Burrows et al. organize ASAG research into eras based on concept mapping, information extraction, corpus-based methods and machine learning [1]. SemEval-2013 Task 7 supplied the SciEntsBank and Beetle corpora used here, with five-way, three-way and two-way labels [2].
+Feature fusion. GradeAid combines lexical features with semantic features from a BERT-based model and feeds them to regressors [6]. As we understand its protocol, each question is handled in its own subset, so its results may not measure unseen-question performance [V11].
+Transformers for ASAG. Camus and Filighera fine-tuned several pretrained transformers on SemEval-2013 data [7]. Ghavidel et al. applied BERT and XLNet to SciEntsBank [8]. Our DistilRoBERTa component belongs to this line of work, so transformer classification is not a contribution of this paper.
+Sentence embeddings and unseen questions. Sentence-BERT gives sentence embeddings that can be compared directly [9]. Condor et al. used SBERT-based features and tested out-of-sample questions with leave-one-question-out protocols [3]. Our seen/unseen analysis has the same motivation but uses different data and a simpler split.
+Pretrained encoders and inference. Our components build on RoBERTa [10], distilled models [11] and DeBERTaV3 [12]. NLI training data such as MultiNLI [13] is relevant because deciding whether a student answer agrees with or contradicts a reference answer resembles entailment.
+Calibration and selective prediction. Modern neural networks are often poorly calibrated, and temperature scaling is a simple post-hoc fix [14]. Selective classification adds a rejection rule and describes performance as a trade-off between coverage and risk [4]. Traub et al. argue that a single working point is an incomplete evaluation and propose a multi-threshold summary [5]. We report coverage with every selective result, but only at fixed working points, because the full set of predictions needed for a risk–coverage curve has not been reconstructed (Section 5.3). QWK is a chance-corrected agreement measure that penalizes large disagreements more than small ones [15].
+Comparability. Published scores are not directly comparable with ours, because label schemes, splits and metrics differ. Our three-level mapping is project-specific. We therefore make no numerical comparison with published systems.
+3. Method
+3.1 Task and labels
+The scorer receives a question, a reference answer and a student answer, and predicts one ordered level: Incorrect (0), Partial (1) or Correct (2). Both datasets carry expert labels that the project collapsed to three levels (Table 1). This mapping is project-specific and is not the three-way task of SemEval-2013 [2]. QWK is computed only on the ordered three-level scale.
+Table 1. Source-to-project label mapping, as recorded in the project code notes.
+Source label
+Project label
+Score
+correct
+Correct
+2
+partially correct / incomplete
+Partial
+1
+contradictory
+Incorrect
+0
+irrelevant
+Incorrect
+0
+non-domain
+Incorrect
+0
+The project record describes the source labels in two ways: five labels (with partially correct and incomplete as one label) and six names (with the two listed separately). The mapping used by each experiment, and the label space of each macro-F1 value, have not been confirmed from the dataset files and preprocessing code [V2]. Every table below states its label space where it is known.
+3.2 Components
+Table 2. Components of the deployed scorer (v2).
+Component
+Input
+Output
+C1: fine-tuned DistilRoBERTa classifier [10], [11]
+Question and reference answer paired with the student answer
+Class probabilities
+C2: SBERT embeddings [9] with logistic regression
+Reference answer and student answer (no question)
+Class probabilities
+C3: NLI features with logistic regression
+Reference answer split into sentences, each checked against the student answer (no question)
+Class probabilities
+C2 used the all-MiniLM-L6-v2 sentence encoder in the earlier baseline [16], and C3 used the frozen cross-encoder nli-deberta-v3-base [17], [12]. The exact C1 checkpoint, feature construction, training settings and seed are still to be confirmed [V6]. Only C1 receives the question text. The three components are trained on the pooled training data of both datasets and need no dataset identifier at run time.
+3.3 Combining the components
+The deployed scorer takes an equal-weight average of the three components:
+P_ens(y | x) = (1/3) · [P₁(y | x) + P₂(y | x) + P₃(y | x)]
+Here x is the input, y a class and P₁–P₃ the component probabilities. Whether the average is taken over probabilities, logits or scores, and in which label space, must be confirmed from the inference code [V6]. Two ways of turning the average into a label were recorded. Path A collapses the averaged probabilities to three levels and takes the arg-max; it is the deployed path. Path B takes the five-way arg-max and then maps it to three levels; it was examined after the fact on development data and is not deployed. The two paths are never merged in this paper.
+3.4 Confidence and the review rule
+The confidence of a prediction is the largest of the three class probabilities. An answer is flagged for teacher review when confidence is below 0.64 [V4]. Answers at or above the threshold are scored automatically. The threshold was chosen from a risk–coverage table on development data, so it is tuned on the data used for development results. A temperature-scaling step was fitted with temperature 1.00, which leaves probabilities unchanged. The expected calibration error (ECE) was recorded as 0.017 [V4]. We therefore call the confidence the ensemble's maximum class probability, not a validated probability of being correct [14]. A contradiction-based review flag exists in the code but is switched off in the packaged policy.
+3.5 What the scorer does not do
+• It does not use rubric information for scoring. A demo can display rubric data, but the scoring path does not use it.
+• It does not call a hosted model, API or large language model.
+• A learned deferral model (gradient boosting) and question-embedding clustering were studied but are not deployed.
+• It has not been tested on voice input, child speech or school-board questions.
+3.6 Architecture
+Figure 1. Architecture of the deployed scorer. Inputs: only C1 receives the question; C2 and C3 receive the reference and student answers. The three probability vectors are averaged with equal weights, the arg-max gives the label, and the maximum probability is the confidence. Confidence below 0.64 sends the answer for review. No rubric data enters scoring. [Figure to be inserted; see ledger V6 for the aggregation-order check.]
+4. Experimental Setup
+4.1 Data
+We use the SciEntsBank and Beetle corpora from SemEval-2013 Task 7 [2]. Both contain English student answers to science questions, each with a reference answer and an expert label. SciEntsBank covers school science in 15 domains [18]. Beetle covers basic electricity and comes from a tutoring system [19].
+Table 3. Official partitions.
+Dataset
+Questions
+Answers
+Partitions (answers)
+SciEntsBank
+197
+10,804
+train 4,969; test_ua 540; test_uq 733; test_ud 4,562
+Beetle
+56
+5,199
+train 3,941; test_ua 439; test_uq 819
+Total
+253
+16,003
+test partitions together: 7,093
+A development set of 2,049 answers (Beetle 920, SciEntsBank 1,129) covering 177 questions was held out from the training portion. It has answers to questions that also appear in training ("seen": 150 questions) and answers to questions removed from all training ("unseen": 27 questions, 7 Beetle and 20 SciEntsBank). Error counts imply about 753 seen and 1,296 unseen answers (derived), so about 63% of development answers come from only 27 questions. The exact question IDs, answer counts, the split rule, and checks for duplicates and near-duplicates are still to be reconstructed [V5]. The test partitions are test_ua (unseen answers), test_uq (unseen questions) and test_ud (unseen domains, SciEntsBank only). Their counts sum to 7,093 answers.
+4.2 Protocol and test-set status
+Training epochs, ensemble choice and the 0.64 threshold were chosen on development data. The official test partitions were scored in earlier stages of the project, and the recorded access count is three. A full notebook run on 30 October 2026 also rewrote frozen files, although deployed scores were reproduced exactly and some older comparison tables moved by up to 0.006. Every test result in this paper is therefore exploratory and is not described as blind or independent. Development results are also optimistic, because choices were made on the same data and the deployed models used one training seed.
+4.3 Metrics
+• Overall accuracy: correct predictions ÷ all answers.
+• Selective accuracy: correct predictions ÷ automatically accepted answers.
+• Coverage: accepted answers ÷ all answers. Review rate: deferred answers ÷ all answers.
+• QWK: on the ordered three-level labels only [15].
+• Macro-F1: the label space (three or five) is stated in each table [V2].
+Paired model comparisons used a question-level paired bootstrap with 1,000 resamples over the 177 development questions. The method for the QWK intervals was not recorded [V9]. No interval is available for selective accuracy, and no question-level macro-average of performance is available for the unseen questions. A non-overlapping interval is read only as an indication, not as a significance test.
+4.4 Baselines
+We compare against the majority-label predictor, TF-IDF similarity with logistic regression, the single fine-tuned DistilRoBERTa, a single RoBERTa-base fine-tune (weights not saved), an earlier simple average, and a variant with dataset-specific heads that needs the dataset identity at run time. Whether all comparisons use identical examples, label space and metric code is still to be confirmed [V10].
+4.5 Provenance of reported figures
+All figures come from the project's saved evaluation logs. In this draft they have not been recomputed from the saved UID-keyed prediction files [V3]. Developers' hard-coded values and a missing RoBERTa-base checkpoint limit full reproduction. A demo parity check matched the notebook on 15 of 15 reference cases (largest confidence difference 0.0005), but both call the same function, so this shows consistency and not independent replication. Hardware and software versions are not recorded here [V6].
+5. Results
+5.1 Overall and seen/unseen performance
+Table 4. Development results (N = 2,049, 177 questions) for the two aggregation paths. Three-class labels.
+Path
+Accuracy
+Macro-F1 (three-class)
+QWK
+Partial recall
+A: collapse to three levels, then arg-max (deployed)
+56.37%
+52.70%
+0.4015
+26.3%
+B: five-way arg-max, then map (candidate, not deployed)
+58.03%
+55.66%
+0.4318
+38.5%
+The two paths disagree on 336 answers. For Path B, the accuracy gain has an interval that includes zero, the macro-F1 gain has an interval of +0.8 to +5.4 points, and the Partial-recall gain has an interval of +8.5 to +16.9 points. Path B was examined after the fact on development data, so it is a candidate for a later version and not a result about the deployed scorer.
+Table 5. Development results by question type.
+Subset
+Answers / questions
+Accuracy
+Macro-F1 (five-label)
+QWK (95% interval)
+All
+2,049 / 177
+56.37%
+0.579
+0.4015 (Path A); 0.432 (0.358–0.509) matches Path B
+Seen questions
+≈753 / 150
+69.19%
+0.730
+0.630 (0.562–0.692) [V1]
+Unseen questions
+≈1,296 / 27
+48.92%
+0.490
+0.317 (0.199–0.412) [V1]
+The overall QWK of 0.432 matches Path B (0.4318), not deployed Path A (0.4015). The aggregation path behind the seen and unseen QWK values (0.630 and 0.317) has not been established, so these two values are not presented as verified results of the deployed scorer [V1]. The accuracy values are consistent with Path A: weighting 69.19% and 48.92% by the derived answer counts gives about 1,155 correct answers, or 56.4%. Accuracy by dataset was 58.91% for Beetle (N = 920) and 54.30% for SciEntsBank (N = 1,129).
+All accuracy and macro-F1 values point the same way: performance is clearly lower on unseen questions. The unseen estimate rests on only 27 questions and has a wide interval.
+Table 6. Exploratory test results (test partitions were accessed earlier; the aggregation path is not confirmed [V1]).
+Partition
+Answers / questions
+QWK (95% interval)
+All test partitions
+7,093 / 248
+0.454 (0.392–0.515)
+Beetle, unseen questions
+819 / 9
+0.450 (not recorded)
+SciEntsBank, unseen questions
+733 / 15
+0.421 (not recorded)
+SciEntsBank, unseen domains
+4,562 / 46
+0.441 (0.353–0.523)
+These test values are higher than the development QWK for unseen questions. The test subsets have only 9 and 15 questions and were accessed before, so we draw no conclusion about a difference between development and test.
+5.2 Selective prediction
+Table 7. Selective accuracy with coverage, counts and overall accuracy.
+Evaluation
+Selective accuracy
+Coverage
+Accepted / deferred
+Overall accuracy
+Development, threshold 0.64
+75.1% (≈471 of ≈627)
+30.6%
+≈627 / ≈1,422
+56.4%
+Exploratory test, threshold 0.64
+79.0%
+28.8%
+≈2,043 / ≈5,050
+not available
+Grouped cross-validation estimate
+74.8%
+31.3%
+not available
+not available
+Counts marked ≈ are derived from rounded coverage and accuracy. The development threshold was tuned on the same data. No selective-accuracy intervals are available, and the grouped cross-validation protocol must be documented before it is cited as a leakage-safe estimate [V4].
+At the 0.64 threshold, about 69% of development answers go to review. About 156 of the ≈627 accepted answers are wrong, so roughly one in four automatically accepted answers is an error. Of the 894 development errors, about 738 (82.5%) were deferred and 156 were accepted. Deferral also sent about 684 correct answers to review. In the development data, selective accuracy reached 85% only at about 10% coverage (≈205 answers) and 90% only near 6% coverage; these points are in-sample. The target of 85% accuracy at about 30% coverage was not met.
+A learned deferral model (gradient boosting) gave 81.5% accuracy on accepted answers at the same 30.6% coverage in development data, with an interval for the difference from the fixed threshold of 0.002 to 0.128. The model was fitted and scored in the same development context, so this is not a validated improvement and is not deployed. A random-deferral control and a margin-based rule at matched coverage have not been run.
+5.3 Baselines and component comparisons
+Table 8. Paired comparisons on development data (question-level paired bootstrap, 1,000 resamples). Which configuration (pooled or dataset-specific) and label space each used must be confirmed [V10].
+Comparison
+Population
+Difference (95% interval)
+Reading
+Scorer vs majority label
+Unseen dev questions (27)
++0.370 macro-F1 (0.283 to 0.422)
+Clear gain
+Scorer vs TF-IDF + logistic regression
+Seen dev answers
++0.088 (0.060 to 0.120)
+Clear gain
+Scorer vs best single fine-tuned model, and vs SBERT
+Unseen dev questions
+Intervals include zero
+No difference shown
+Two further comparisons are contextual, not direct. On five exploratory test splits, the scorer was equal to or lower than an earlier simple average by 0.001 to 0.071 macro-F1 (for example Beetle unseen questions, 0.513 against 0.584). The deployed pooled ensemble had a mean development macro-F1 of 0.528 over four splits, against 0.583 for the ensemble with dataset-specific heads. The pooled version was deployed because the dataset identity is not available at run time. This is an engineering constraint, not evidence that the pooled model is more accurate.
+Table 9. Development macro-F1 (five-label space as recorded [V2]) by split. The paired difference is relative to the dataset-specific ensemble.
+Model
+Beetle seen
+Beetle unseen
+SciEntsBank seen
+SciEntsBank unseen
+Mean
+Paired difference (interval)
+DistilRoBERTa (fine-tuned)
+0.653
+0.447
+0.692
+0.335
+0.532
+−0.047 (−0.068 to −0.028)
+RoBERTa-base, one run (weights not saved)
+0.688
+0.495
+0.747
+0.408
+0.584
+−0.002 (−0.036 to 0.032)
+Ensemble with dataset-specific heads (reference)
+0.700
+0.490
+0.729
+0.412
+0.583
+—
+RoBERTa-base + SBERT + NLI (not adopted)
+0.688
+0.521
+0.753
+0.444
+0.602
++0.018 (−0.001 to 0.039)
+Four-model average (not adopted)
+0.683
+0.487
+0.751
+0.416
+0.584
++0.003 (−0.018 to 0.023)
+Table 9 supports one claim about ensembling: the dataset-specific ensemble beats DistilRoBERTa alone. RoBERTa-base is statistically tied with it. The deployed pooled ensemble (0.528) is not above DistilRoBERTa alone (0.532), although these means may come from different runs. We therefore do not claim that the deployed ensemble outperforms its individual components.
+NLI contribution. A raw-NLI-feature ablation gave 0.5975 against 0.5943 (difference 0.0032). The variant without those features still contained the NLI classifier's probabilities, so it is not a clean removal of NLI information. The contribution of NLI to the deployed scorer is therefore unproven [V7]. An earlier v1 pipeline reported fewer contradicting answers scored Correct after NLI features were added (25.2% to 9.6%), but that was a different, superseded system and is not transferred to v2.
+5.4 Error analysis
+Table 10. Development error structure from saved probabilities (Path A, N = 2,049), and hand-written diagnostics.
+Observation
+Value
+Gold-Partial answers (N = 524) predicted Incorrect / Partial / Correct
+255 (48.7%) / 138 (26.3%) / 131 (25.0%)
+Errors involving a gold-Partial answer
+386 of 894 (43.2%)
+Errors on unseen-question answers
+about 662 of 894 (74.0%, derived)
+High-confidence errors (confidence at least 0.64)
+156: gold Partial 84, gold Correct 68, other 4; unseen-question 116, seen-question 40
+Hand-written control set, paraphrase and spelling items
+12 of 12 and 12 of 12 correct
+Hand-written negation items, diagnostic D1
+Exactly right in 3 of 12; nine scored Correct; all 12 flagged for review
+Hand-written negation items, diagnostic D2
+All 12 scored Correct; the NLI component output was nearly constant (about 0.507)
+Wording flip
+"Plants do not need sunlight." scored Incorrect; "Plants do not need sunlight to make food." scored Correct; both flagged
+Silent failure
+A vague answer about a bulb scored 0 (expected 1) at confidence 0.745 and was not flagged; the only silent failure in 15 reference cases
+Partial-credit answers are the main failure class: Partial recall is 26.3%, they cause 43% of errors, and they make up 84 of the 156 high-confidence errors. The two negation diagnostics D1 and D2 could not be reconciled from the record: the sentences, scorer version, run IDs and confidence values are not recovered [V8]. We report both as separate diagnostics. They agree on one point: negation is handled unreliably. All hand-written items (a 36-sentence control set that appears to hold 12 negation, 12 paraphrase and 12 spelling items) are qualitative stress tests, not population-level error estimates. Twelve items cannot separate 3 of 12 from 4 of 12.
+6. Discussion
+RQ1: comparison with baselines. The scorer clearly beats the majority label and TF-IDF with logistic regression in the development comparisons of Table 8. Against stronger models it shows no gain: on unseen development questions it is level with the best single fine-tuned model and with SBERT, and on exploratory test splits it is equal to or lower than an earlier simple average. No claim of general superiority or state-of-the-art performance is supported.
+RQ2: seen and unseen questions. Accuracy falls from 69.2% on seen questions to 48.9% on unseen questions, and macro-F1 falls from 0.730 to 0.490 (Table 5). The seen and unseen QWK values show the same direction (0.630 and 0.317), but their aggregation path is unconfirmed [V1]. Three explanations are plausible and untested. The models may memorize wording from training questions. The unseen subset is dominated by a few questions with many answers, so a handful of questions can drive the pooled metrics. Reference answers may not describe what counts as an acceptable paraphrase. Because only 27 unseen questions are in the development subset, the gap is indicative. Per-question and question-level macro-averaged results are not yet available.
+RQ3: accuracy–coverage trade-off. Deferral raises accuracy on accepted answers from 56.4% (all answers) to 75.1% on about 31% of development answers. The price is a review rate of about 69%, and about one in four accepted answers is still wrong. Reaching 85% needed coverage near 10% in-sample, so the 85%-at-30% target was not met. Whether this review load helps a teacher is a workflow question that these data cannot answer. The 0.64 threshold gives a usable ranking signal, but the confidence is the maximum class probability, not a validated probability of correctness, and the contradiction-based flag is switched off. A fair test of the threshold needs a question-grouped protocol with random-deferral and margin-based controls at matched coverage.
+RQ4: error patterns. Partial-credit answers are the largest error class. Negation is handled unreliably in two small diagnostics. Some wrong answers are accepted silently above the threshold. Silent errors matter most in assessment, because they reach students without a teacher seeing them.
+Evaluation choices change the picture. The choice of aggregation path moves Partial recall from 26.3% to 38.5%, and the label space changes macro-F1. Results must therefore be reported with their protocol. Prior work on per-question and leave-one-question-out grading [3], [6] addresses related but different questions, so we make no numerical comparison. We note only that our seen/unseen gap agrees in direction with the concern that motivates [3].
+Not evidence for school or child use. The scorer was trained and tested on public English science data. Nothing was measured on children, CBSE or other school-board questions, Indian classroom answers, spoken answers or Telugu-native English learners. The system is an experimental assessment prototype, not a validated educational assessment tool.
+7. Limitations
+• Public English datasets do not establish performance on schoolchildren, CBSE assessments, other languages or the reading-skills system as a whole.
+• The unseen development subset has only 27 questions, and about 63% of development answers come from them.
+• The test partitions were accessed earlier (count three), so all test results are exploratory.
+• Development results are optimistic: epochs, ensemble and the 0.64 threshold were chosen on the same data, with one training seed.
+• The label scheme, the macro-F1 label space and the source of the seen/unseen QWK values are unresolved [V1], [V2].
+• Interval methods are partly unrecorded. No selective-accuracy intervals and no question-level macro-averages exist.
+• The threshold and learned deferral have not been tested in a leakage-safe, question-grouped protocol.
+• The NLI contribution is unproven, and the negation diagnostics conflict.
+• A cross-dataset transfer check was left out because its protocol could not be reproduced from the record.
+• The scorer uses no rubric information. No human-grader agreement for the three-level scheme is available.
+• Demo parity shows consistency, not independent replication, and some checkpoints are missing.
+8. Conclusion and Future Work
+We evaluated a three-component ensemble for three-level short-answer grading on SciEntsBank and Beetle. In development data it clearly beats simple lexical baselines. Its accuracy drops from 69.2% on seen questions to 48.9% on unseen questions, partial-credit answers cause most errors, and a fixed confidence threshold gives 75.1% accuracy on about 31% of answers, not the 85% targeted. Test figures are exploratory, and the values reported here are provisional until reproduced from saved predictions.
+Future work, in priority order: (i) reproduce every figure from UID-keyed saved predictions and fix the label space; (ii) run a nested, question-grouped evaluation with a full risk–coverage analysis, a multi-threshold summary [5], and random and margin-based deferral controls; (iii) create a truly untouched test set before further selection; (iv) run a clean NLI ablation and improve negation and partial-credit handling; (v) test rubric-conditioned scoring; (vi) collect double-labelled, adjudicated data and report human agreement; (vii) build a teacher-adjudicated CBSE-style benchmark; and (viii) study child populations only with ethics approval, guardian consent, child assent and privacy safeguards.
+Declarations
+• Ethics. Only public datasets were used, and no new data were collected from people for this paper [V12]. Any future collection from children requires institutional ethics approval, guardian consent and child assent.
+• AI-use disclosure. [To complete truthfully under your institute's policy. State that an AI system (Claude, Anthropic) helped draft and revise this manuscript, what it did, and what you checked yourself. AI systems are not authors.]
+• Author contributions. [To complete]
+• Funding. [To complete]
+• Conflicts of interest. [To complete]
+• Data and code availability. [To complete after confirming dataset licences and repository contents]
+References
+[1] S. Burrows, I. Gurevych, and B. Stein, "The eras and trends of automatic short answer grading," Int. J. Artif. Intell. Educ., vol. 25, no. 1, pp. 60–117, 2015, doi: 10.1007/s40593-014-0026-8.
+[2] M. Dzikovska et al., "SemEval-2013 Task 7: The Joint Student Response Analysis and 8th Recognizing Textual Entailment Challenge," in Proc. 7th Int. Workshop on Semantic Evaluation (SemEval 2013), Atlanta, GA, USA, Jun. 2013, pp. 263–274. [Online]. Available: https://aclanthology.org/S13-2045/
+[3] A. Condor, M. Litster, and Z. Pardos, "Automatic short answer grading with SBERT on out-of-sample questions," in Proc. 14th Int. Conf. Educational Data Mining (EDM), 2021, pp. 748–752.
+[4] Y. Geifman and R. El-Yaniv, "Selective classification for deep neural networks," in Advances in Neural Information Processing Systems 30 (NIPS 2017); arXiv:1705.08500.
+[5] J. Traub et al., "Overcoming common flaws in the evaluation of selective classification systems," in Advances in Neural Information Processing Systems 37 (NeurIPS 2024).
+[6] E. del Gobbo, A. Guarino, B. Cafarelli, and L. Grilli, "GradeAid: A framework for automatic short answers grading in educational contexts," Knowl. Inf. Syst., vol. 65, no. 10, pp. 4295–4334, 2023, doi: 10.1007/s10115-023-01892-9.
+[7] L. Camus and A. Filighera, "Investigating transformers for automatic short answer grading," in Artificial Intelligence in Education (AIED 2020), LNAI 12164, Springer, 2020, pp. 43–48, doi: 10.1007/978-3-030-52240-7_8.
+[8] H. Ghavidel, A. Zouaq, and M. C. Desmarais, "Using BERT and XLNet for the automatic short answer grading task," in Proc. 12th Int. Conf. Computer Supported Education (CSEDU), vol. 1, 2020, pp. 58–67, doi: 10.5220/0009422400580067.
+[9] N. Reimers and I. Gurevych, "Sentence-BERT: Sentence embeddings using Siamese BERT-networks," in Proc. EMNLP-IJCNLP 2019, Hong Kong, China, pp. 3982–3992, doi: 10.18653/v1/D19-1410.
+[10] Y. Liu et al., "RoBERTa: A robustly optimized BERT pretraining approach," arXiv:1907.11692, 2019.
+[11] V. Sanh, L. Debut, J. Chaumond, and T. Wolf, "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter," arXiv:1910.01108, 2019.
+[12] P. He, J. Gao, and W. Chen, "DeBERTaV3: Improving DeBERTa using ELECTRA-style pre-training with gradient-disentangled embedding sharing," arXiv:2111.09543, 2021.
+[13] A. Williams, N. Nangia, and S. Bowman, "A broad-coverage challenge corpus for sentence understanding through inference," in Proc. NAACL-HLT 2018, vol. 1, pp. 1112–1122, doi: 10.18653/v1/N18-1101.
+[14] C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger, "On calibration of modern neural networks," in Proc. 34th Int. Conf. Machine Learning (ICML), PMLR vol. 70, 2017, pp. 1321–1330.
+[15] J. Cohen, "Weighted kappa: Nominal scale agreement with provision for scaled disagreement or partial credit," Psychol. Bull., vol. 70, no. 4, pp. 213–220, 1968, doi: 10.1037/h0026256.
+[16] Sentence-Transformers, "all-MiniLM-L6-v2," Hugging Face model card. [Online]. Available: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+[17] Cross-Encoder, "nli-deberta-v3-base," Hugging Face model card. [Online]. Available: https://huggingface.co/cross-encoder/nli-deberta-v3-base
+[18] R. D. Nielsen, W. Ward, J. H. Martin, and M. Palmer, "Annotating students' understanding of science concepts," in Proc. LREC 2008, Marrakech, Morocco, 2008.
+[19] M. Dzikovska et al., "Beetle II: A system for tutoring and computational linguistics experimentation," in Proc. ACL 2010 System Demonstrations, Uppsala, Sweden, 2010.
+References [3], [5], [8], [18] and [19] need page, DOI and author-name checks against the publishers' records before submission [V11].

@@ -1,0 +1,24 @@
+Local SHA-256 values recomputed 15 Nov 2026. Local files are not proof of
+live Drive identity.
+
+project_s_qa/reports_v2/A_predict.py
+CA7C2752A4863F2A24B20EC7CD9000B651D83A0CFC39709F0080EBCBDAD0A053
+
+project_s_qa/reports_v2/A_demo_reference_outputs_v2.json
+C99B7D84D000046C9629708D5EE440D5A20AB28FD298F63708E2E8C13F89DC92
+
+PROJECT_S_QA_HANDOVER/src/A_predict.py
+CA7C2752A4863F2A24B20EC7CD9000B651D83A0CFC39709F0080EBCBDAD0A053
+
+PROJECT_S_QA_HANDOVER/src/config/A_demo_reference_outputs_v2.json
+EA5288E9F12B25D28A66F36EC38D48B08C65E19452BF3B5EFA17EED2BE20AEB9
+
+PROJECT_S_QA_HANDOVER/src/config/A_abstain_policy_v2.json
+B6548EDEB682EABD2BA6B74D9B9B67BFF293C1FEA9C3CB6345E0A7EBF7E9EF9B
+
+Root reference JSON declares scorer_mode pooled, scorer hash matching the
+local A_predict.py, and policy hash BABF76F460D2A6516D9EF11D317F69CEDDB0958DD67A2CE06D3B67496163AD25.
+The exact bytes were re-hashed at
+Project_S_QA_Evidence/Phase_0/scratch/policy_compare_20261107_160707/staged_policy.json
+with that SHA-256. They are not at the expected root reports_v2 policy path;
+scratch presence does not establish deployment or authorize staging.

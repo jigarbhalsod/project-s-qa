@@ -1,0 +1,6 @@
+Status: NOT RUN — BLOCKED
+Reason: no approved notebook, runtime root, or JSON/policy pair; no live
+Colab/Drive access was performed by this local audit.
+Required action: resolve Gates 1 and 2, then Jigar runs
+docs/PHASE0_COLAB_READ_ONLY_PREFLIGHT.md and supplies its complete output.
+No model was loaded; no inference or training was run.

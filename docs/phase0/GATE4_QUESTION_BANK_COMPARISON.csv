@@ -1,0 +1,4 @@
+source,path,records,subject_grade_fields,required_concepts,review_status,verified_by,canonical
+packaged_rubrics,project_s_qa/A_submission_v2/reports_v2/A_rubrics_v2.json,251,absent,251 nonempty but concepts unreviewed,248 auto_draft; 3 demo,empty for 251,No
+handover_questions,PROJECT_S_QA_HANDOVER/question_bank/questions.json,12,Science only; grades 4/5/6,0 nonempty,12 draft_unreviewed,not present,No
+handover_rubrics,PROJECT_S_QA_HANDOVER/question_bank/rubrics.json,12,linked to demo question IDs,0 nonempty,12 draft_unreviewed,not present,No
